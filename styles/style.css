@@ -2,13 +2,13 @@
 
 * {
   margin: 0;
-  padding: 0px;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Oswald', sans-serif;
 }
 
 /* ############################################
----      Navbar     
+--- <<<     Navbar     >>> ---
 ---############################################ */
 
 nav {
@@ -25,8 +25,8 @@ nav {
 
 .nav__links {
   display: flex;
-  width: 45%;
-  justify-content: space-evenly;
+  width: 40%;
+  justify-content: space-between;
 }
 
 .nav__links li {
@@ -38,8 +38,19 @@ nav {
   color: #f6f6f6;
   text-decoration: none;
   letter-spacing: 3px;
-  font-weight: bold;
+  font-weight: 200;
   font-size: 14px;
+}
+
+.nav__links a:hover {
+  border-bottom: #f6f6f6 solid 2px;
+  padding-bottom: 4px;
+}
+
+.nav__links--active a {
+  font-weight: 500;
+  border-bottom: #f6f6f6 solid 2px;
+  padding-bottom: 4px;
 }
 
 .nav__burger {
