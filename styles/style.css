@@ -148,13 +148,131 @@ nav {
 ---############################################ */
 
 .index__header {
-  background-image: url("/assets/spacex-launch-large.jpg");
-  /* Image by SpaceX on Unsplash.com. URL "https://unsplash.com/photos/XRAmDxBQy_Q" */
+  background-image: url("/assets/spacex-launch-large-1.jpg");
+  /* Image by SpaceX on stocksnap.io URL "https://stocksnap.io/photo/space-rocket-QLXO02GEWL" */
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center top;
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   height: 92vh;
+}
+
+.index__headerTextContainer {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f6f6f6;
+}
+.index__headerTextContainer h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.index__headerTextContainer p {
+  margin-top: 2vh;
+  padding: 0 10px 0 10px;
+  text-align: center;
+}
+
+.index__nextLaunchResults {
+  margin: 1rem;
+  padding: 2rem;
+  width: 320px;
+  background: rgb(246,246,246);
+background: linear-gradient(90deg, rgba(246,246,246,0.5679583603076721) 0%, rgba(246,246,246,0.9050370119930653) 100%);
+}
+
+.next_launch_container,
+.countdown__result {
+  display: flex;
+  justify-content: center;
+}
+
+.index__nextLaunchResults,
+.countdown__result {
+  margin: 0;
+  width: 800px;
+  min-width: 500px;
+  text-align: center;
+}
+.index__nextLaunchResults  h2 {
+  font-size: 36px;
+  padding: 10px;
+}
+
+#countdown-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.countdown__result {
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #f6f6f6;
+}
+
+.countdown-numbers {
+  font-size: 45px;
+}
+.countdown__TimeUnit {
+  font-size: small;
+  font-weight: 300;
+}
+
+/* --- LOADING & ERROR */
+.errorMessageContainer {
+  border: 1px solid darkred;
+  padding: 3rem;
+  font-size: 22px;
+  color: darkred;
+  background: rgba(255, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-top: 10em;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #b2ebf2;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -162,17 +280,11 @@ nav {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  .index__header {
-    background-image: url('/assets/spacex-launch-small.jpg');
-    /* Image by SpaceX on Unsplash.com. URL "https://unsplash.com/photos/XRAmDxBQy_Q" */
-  }
+ 
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .index__header {
-    background-image: url('/assets/spacex-launch-small.jpg');
-    /* Image by SpaceX on Unsplash.com. URL "https://unsplash.com/photos/XRAmDxBQy_Q" */
-  }
+
 }
 
 /* ############################################

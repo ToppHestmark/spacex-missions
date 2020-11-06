@@ -35,12 +35,24 @@
   </nav>
 
   <header class="index__header">
-    <h1>Hello</h1>
+    <div class="index__headerTextContainer">
+      <h1>SpaceX Missions</h1>
+      <p>See what's coming up next and keep on track of the SpaceX Launches.</p>
+    </div>
+    
+    <div class="index__nextLaunchContainer">
+      <!-- Loading indicator -->
+      <div class="lds-facebook"><div></div><div></div><div></div></div> 
+      <div class="error-container"></div>
+    </div>
+    <div id="countdown-container"></div>
   </header>
-  <section class="index__upcomingLaunchSection">
 
+  <section class="index__upcomingLaunchSection">
+   
   </section>
   
+  <script src="src/components/errorHandler.js"></script>
   <script src="src/app.js"></script>
 </body>
 </html>
