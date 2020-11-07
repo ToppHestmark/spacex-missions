@@ -20,7 +20,9 @@ const navSlide = () => {
 }
 navSlide()
 
-// Next launch container
+/* ############################################
+--- <<<     Next launch     >>> ---
+---############################################ */
 const url = "https://api.spacexdata.com/v3/launches/upcoming";
 const nextLaunchUrl = "https://api.spacexdata.com/v3/launches/next";
 const errorContainer = document.querySelector(".error-container");
@@ -34,7 +36,7 @@ async function getNextLaunch() {
     nextLaunchHtml(nextLaunchResult)
   }
   catch(error) {
-    errorContainer.innerHTML = displayError("Obs, An error occured when calling API.")
+    errorContainer.innerHTML = displayError("Ooops, An error occured when calling API.")
   }
 }
 getNextLaunch()
@@ -102,3 +104,40 @@ function nextLaunchHtml(nextLaunchResult) {
   countdownTimer('countdown-container', launchDateUTC);
 
 } 
+
+
+/* ############################################
+--- <<<     Upcoming launches     >>> ---
+---############################################ */
+const upcomingLaunchUrl = "https://api.spacexdata.com/v3/launches/upcoming";
+const upcomingLaunchTable = document.querySelector('.index__upcomingLaunchTable');
+
+async function getUpcomingLaunches() {
+  try {
+    const response = await fetch(upcomingLaunchUrl);
+    const upcomingLaunchResults = await response.json();
+
+    upcomingLaunchResults.map((upcomingLaunch) => {
+
+      const launchDateUTC = upcomingLaunch.launch_date_utc;
+      const flightNumber = upcomingLaunch.flight_number;
+      const missionName = upcomingLaunch.mission_name;
+      const launchSite = upcomingLaunch.launch_site.site_name_long;
+
+      upcomingLaunchTable.innerHTML +=  `
+      <tr class="upcomingLaunch__data tablerow__borderBottom">
+        <td class="upcomingLaunch__flightNumber upcomingLaunch__dataTable">${flightNumber}</td>
+        <td class="upcomingLaunch__mission upcomingLaunch__dataTable">${missionName}</td>
+        <td class="upcomingLaunch__site upcomingLaunch__dataTable">${launchSite}</td>
+        <td class="upcomingLaunch__date upcomingLaunch__dataTable">${dateFormatter(launchDateUTC)}</td>
+      </tr>`;
+    });
+  }
+  catch(error) {
+    upcomingLaunchContainer.innerHTML = displayError("Ooops, an error occured when calling API")
+  }
+}
+getUpcomingLaunches();
+
+
+
