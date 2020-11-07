@@ -177,24 +177,24 @@ nav {
   text-align: center;
 }
 
+.index__nextLaunchContainer {
+  display: flex;
+  justify-content: center;
+}
 .index__nextLaunchResults {
   margin: 1rem;
   padding: 2rem;
-  width: 320px;
-  background: rgb(246,246,246);
-background: linear-gradient(90deg, rgba(246,246,246,0.5679583603076721) 0%, rgba(246,246,246,0.9050370119930653) 100%);
 }
 
 .next_launch_container,
-.countdown__result {
+.countdown__results {
   display: flex;
   justify-content: center;
 }
 
 .index__nextLaunchResults,
-.countdown__result {
+.countdown__results {
   margin: 0;
-  width: 800px;
   min-width: 500px;
   text-align: center;
 }
@@ -203,23 +203,21 @@ background: linear-gradient(90deg, rgba(246,246,246,0.5679583603076721) 0%, rgba
   padding: 10px;
 }
 
+/* --- Countdown Container --- */
 #countdown-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-bottom: 50px;
 }
-
-.countdown__result {
+.countdown__results {
   padding: 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   color: #f6f6f6;
 }
-
-.countdown-numbers {
+.countdown__numbers {
   font-size: 45px;
 }
 .countdown__TimeUnit {
@@ -227,29 +225,65 @@ background: linear-gradient(90deg, rgba(246,246,246,0.5679583603076721) 0%, rgba
   font-weight: 300;
 }
 
-/* --- LOADING & ERROR */
+
+@media screen and (max-width: 990px) {
+  
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+}
+
+/* ############################################
+--- <<<     Upcoming launches     >>> ---
+---############################################ */
+
+.index__upcomingLaunchSection {
+  width: 100%;
+  height: 100vh;
+  background-color: tomato;
+}
+
+
+/* ############################################
+--- <<<     Loading and Errorhandling     >>> ---
+---############################################ */
+.error-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 .errorMessageContainer {
-  border: 1px solid darkred;
   padding: 3rem;
   font-size: 22px;
-  color: darkred;
-  background: rgba(255, 0, 0, 0.1);
+  color: #F53B3B;
+  background: #f6f6f6;
   margin: 0 auto;
 }
 
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .lds-facebook {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
-  margin-top: 10em;
+  margin-top: 3em;
 }
 .lds-facebook div {
   display: inline-block;
   position: absolute;
   left: 8px;
   width: 16px;
-  background: #b2ebf2;
+  background: #f6f6f6;
   animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 .lds-facebook div:nth-child(1) {
@@ -273,26 +307,4 @@ background: linear-gradient(90deg, rgba(246,246,246,0.5679583603076721) 0%, rgba
     top: 24px;
     height: 32px;
   }
-}
-
-@media screen and (max-width: 990px) {
-
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
- 
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-
-}
-
-/* ############################################
---- <<<     Upcoming launches     >>> ---
----############################################ */
-
-.index__upcomingLaunchSection {
-  width: 100%;
-  height: 100vh;
-  background-color: tomato;
 }

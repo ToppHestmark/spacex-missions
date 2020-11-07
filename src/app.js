@@ -34,7 +34,7 @@ async function getNextLaunch() {
     nextLaunchHtml(nextLaunchResult)
   }
   catch(error) {
-    errorContainer.innerHTML = displayError("An error occured when calling API")
+    errorContainer.innerHTML = displayError("Obs, An error occured when calling API.")
   }
 }
 getNextLaunch()
@@ -62,15 +62,13 @@ function nextLaunchHtml(nextLaunchResult) {
 
   // Countdown timer
   function getRemainingTime(endtime){
-    const total = Date.parse(endtime) - Date.parse(new Date());
-    const seconds = Math.floor( (total/1000) % 60 );
-    const minutes = Math.floor( (total/1000/60) % 60 );
-    const hours = Math.floor( (total/(1000*60*60)) % 24 );
-    const days = Math.floor( total/(1000*60*60*24) );
-
-    console.log(days, hours, minutes, seconds);
+    const totalTimeRemaining = Date.parse(endtime) - Date.parse(new Date());
+    const seconds = Math.floor( (totalTimeRemaining/1000) % 60 );
+    const minutes = Math.floor( (totalTimeRemaining/1000/60) % 60 );
+    const hours = Math.floor( (totalTimeRemaining/(1000*60*60)) % 24 );
+    const days = Math.floor( totalTimeRemaining/(1000*60*60*24) );
   
-    return { total, days, hours, minutes, seconds };
+    return { days, hours, minutes, seconds };
 
   }
   getRemainingTime(launchDateUTC)
@@ -80,17 +78,17 @@ function nextLaunchHtml(nextLaunchResult) {
 
     const timeinterval = setInterval(() => {
       const timeRemaining = getRemainingTime(endtime);
-      countdownContainer.innerHTML = `<div class="countdown__result">
-      <div><p class="countdown-numbers">${timeRemaining.days}</p> <p class="countdown__TimeUnit">DAYS</p></div>
-      <div><p class="countdown-numbers">${timeRemaining.hours}</p> <p class="countdown__TimeUnit">HOURS</p></div>
-      <div><p class="countdown-numbers">${timeRemaining.minutes}</p> <p class="countdown__TimeUnit">MINUTES</p></div>
-      <div><p class="countdown-numbers">${timeRemaining.seconds}</p> <p class="countdown__TimeUnit">SECONDS</p></div>
+      countdownContainer.innerHTML = `<div class="countdown__results">
+      <div><p class="countdown__numbers">${timeRemaining.days}</p> <p class="countdown__TimeUnit">DAYS</p></div>
+      <div><p class="countdown__numbers">${timeRemaining.hours}</p> <p class="countdown__TimeUnit">HOURS</p></div>
+      <div><p class="countdown__numbers">${timeRemaining.minutes}</p> <p class="countdown__TimeUnit">MINUTES</p></div>
+      <div><p class="countdown__numbers">${timeRemaining.seconds}</p> <p class="countdown__TimeUnit">SECONDS</p></div>
       </div>`
 
       // Stop counting when passing the deadline
-      // if (t.total <= 0) {
-      //   clearInterval(timeinterval);
-      // }
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+      }
     },1000);
     timeinterval()
   }
