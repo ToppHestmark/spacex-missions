@@ -71,7 +71,7 @@ function nextLaunchHtml(nextLaunchResult) {
   function countdownTimer(id, endtime) {
     const countdownContainer = document.getElementById(id);
 
-    const timeinterval = setInterval(() => {
+    const countdownInterval = setInterval(() => {
       const timeRemaining = getRemainingTime(endtime);
       countdownContainer.innerHTML = `<div class="countdown__results">
       <div><p class="countdown__numbers">${timeRemaining.days}</p> <p class="countdown__TimeUnit">DAYS</p></div>
@@ -82,7 +82,7 @@ function nextLaunchHtml(nextLaunchResult) {
 
       // Stop counting when passing the deadline
       if (timeRemaining.totalTimeRemaining <= 0) {
-        clearInterval(timeinterval);
+        clearInterval(countdownInterval);
       }
     },1000);
     timeinterval()
