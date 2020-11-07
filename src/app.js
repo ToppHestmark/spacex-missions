@@ -41,21 +41,16 @@ getNextLaunch()
 
 
 function nextLaunchHtml(nextLaunchResult) {
-  const missionName = nextLaunchResult.mission_name
-  const flightNumber = nextLaunchResult.flight_number
-  const launchSite = nextLaunchResult.launch_site.site_name_long
-  const rocketName = nextLaunchResult.rocket.rocket_name
-  const launchDateUTC = nextLaunchResult.launch_date_utc
-  const getDate = new Date(launchDateUTC);
-  const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(getDate);
-  const month = new Intl.DateTimeFormat('en', { month: 'long' }).format(getDate);
-  const day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(getDate);
-  const date = `${month} ${day}, ${year}`;
+  const missionName = nextLaunchResult.mission_name;
+  const flightNumber = nextLaunchResult.flight_number;
+  const launchSite = nextLaunchResult.launch_site.site_name_long;
+  const rocketName = nextLaunchResult.rocket.rocket_name;
+  const launchDateUTC = nextLaunchResult.launch_date_utc;
 
   nextLaunchContainer.innerHTML = `<div class="index__nextLaunchResults">
   <h2>${missionName}</h2>
   <p><b>Flight Number:</b> ${flightNumber}</p>
-  <p><b>Launch Date:</b> ${date}</p>
+  <p><b>Launch Date:</b> ${dateFormatter(launchDateUTC)}</p>
   <p><b>Launch Site:</b> ${launchSite}</p>
   <p><b>Rocket Name:</b> ${rocketName}</p>
   </div>`;
@@ -86,7 +81,7 @@ function nextLaunchHtml(nextLaunchResult) {
       </div>`
 
       // Stop counting when passing the deadline
-      if (t.total <= 0) {
+      if (timeRemaining.totalTimeRemaining <= 0) {
         clearInterval(timeinterval);
       }
     },1000);

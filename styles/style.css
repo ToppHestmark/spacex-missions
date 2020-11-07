@@ -178,26 +178,18 @@ nav {
 }
 
 .index__nextLaunchContainer {
-  display: flex;
-  justify-content: center;
-}
-.index__nextLaunchResults {
-  margin: 1rem;
-  padding: 2rem;
+  margin-top: 10vh;
 }
 
+.index__nextLaunchContainer,
 .next_launch_container,
 .countdown__results {
   display: flex;
   justify-content: center;
+  text-align: center;
+  color: #f6f6f6;
 }
 
-.index__nextLaunchResults,
-.countdown__results {
-  margin: 0;
-  min-width: 500px;
-  text-align: center;
-}
 .index__nextLaunchResults  h2 {
   font-size: 36px;
   padding: 10px;
@@ -211,6 +203,7 @@ nav {
   justify-content: space-around;
 }
 .countdown__results {
+  min-width: 500px;
   padding: 1rem 1rem;
   display: flex;
   align-items: center;
