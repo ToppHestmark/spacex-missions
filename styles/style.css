@@ -191,7 +191,8 @@ nav {
 }
 
 .index__nextLaunchResults  h2 {
-  font-size: 36px;
+  font-size: 4em;
+  font-weight: 400;
   padding: 10px;
 }
 
@@ -209,6 +210,10 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   color: #f6f6f6;
+}
+.countdown__window {
+  display: flex;
+  flex-direction: column;
 }
 .countdown__numbers {
   font-size: 5em;
