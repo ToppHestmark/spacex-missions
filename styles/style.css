@@ -214,6 +214,7 @@ nav {
 .countdown__window {
   display: flex;
   flex-direction: column;
+  width: 100px;
 }
 .countdown__numbers {
   font-size: 5em;
@@ -238,6 +239,9 @@ nav {
   .countdown__results {
     min-width: 400px;
     padding: 1rem 1rem;
+  }
+  .countdown__window {
+    width: 60px;
   }
   .countdown__numbers {
     font-size: 3em;
