@@ -99,7 +99,7 @@ nav {
     display: block;
   }
 
-  .nav__active {
+  .nav--active {
     transform: translateX(0%);
   }
 
@@ -280,7 +280,7 @@ nav {
 }
 
 .upcomingLaunch__table {
-  padding: 20px 0 20px 2px;
+  padding: 25px 0 25px 2px;
   background-color: #393e46;
   color: #f6f6f6;
   border-bottom: 1px solid #393e46;
