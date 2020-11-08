@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="assets/favicon_32x32.png"/>
   <meta name="description" content="Join us on SpaceX adventure. See upcoming launching schedules and explore missions from the past.">
+  <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/style.css">
   <title>SpaceX Missions | Upcoming Launches Schedules</title>
 </head>
 <body>
   <nav class="nav"> 
     <a href="index.html" class="nav__logo">
-      <img src="assets/spacex_mission_logo.png" alt="Logo">
+      <img src="assets/spacex-mission-logo.png" alt="Logo">
     </a>
     <ul class="nav__links">
-      <li class="nav__links--active">
+      <li class="nav__links--active nav__homeLink">
         <a href="index.html">Home</a>
       </li>
       <li>
@@ -68,6 +69,7 @@
 
   </section>
   
+  <script src="src/components/navbar.js"></script>
   <script src="src/components/errorHandler.js"></script>
   <script src="src/components/dateFormatter.js"></script>
   <script src="src/app.js"></script>
