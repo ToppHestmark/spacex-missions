@@ -58,51 +58,41 @@ function nextLaunchHtml(nextLaunchResult) {
   </div>`;
 
   // Countdown timer
-  function getRemainingTime(endtime){
-    const totalTimeRemaining = Date.parse(endtime) - Date.parse(new Date());
-    const seconds = Math.floor( (totalTimeRemaining/1000) % 60 );
-    const minutes = Math.floor( (totalTimeRemaining/1000/60) % 60 );
-    const hours = Math.floor( (totalTimeRemaining/(1000*60*60)) % 24 );
-    const days = Math.floor( totalTimeRemaining/(1000*60*60*24) );
-  
-    return { days, hours, minutes, seconds };
+  const countdownInterval = setInterval(() => {
+    const launchTime = Date.parse(launchDateUTC);
+    const now = Date.parse(new Date());
+    const totalTimeRemaining = launchTime - now;
+    const countdownContainer = document.getElementById('countdown-container');
+    
+    const seconds = Math.floor((totalTimeRemaining/1000) % 60);
+    const minutes = Math.floor((totalTimeRemaining/1000/60) % 60);
+    const hours = Math.floor((totalTimeRemaining / (1000*60*60)) % 24);
+    const days = Math.floor(totalTimeRemaining / (1000*60*60*24));
+    
+    countdownContainer.innerHTML = `<div class="countdown__results">
+      <div class="countdown__window">
+        <p class="countdown__numbers">${days}</p> 
+        <p class="countdown__TimeUnit">DAYS</p>
+      </div>
+      <div class="countdown__window">
+        <p class="countdown__numbers">${hours}</p> 
+        <p class="countdown__TimeUnit">HOURS</p>
+      </div>
+      <div class="countdown__window">
+        <p class="countdown__numbers">${minutes}</p> 
+        <p class="countdown__TimeUnit">MINUTES</p>
+      </div>
+      <div class="countdown__window">
+        <p class="countdown__numbers">${seconds}</p> 
+        <p class="countdown__TimeUnit">SECONDS</p>
+      </div>
+    </div>`;
 
-  }
-  getRemainingTime(launchDateUTC)
-  
-  function countdownTimer(id, endtime) {
-    const countdownContainer = document.getElementById(id);
-
-    const countdownInterval = setInterval(() => {
-      const timeRemaining = getRemainingTime(endtime);
-      countdownContainer.innerHTML = `<div class="countdown__results">
-        <div class="countdown__window">
-          <p class="countdown__numbers">${timeRemaining.days}</p> 
-          <p class="countdown__TimeUnit">DAYS</p>
-        </div>
-        <div class="countdown__window">
-          <p class="countdown__numbers">${timeRemaining.hours}</p> 
-          <p class="countdown__TimeUnit">HOURS</p>
-        </div>
-        <div class="countdown__window">
-          <p class="countdown__numbers">${timeRemaining.minutes}</p> 
-          <p class="countdown__TimeUnit">MINUTES</p>
-        </div>
-        <div class="countdown__window">
-          <p class="countdown__numbers">${timeRemaining.seconds}</p> 
-          <p class="countdown__TimeUnit">SECONDS</p>
-        </div>
-      </div>`
-
-      // Stop counting when passing the deadline
-      if (timeRemaining.totalTimeRemaining <= 0) {
-        clearInterval(countdownInterval);
-      }
-    },1000);
-    timeinterval()
-  }
-  countdownTimer('countdown-container', launchDateUTC);
-
+    if (totalTimeRemaining < 0) {
+      clearInterval(countdownInterval);
+      countdownContainer.innerHTML = `<h2>Launched</h2>`;
+    }
+  }, 1000)
 } 
 
 
