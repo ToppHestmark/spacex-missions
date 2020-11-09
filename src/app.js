@@ -30,7 +30,7 @@ function nextLaunchHtml(nextLaunchResult) {
   nextLaunchContainer.innerHTML = `<div class="index__nextLaunchResults">
   <h2>${missionName}</h2>
   <p><b>Flight Number:</b> ${flightNumber}</p>
-  <p><b>Launch Date:</b> ${dateFormatter(launchDateUTC)}</p>
+  <p><b>Launch Date:</b> ${americanDateFormat(launchDateUTC)}</p>
   <p><b>Launch Site:</b> ${launchSite}</p>
   <p><b>Rocket Name:</b> ${rocketName}</p>
   </div>`;
@@ -97,7 +97,7 @@ async function getUpcomingLaunches() {
         <td class="upcomingLaunch__flightNumber upcomingLaunch__dataTable">${flightNumber}</td>
         <td class="upcomingLaunch__mission upcomingLaunch__dataTable">${missionName}</td>
         <td class="upcomingLaunch__site upcomingLaunch__dataTable">${launchSite}</td>
-        <td class="upcomingLaunch__date upcomingLaunch__dataTable">${dateFormatter(launchDateUTC)}</td>
+        <td class="upcomingLaunch__date upcomingLaunch__dataTable">${americanDateFormat(launchDateUTC)}</td>
       </tr>`;
     });
   }

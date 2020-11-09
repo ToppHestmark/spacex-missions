@@ -1,0 +1,66 @@
+const pastLaunchUrl = "https://api.spacexdata.com/v3/launches/past";
+const pastLaunchContainer = document.querySelector(".pastLaunch__container");
+
+async function getPastLaunchProp() {
+
+  try {
+    const response = await fetch(pastLaunchUrl);
+    const pastLaunchResults = await response.json();
+
+    createPastLaunchesHtml(pastLaunchResults)
+  }
+  catch(error) {
+    pastLaunchContainer.innerHTML = displayError("An error occured when calling API")
+  }
+}
+
+getPastLaunchProp();
+
+
+function createPastLaunchesHtml(pastLaunchResults) {
+
+  function sortByFlightNumber(flightNumber){ 
+  
+    return function(a, b){  
+      
+       if(a[flightNumber] > b[flightNumber])  
+       {return -1;  }
+       else if(a[flightNumber] < b[flightNumber])  
+         {return +1;}   
+   
+       return 0;  
+    };  
+  }
+  pastLaunchResults.sort(sortByFlightNumber("flight_number"));
+
+  pastLaunchResults.map(pastLaunchProp => {
+  
+    const launchDateUTC = pastLaunchProp.launch_date_utc;
+    const missionBadge = pastLaunchProp.links.mission_patch_small;
+    const missionName = pastLaunchProp.mission_name
+    const flightNumber = pastLaunchProp.flight_number;
+    const launchSite = pastLaunchProp.launch_site.site_name_long;
+    const rocketName = pastLaunchProp.rocket.rocket_name;
+    const launchSuccess = pastLaunchProp.launch_success;
+    
+    function successMessage() {
+      return launchSuccess ? `<p class="pastLaunch__successMessage">SUCCESSFUL</p>` : `<p class="pastLaunch__failedMessage">FAILED</p>`;
+    }
+    const details = pastLaunchProp.details;
+    function detailsDescription() {
+      return details ? `<p class="details_description">${details}</p>` : "";
+    }
+
+    pastLaunchContainer.innerHTML +=  `
+    <div class="pastLaunch__card">
+      <img class="pastLaunch__missionBadge" src=${missionBadge} alt=${missionName}>
+      <h2 class="pastLaunch__missionName">${missionName}</h2>
+      <p><b>Flight Number:</b> ${flightNumber}</p>
+      <p><b>Launch Date:</b> ${americanDateFormat(launchDateUTC)}</p>
+      <p><b>Launch Site:</b> ${launchSite}</p>
+      <p><b>Rocket:</b> ${rocketName}</p>
+      ${successMessage()}
+      ${detailsDescription()}
+    </div>`;
+  });
+};

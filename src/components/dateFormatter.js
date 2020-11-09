@@ -1,4 +1,4 @@
-const dateFormatter = (launchDateUTC) => {
+const americanDateFormat = (launchDateUTC) => {
   const getDate = new Date(launchDateUTC);
   const year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(getDate);
   const month = new Intl.DateTimeFormat('en', { month: 'long' }).format(getDate);

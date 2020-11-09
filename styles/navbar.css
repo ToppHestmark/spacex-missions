@@ -113,7 +113,7 @@ nav {
   .nav--active {
     transform: translateX(0%);
   }
-  .prevent-scrolling {
+  .prevent--scrolling {
     height: 100%;
     overflow: hidden;
   }
