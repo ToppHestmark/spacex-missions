@@ -44,11 +44,7 @@ function createPastLaunchesHtml(pastLaunchResults) {
     const launchSuccess = pastLaunchProp.launch_success;
     
     function successMessage() {
-      return launchSuccess ? `<p class="pastLaunch__successMessage">SUCCESSFUL</p>` : `<p class="pastLaunch__failedMessage">FAILED</p>`;
-    }
-    const details = pastLaunchProp.details;
-    function detailsDescription() {
-      return details ? `<p class="details_description">${details}</p>` : "";
+      return launchSuccess ? `<p class="pastLaunch__successMessage"><SUCCESSFUL>SUCCESSFUL</p>` : `<p class="pastLaunch__failedMessage">FAILED</p>`;
     }
 
     pastLaunchContainer.innerHTML +=  `
@@ -60,7 +56,9 @@ function createPastLaunchesHtml(pastLaunchResults) {
       <p><b>Launch Site:</b> ${launchSite}</p>
       <p><b>Rocket:</b> ${rocketName}</p>
       ${successMessage()}
-      ${detailsDescription()}
+      <div class="button__moreDetails">
+        <a href="#">Learn more</a>
+      </div>
     </div>`;
   });
 };

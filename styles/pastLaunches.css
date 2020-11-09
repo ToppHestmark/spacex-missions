@@ -1,10 +1,22 @@
 .pastLaunches__header {
+  background-image: url('/assets/spacex-satelite-large.jpg');
+  /* Image source "https://www.pexels.com/nb-no/bilde/luftfart-mane-mork-nasa-256152/" by Pixabay on pexels.com */
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
   width: 100%;
-  height: 40vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: dodgerblue;
+}
+
+.pastLaunches__header h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #f6f6f6;
+  text-shadow: 0px 1px 8px rgba(108, 108, 108, 0.8);
+  margin-top: 120px;
 }
 
 /* ############################################
@@ -13,21 +25,31 @@
 
 .pastLaunch__mainSection {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
 
 .pastLaunch__container {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -250px;
 }
 
 .pastLaunch__card {
   margin: 1rem;
   padding: 2rem;
   width: 320px;
-  background-color: #ffffff;
-  background: rgb(238,238,238);
-  background: radial-gradient(circle, rgba(238,238,238,1) 0%, rgba(219,219,227,0.4499808322177844) 100%);
+  color: #55595c;
+  background-color: #fff;
+}
+.pastLaunch__card:hover {
+  -webkit-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  -moz-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
 }
 
 .pastLaunch__missionBadge {
@@ -36,31 +58,41 @@
   margin: auto;
 }
 .pastLaunch__missionName {
-  padding-bottom: 20px;
+  padding: 30px 0 20px 0;
   font-size: x-large;
   font-weight: 700;
   font-style: normal;
-  padding-top: 30px;
 }
 
 .pastLaunch__failedMessage,
 .pastLaunch__successMessage {
-  padding: 10px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  text-align: center;
+  margin: 25px 0 25px 0;
   font-weight: 500;
   letter-spacing: 2px;
+  text-align: center;
 }
 .pastLaunch__failedMessage {
-  border: 1px solid #F53B3B;
   color: #F53B3B;
 }
 .pastLaunch__successMessage {
-  border: 1px solid #3BF56F;
   color: #3BF56F;
 }
 
-.details_description {
-  padding-bottom: 25px;
+.button__moreDetails {
+  display: flex;
+  justify-content: center;
+}
+.button__moreDetails a {
+  color: #55595c;
+  padding: 1em 5.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 0.5px solid #55595c;
+}
+.button__moreDetails a:hover {
+  background-color: #000;
+  color: white;
+}
+.button__moreDetails a:active {
+  background-color: #393e46;
 }
