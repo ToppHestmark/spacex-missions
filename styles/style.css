@@ -12,8 +12,8 @@
 ---############################################ */
 
 .index__header {
-  background-image: url("/assets/spacex-prelaunch-large.jpg");
-  /* Image by SpaceX on Unsplash.com. URL "https://unsplash.com/photos/9dF7pCyaM9s" */
+  background-image: url("/assets/spacex-launch-night-large.jpg");
+  /* Photo by SpaceX on Unsplash.com. URL "https://unsplash.com/photos/-p-KCm6xB9I" */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -97,6 +97,13 @@
   font-size: 3rem;
   font-weight: 400;
   color: #f6f6f6;
+}
+
+@media screen and (max-width: 990px)  {
+
+  .index__header {
+    background-position: center right;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
