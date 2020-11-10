@@ -2,8 +2,8 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background-image: url('/assets/space-star-large.jpg');
-  /* Image by Jake Weirick on Unsplash.com URL "https://unsplash.com/photos/Q_RBVFFXR_g" */
+  background-image: url('/assets/space-background-large.jpg');
+  /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -19,29 +19,30 @@ body {
 .pastLaunchesDetails__container {
   width: 70%;
 }
-.pastLaunchesDetails__result {
+.pastLaunchesDetails__results {
   padding: 5vh 0 10vh 0;
   color: #55595c;
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 
-.pastLaunchesDetails__result h1 {
+.pastLaunchesDetails__results h1 {
   margin-bottom: 5px;
 }
 
-.pastLaunchesDetails__result img {
+.pastLaunchesDetails__results img {
   width: 100%;
   height: auto;
 }
 
 .pastLaunchesDetails__TextContentContainer {
   margin: 0 15px 20px 30px;
+  padding: 4vh 5vw 0 5vw;
 }
 
 .pastLaunchesDetails__imageText {
   font-size: x-small;
   font-weight: 300;
-  margin: -5px 0px 20px 25px;
+  margin: -3px 0px 0px 20px;
 }
 
 .pastLaunchesDetails__detailsDescription {
