@@ -1,8 +1,3 @@
-// const details = pastLaunchProp.details;
-// function detailsDescription() {
-//   return details ? `<p class="details_description">${details}</p>` : "";
-// }
-
 const pastLaunchesDetailsContainer = document.querySelector(".pastLaunchesDetails__container");
 
 const queryString = document.location.search;
@@ -46,25 +41,31 @@ function createDetailsHtml(details) {
     if (!detailsImage) {
       return `<p>No image</p>`
     }
+
+    function detailsDescription() {
+      return detailsText ? detailsText : "No details available.";
+    }
     
     pastLaunchesDetailsContainer.innerHTML = `<div class="pastLaunchesDetails__results">
       <h1>${missionName}</h1>
-      <img src="${detailsImage}" alt="${missionName}">
-      <p class="pastLaunchesDetails__imageText">Photo: SpaceX</p>
-      <div class="pastLaunchesDetails__TextContentContainer">
-        <p class="pastLaunchesDetails__detailsDescription">${detailsText}</p>
-        <p><b>Mission:</b> ${successFactor()}</p>
-        <p><b>Date Launched:</b> ${americanDateFormat(launchDateUTC)}</p>
-        <p><b>Flight Number:</b> ${flightNumber}</p>
-        <h2 class="pastLaunchesDetails__subHeader">Mission details:</h2>
-        <li>Launch Site: ${launchSite}</li>
-        <li>Rocket: ${rocketName}</li>
-        <li>Rocket Type: ${rocketType}</li>
-        <li>Payload Type: ${payloadType}</li>
-        <li>Payload Mass: ${payloadMass} kg</li>
-        <li>Nationality: ${nationality} </li>
-        <div class="pastLaunchesDetails__links">
-          <a target="_blank" href="${videoLink}">WATCH VIDEO</a>
+      <div class="pastLaunchesDetails__contentContainer">
+        <img src="${detailsImage}" alt="${missionName}">
+        <p class="pastLaunchesDetails__imageText">Photo: SpaceX</p>
+        <div class="pastLaunchesDetails__TextContentContainer">
+          <p class="pastLaunchesDetails__detailsDescription">${detailsDescription()}</p>
+          <p><b>Mission:</b> ${successFactor()}</p>
+          <p><b>Date Launched:</b> ${americanDateFormat(launchDateUTC)}</p>
+          <p><b>Flight Number:</b> ${flightNumber}</p>
+          <h2 class="pastLaunchesDetails__subHeader">Mission details:</h2>
+          <li><b>Launch Site:</b> ${launchSite}</li>
+          <li><b>Rocket:</b> ${rocketName}</li>
+          <li><b>Rocket Type:</b> ${rocketType}</li>
+          <li><b>Payload Type:</b> ${payloadType}</li>
+          <li><b>Payload Mass:</b> ${payloadMass} kg</li>
+          <li><b>Nationality:</b> ${nationality} </li>
+          <div class="pastLaunchesDetails__links">
+            <a target="_blank" href="${videoLink}">WATCH VIDEO</a>
+          </div>
         </div>
       </div>
     </div>`

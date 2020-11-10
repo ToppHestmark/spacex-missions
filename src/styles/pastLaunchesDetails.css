@@ -20,13 +20,23 @@ body {
   width: 70%;
 }
 .pastLaunchesDetails__results {
-  padding: 5vh 0 10vh 0;
   color: #55595c;
+}
+
+.pastLaunchesDetails__contentContainer {
+  padding-bottom: 20vh;
   background-color: #fff;
+  box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
+-webkit-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
+-moz-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
+
 }
 
 .pastLaunchesDetails__results h1 {
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
+  color: #f6f6f6;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 
 .pastLaunchesDetails__results img {
