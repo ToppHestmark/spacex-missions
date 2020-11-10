@@ -1,81 +1,77 @@
-@import url("https://use.typekit.net/xbs5fht.css");
-
-/* * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Oswald', sans-serif;
-} */
 
 body {
   width: 100%;
+  min-height: 100vh;
   background-image: url('/assets/space-star-large.jpg');
   /* Image by Jake Weirick on Unsplash.com URL "https://unsplash.com/photos/Q_RBVFFXR_g" */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
 }
 
 .pastLaunchesDetails__main {
-  width: 70vw;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.pastLaunchesDetails__container {
-  width: 100%;
-  background-color: white;
-}
-.pastLaunchesDetails__container {
   margin-top: 25vh;
 }
 
-
-.mission_name {
-  margin: 30px 0px 10px 30px;
+.pastLaunchesDetails__container {
+  width: 70%;
+}
+.pastLaunchesDetails__result {
+  padding: 5vh 0 10vh 0;
+  color: #55595c;
+  background-color: #f0f0f0;
 }
 
-.details_result > img {
+.pastLaunchesDetails__result h1 {
+  margin-bottom: 5px;
+}
+
+.pastLaunchesDetails__result img {
   width: 100%;
+  height: auto;
 }
 
-.text_content_container {
+.pastLaunchesDetails__TextContentContainer {
   margin: 0 15px 20px 30px;
 }
 
-.image_text {
-  font-size: small;
+.pastLaunchesDetails__imageText {
+  font-size: x-small;
+  font-weight: 300;
   margin: -5px 0px 20px 25px;
 }
 
-.details_description {
+.pastLaunchesDetails__detailsDescription {
   margin-right: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
 }
 
-.successful_message {
+.pastLaunchesDetails__successMessage {
   color: #81b214;
+  letter-spacing: 1px;
 }
-.unsuccessful_message {
+.pastLaunchesDetails__failedMessage {
   color: #dd2c00;
+  letter-spacing: 1px;
 }
 
-.mission_subheader {
+.pastLaunchesDetails__subHeader {
   margin-top: 20px;
 }
 
-li {
+.pastLaunchesDetails__TextContentContainer li {
   margin: 5px 0px 5px 20px;
   list-style-type: square;
 }
 
-.links {
+.pastLaunchesDetails__links {
   margin: 30px 0 20px 0;
 }
-.links > a {
+.pastLaunchesDetails__links  a {
   text-decoration: none;
   margin: 15px;
   padding: 10px 45px 10px 45px;
