@@ -57,7 +57,7 @@ function createPastLaunchesHtml(pastLaunchResults) {
       <p><b>Rocket:</b> ${rocketName}</p>
       ${successMessage()}
       <div class="button__moreDetails">
-        <a href="#">Learn more</a>
+        <a href="past-launches-details.html?flight_number=${flightNumber}">Learn more</a>
       </div>
     </div>`;
   });
