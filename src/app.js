@@ -98,7 +98,7 @@ async function getUpcomingLaunches() {
       };
 
       upcomingLaunchTable.innerHTML +=  `
-      <tr class="upcomingLaunch__data tablerow__borderBottom">
+      <tr class="upcomingLaunch__dataResults tablerow__borderBottom">
         <td class="upcomingLaunch__flightNumber upcomingLaunch__dataTable">${flightNumber}</td>
         <td class="upcomingLaunch__mission upcomingLaunch__dataTable">${missionName}</td>
         <td class="upcomingLaunch__site upcomingLaunch__dataTable">${launchSiteLocation()}</td>

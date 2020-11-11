@@ -144,18 +144,36 @@
   align-items: center;
 }
 .index__upcomingLaunchSection h2 {
-  margin-top: 70px;
-  padding: 20px 0 50px 0;
+  margin-top: 10vh;
+  padding: 20px 0 15px 0;
   font-size: 40px;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
 }
+
+.upcomingLaunch__table,
 .index__upcomingLaunchContainer {
+  width: 79vw;
+}
+
+.index__upcomingLaunchContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 150px;
 }
 
+.index__upcomingLaunchImageContainer img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 3vh;
+}
+
 .upcomingLaunch__table {
+  width: 100%;
   padding: 25px 0 25px 2px;
   background-color: #393e46;
   color: #f6f6f6;
@@ -166,17 +184,18 @@
   color: #55595c;
 }
 
-.upcomingLaunch__data td {
+.upcomingLaunch__dataResults td {
   font-weight: 300;
   letter-spacing: 0.5px;
 }
 
 .upcomingLaunch__dataTable {
+  width: 100vw;
   padding: 30px 0 30px 10px;
 }
 
 .upcomingLaunch__flightNumber {
-  width: 100px;
+  width: 200px;
 }
 .upcomingLaunch__mission {
   width: 200px;
@@ -195,8 +214,26 @@ tr.tablerow__borderBottom td {
 }
 
 @media screen and (max-width: 990px) {
+
+  .index__upcomingLaunchContainer {
+    width: 90%;
+  }
   .upcomingLaunch__table {
     padding-right: 20px 0 20px 0px !important;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .index__upcomingLaunchContainer {
+    width: 95%;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .index__upcomingLaunchContainer {
+    width: 100%;
   }
 }
 
