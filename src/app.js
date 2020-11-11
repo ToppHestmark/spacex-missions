@@ -93,11 +93,15 @@ async function getUpcomingLaunches() {
       const missionName = upcomingLaunch.mission_name;
       const launchSite = upcomingLaunch.launch_site.site_name_long;
 
+      const launchSiteLocation = () => {
+        return launchSite === null ? "Not specified" : launchSite;
+      };
+
       upcomingLaunchTable.innerHTML +=  `
       <tr class="upcomingLaunch__data tablerow__borderBottom">
         <td class="upcomingLaunch__flightNumber upcomingLaunch__dataTable">${flightNumber}</td>
         <td class="upcomingLaunch__mission upcomingLaunch__dataTable">${missionName}</td>
-        <td class="upcomingLaunch__site upcomingLaunch__dataTable">${launchSite}</td>
+        <td class="upcomingLaunch__site upcomingLaunch__dataTable">${launchSiteLocation()}</td>
         <td class="upcomingLaunch__date upcomingLaunch__dataTable">${americanDateFormat(launchDateUTC)}</td>
       </tr>`;
     });

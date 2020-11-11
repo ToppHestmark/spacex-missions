@@ -33,7 +33,6 @@ function createDetailsHtml(flightDetails) {
     const payloads = flightDetails.rocket.second_stage.payloads;
 
     const missionPayloads = payloads.map(payload => {
-
       const payloadId = `<h4>${payload.payload_id}</h4>`;
       const payloadType = `<li><b>Payload Type:</b> ${payload.payload_type}</li>`;
       const customer = `<li><b>Customer:</b> ${payload.customers}</li>`;
@@ -41,7 +40,7 @@ function createDetailsHtml(flightDetails) {
       const nationality = `<li><b>Nationality:</b> ${payload.nationality}</li>`;
       const payloadMass = `<li><b>Mass:</b> ${payload.payload_mass_kg} kg</li>`;
 
-    return `${payloadId} ${payloadType} ${customer} ${manufacturer} ${nationality} ${payloadMass}`;
+      return `${payloadId} ${payloadType} ${customer} ${manufacturer} ${nationality} ${payloadMass}`;
     });
       
     function successFactor() {
