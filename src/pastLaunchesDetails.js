@@ -3,14 +3,14 @@ const pastLaunchesDetailsContainer = document.querySelector(".pastLaunchesDetail
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const flight_number = params.get("flight_number");
-const url = "https://api.spacexdata.com/v3/launches/" + flight_number;
+const singleFlightURL = "https://api.spacexdata.com/v3/launches/" + flight_number;
 
 async function getDetails() {
   try {
-    const response = await fetch(url);
-    const details = await response.json();
-
-    createDetailsHtml(details);
+    const response = await fetch(singleFlightURL);
+    const flightDetails = await response.json();
+    
+    createDetailsHtml(flightDetails);
   }
   catch(error) {
     pastLaunchesDetailsContainer.innerHTML = displayError("An error occured when calling API");
@@ -19,21 +19,31 @@ async function getDetails() {
 getDetails()
 
 
-function createDetailsHtml(details) {
-    const launchDateUTC = new Date(details.launch_date_utc);
-    const missionName = details.mission_name;
-    const detailsImage = details.links.flickr_images;
-    const launchSite = details.launch_site.site_name_long;
-    const flightNumber = details.flight_number;
-    const detailsText = details.details;
-    const rocketName = details.rocket.rocket_name;
-    const rocketType = details.rocket.rocket_type;
-    const payloadType = details.rocket.second_stage.payloads[0].payload_type;
-    const payloadMass = details.rocket.second_stage.payloads[0].payload_mass_kg;
-    const nationality = details.rocket.second_stage.payloads[0].nationality;
-    const videoLink = details.links.video_link;
+function createDetailsHtml(flightDetails) {
+    const launchDateUTC = new Date(flightDetails.launch_date_utc);
+    const missionName = flightDetails.mission_name;
+    const detailsImage = flightDetails.links.flickr_images;
+    const launchSite = flightDetails.launch_site.site_name_long;
+    const flightNumber = flightDetails.flight_number;
+    const detailsText = flightDetails.details;
+    const rocketName = flightDetails.rocket.rocket_name;
+    const videoLink = flightDetails.links.video_link;
+    const articleLink = flightDetails.links.article_link;
+    const launchSuccess = flightDetails.launch_success;
+    const payloads = flightDetails.rocket.second_stage.payloads;
 
-    const launchSuccess = details.launch_success;
+    const missionPayloads = payloads.map(payload => {
+
+      const payloadId = `<h4>${payload.payload_id}</h4>`;
+      const payloadType = `<li><b>Payload Type:</b> ${payload.payload_type}</li>`;
+      const customer = `<li><b>Customer:</b> ${payload.customers}</li>`;
+      const manufacturer = `<li><b>Manufacturer:</b> ${payload.manufacturer}</li>`;
+      const nationality = `<li><b>Nationality:</b> ${payload.nationality}</li>`;
+      const payloadMass = `<li><b>Mass:</b> ${payload.payload_mass_kg} kg</li>`;
+
+    return `${payloadId} ${payloadType} ${customer} ${manufacturer} ${nationality} ${payloadMass}`;
+    });
+      
     function successFactor() {
       return launchSuccess ? `<span class="pastLaunchesDetails__successMessage">SUCCESSFUL</span>` : `<span class="pastLaunchesDetails__failedMessage">FAILED</span>`;
     }
@@ -46,7 +56,8 @@ function createDetailsHtml(details) {
       return detailsText ? detailsText : "No details available.";
     }
     
-    pastLaunchesDetailsContainer.innerHTML = `<div class="pastLaunchesDetails__results">
+    pastLaunchesDetailsContainer.innerHTML = `
+    <div class="pastLaunchesDetails__results">
       <h1>${missionName}</h1>
       <div class="pastLaunchesDetails__contentContainer">
         <img src="${detailsImage}" alt="${missionName}">
@@ -54,19 +65,17 @@ function createDetailsHtml(details) {
         <div class="pastLaunchesDetails__TextContentContainer">
           <p class="pastLaunchesDetails__detailsDescription">${detailsDescription()}</p>
           <p><b>Mission:</b> ${successFactor()}</p>
-          <p><b>Date Launched:</b> ${americanDateFormat(launchDateUTC)}</p>
           <p><b>Flight Number:</b> ${flightNumber}</p>
-          <h2 class="pastLaunchesDetails__subHeader">Mission details:</h2>
-          <li><b>Launch Site:</b> ${launchSite}</li>
-          <li><b>Rocket:</b> ${rocketName}</li>
-          <li><b>Rocket Type:</b> ${rocketType}</li>
-          <li><b>Payload Type:</b> ${payloadType}</li>
-          <li><b>Payload Mass:</b> ${payloadMass} kg</li>
-          <li><b>Nationality:</b> ${nationality} </li>
+          <p><b>Date Launched:</b> ${americanDateFormat(launchDateUTC)}</p>
+          <p><b>Launch Site:</b> ${launchSite}</p>
+          <p><b>Rocket:</b> ${rocketName}</p>
+          <h3>Payloads</h3>
+          <div class="pastLauchesDetails__payloads">${missionPayloads}</div>
           <div class="pastLaunchesDetails__links">
-            <a target="_blank" href="${videoLink}">WATCH VIDEO</a>
-          </div>
+          <a target="_blank" href="${videoLink}">Watch video</a>
+          <a target="_blank" href="${articleLink}">Read article</a>
         </div>
       </div>
-    </div>`
+      </div>
+    </div>`;
 }

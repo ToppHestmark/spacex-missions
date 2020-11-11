@@ -80,7 +80,8 @@
 .pastLaunch__failedMessage,
 .pastLaunch__successMessage {
   margin: 25px 0 25px 0;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: larger;
   letter-spacing: 2px;
   text-align: center;
 }
