@@ -6,6 +6,7 @@ async function getPastLaunchProp() {
   try {
     const response = await fetch(pastLaunchUrl);
     const pastLaunchResults = await response.json();
+    pastLaunchResults.sort((a, b) => b.flight_number - a.flight_number)
 
     createPastLaunchesHtml(pastLaunchResults)
   }
@@ -19,22 +20,8 @@ getPastLaunchProp();
 
 function createPastLaunchesHtml(pastLaunchResults) {
 
-  function sortByFlightNumber(flightNumber){ 
-  
-    return function(a, b){  
-      
-       if(a[flightNumber] > b[flightNumber])  
-       {return -1;  }
-       else if(a[flightNumber] < b[flightNumber])  
-         {return +1;}   
-   
-       return 0;  
-    };  
-  }
-  pastLaunchResults.sort(sortByFlightNumber("flight_number"));
-
   pastLaunchResults.map(pastLaunchProp => {
-  
+      
     const launchDateUTC = pastLaunchProp.launch_date_utc;
     const missionBadge = pastLaunchProp.links.mission_patch_small;
     const missionName = pastLaunchProp.mission_name
@@ -42,6 +29,7 @@ function createPastLaunchesHtml(pastLaunchResults) {
     const launchSite = pastLaunchProp.launch_site.site_name_long;
     const rocketName = pastLaunchProp.rocket.rocket_name;
     const launchSuccess = pastLaunchProp.launch_success;
+        
     
     function successMessage() {
       return launchSuccess ? `<p class="pastLaunch__successMessage"><SUCCESSFUL>SUCCESSFUL</p>` : `<p class="pastLaunch__failedMessage">FAILED</p>`;
