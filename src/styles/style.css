@@ -15,7 +15,7 @@
   background-image: url("/assets/spacex-launch-night-large.jpg");
   /* Photo by SpaceX on Unsplash.com. URL "https://unsplash.com/photos/-p-KCm6xB9I" */
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center right;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -333,7 +333,7 @@ tr.tablerow__borderBottom td {
   font-size: 18px;
   border: none;
   outline-width: 0;
-  background-color: #F6F6F6;
+  background-color: #f0f0f0;
   letter-spacing: 1px;
 }
 
