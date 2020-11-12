@@ -38,7 +38,7 @@ function createDetailsHtml(flightDetails) {
       const customer = `<li><b>Customer:</b> ${payload.customers}</li>`;
       const manufacturer = `<li><b>Manufacturer:</b> ${payload.manufacturer}</li>`;
       const nationality = `<li><b>Nationality:</b> ${payload.nationality}</li>`;
-      const payloadMass = `<li><b>Mass:</b> ${payload.payload_mass_kg} kg</li>`;
+      const payloadMass = `<li><b>Mass (kg):</b> ${payload.payload_mass_kg}</li>`;
 
       return `${payloadId} ${payloadType} ${customer} ${manufacturer} ${nationality} ${payloadMass}`;
     });

@@ -9,9 +9,9 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  box-shadow: 0px -200px 200px -60px #f0f0f0 inset;
-  -webkit-box-shadow: 0px -200px 200px -60px #f0f0f0 inset;
-  -moz-box-shadow: 0px -200px 200px -60px #f0f0f0 inset;
+  box-shadow: 0px -200px 200px -60px #fff inset;
+  -webkit-box-shadow: 0px -200px 200px -60px #fff inset;
+  -moz-box-shadow: 0px -200px 200px -60px #fff inset;
 }
 
 .pastLaunches__header h1,
@@ -24,10 +24,12 @@
   margin-top: 120px;
   text-transform: uppercase;
   font-weight: 400;
+  letter-spacing: 3px;
 }
 .pastLaunches__header p {
   margin-top: 2vh;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 /* ############################################
@@ -41,7 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #fff;
 }
 
 .pastLaunch__container {
@@ -57,7 +59,7 @@
   padding: 2rem;
   width: 30vw;
   color: #55595c;
-  background-color: #fff;
+  background-color: #f0f0f0;
   transition: transform 250ms ease-in;
 }
 .pastLaunch__card:hover {
@@ -72,11 +74,18 @@
   display: flex;
   margin: auto;
 }
+.pastLaunch__card b {
+  letter-spacing: 0.5px;
+}
 .pastLaunch__missionName {
   padding: 30px 0 20px 0;
   font-size: x-large;
   font-weight: 700;
   font-style: normal;
+  letter-spacing: 1px;
+}
+.pastLaunch__card p {
+  letter-spacing: 0.5px;
 }
 
 .pastLaunch__failedMessage,
@@ -103,7 +112,8 @@
   padding: 1em 7vw;
   text-decoration: none;
   text-transform: uppercase;
-  border: 0.5px solid #55595c;
+  border: 1px solid #55595c;
+  letter-spacing: 3px;
 }
 .button__moreDetails a:hover {
   background-color: #000;
