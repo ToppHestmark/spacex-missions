@@ -109,7 +109,7 @@
 }
 .button__moreDetails a {
   color: #55595c;
-  padding: 1em 7vw;
+  padding: 1em 6vw;
   text-decoration: none;
   text-transform: uppercase;
   border: 1px solid #55595c;
@@ -129,8 +129,8 @@
   }
 
   .button__moreDetails a {
-    padding: 1em 13vw;
-  }
+    padding: 1em 9vw;
+}
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -140,7 +140,7 @@
   }
 
   .button__moreDetails a {
-    padding: 1em 11vw;
+    padding: 1em 9vw;
   }
 }
 
@@ -151,6 +151,6 @@
   }
 
   .button__moreDetails a {
-    padding: 1em 20vw;
+    padding: 1em 15vw;
   }
 }
