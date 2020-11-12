@@ -120,13 +120,10 @@ const subjectError = document.querySelector("#subjectError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const passedValidation = document.querySelector("#passedValidation");
-const formSubmit = document.getElementById("formSubmitButton");
-
 
 form.addEventListener("submit", contactForm)
 
 function contactForm(event) {
-  console.log(event);
   event.preventDefault();
 
   subject.value.trim().length >= 10

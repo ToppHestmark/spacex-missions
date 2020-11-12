@@ -290,18 +290,38 @@ tr.tablerow__borderBottom td {
 ---############################################ */
 .index__formSection {
   width: 100%;
-  min-height: 100vh;
-  background-color: #fff;
+  min-height: 115vh;
+  background-color: #000;
 }
 .form__container {
-  max-width: 760px;
+  width: 50vw;
+  max-width: 700px;
   margin: 0 auto;
-  padding-top: 15vh;
+  padding-top: 12vh;
+}
+.form__textContainer {
+  padding: 10px 0px 50px 0px;
+}
+.form__container h2,
+.form__container p {
+  color: #fff;
+  text-align: center;
+}
+.form__container h2 {
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+.form__container p {
+  margin: 10px 5px 10px 5px;
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 #contactForm {
-  padding: 1em;
-  background: #fff;
+  padding: 0 0.8rem 1rem 0.8rem;
+  background-color: #fff;
   display: block;
 }
 
@@ -335,8 +355,8 @@ tr.tablerow__borderBottom td {
   color: #55595c;
   margin-top: 10px;
   cursor: pointer;
-  text-decoration: none;
   text-transform: uppercase;
+  font-weight: 500;
   border: 2px solid #55595c;
   letter-spacing: 3px;
   outline: 0;
@@ -358,23 +378,33 @@ tr.tablerow__borderBottom td {
 .form__container .passed-validation {
   display: none;
   text-align: center;
-  /* color: #81b214; */
-  font-size: 2rem;
-  font-weight: 900;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
   margin: 10px 0px 10px 0px;
 }
 
 @media screen and (max-width: 990px) {
- 
+  .form__container {
+    width: 75vw;
+    max-width: 600px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  
+  .form__container {
+    width: 80vw;
+    max-width: 500px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-
+  .form__container {
+    width: 90vw;
+  }
 }
+
 /* ############################################
 --- <<<     Loading and Errorhandling     >>> ---
 ---############################################ */
