@@ -125,6 +125,16 @@
   background-color: #393e46;
 }
 
+@media (min-width: 1281px) {
+  .pastLaunch__card {
+    width: 23vw;
+  }
+
+  .button__moreDetails a {
+    padding: 1em 4vw;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .pastLaunch__card {
     width: 45vw;
@@ -132,7 +142,7 @@
 
   .button__moreDetails a {
     padding: 1em 9vw;
-}
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -143,6 +153,15 @@
 
   .button__moreDetails a {
     padding: 1em 9vw;
+  }
+}
+@media screen and (max-width: 674px) {
+  .pastLaunch__card {
+    width: 70vw;
+  }
+
+  .button__moreDetails a {
+    padding: 1em 15vw;
   }
 }
 
