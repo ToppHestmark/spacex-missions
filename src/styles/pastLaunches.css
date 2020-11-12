@@ -59,7 +59,7 @@
   padding: 2rem;
   width: 30vw;
   color: #55595c;
-  background-color: #f0f0f0;
+  border: 2px solid rgba(0,0,0,.05);
   transition: transform 250ms ease-in;
 }
 .pastLaunch__card:hover {
@@ -112,7 +112,7 @@
   padding: 1em 6vw;
   text-decoration: none;
   text-transform: uppercase;
-  border: 2px solid #55595c;
+  border: 1px solid rgba(0,0,0,.5);
   letter-spacing: 3px;
 }
 .button__moreDetails a:hover {

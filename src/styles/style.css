@@ -357,7 +357,7 @@ tr.tablerow__borderBottom td {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 500;
-  border: 2px solid #55595c;
+  border: 1px solid rgba(0,0,0,.5);
   letter-spacing: 3px;
   outline: 0;
 }
