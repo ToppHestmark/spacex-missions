@@ -14,7 +14,6 @@ async function getPastLaunchProp() {
     pastLaunchContainer.innerHTML = displayError("An error occured when calling API")
   }
 }
-
 getPastLaunchProp();
 
 

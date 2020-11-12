@@ -220,6 +220,24 @@ tr.tablerow__borderBottom td {
   width: 200px;
 }
 
+.index__ApiLinkText {
+  margin: 30px 10px 30px 10px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #55595c;
+  letter-spacing: 2px;
+  text-transform: initial;
+  text-align: center;
+}
+.index__ApiLinkText a {
+  font-weight: 400;
+  text-decoration: none;
+  color: #55595c;
+}
+.index__ApiLinkText a:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 2400px) {
   .index__upcomingLaunchContainer {
     width: 60%;

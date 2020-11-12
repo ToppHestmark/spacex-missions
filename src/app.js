@@ -1,6 +1,6 @@
-/* ############################################
+/* ##########################################################
 --- <<<     Next launch     >>> ---
----############################################ */
+---########################################################## */
 
 const nextLaunchUrl = "https://api.spacexdata.com/v3/launches/next";
 const errorContainer = document.querySelector(".error-container");
@@ -74,9 +74,9 @@ function nextLaunchHtml(nextLaunchResult) {
 } 
 
 
-/* ############################################
+/* ############################################################
 --- <<<     Upcoming launches     >>> ---
----############################################ */
+---############################################################ */
 
 const upcomingLaunchUrl = "https://api.spacexdata.com/v3/launches/upcoming";
 const upcomingLaunchTable = document.querySelector('.index__upcomingLaunchTable');
