@@ -70,7 +70,29 @@
   </section>
 
   <section class="index__formSection">
-
+    <div class="form__container">
+      <div class="passed-validation" id="passedValidation" >Thank you for the feedback</div>
+      <form id="contactForm">
+        <div>
+          <input id="name" name="name" placeholder="Name" required />
+        </div>
+        <div>
+          <input id="subject" name="subject" placeholder="Subject" />
+          <div class="form-error" id="subjectError" >Your subject must be at least 10 characters</div>
+        </div>
+        <div>
+          <input id="email" name="email" placeholder="Email" />
+          <div class="form-error" id="emailError" >Pleas enter a valid email address</div>
+        </div>
+        <div>
+          <textarea rows="6" id="message" name="message" placeholder="Message" form="contactForm"></textarea>
+          <div class="form-error" id="messageError" >Your message must contain at least 25 characters</div>
+        </div>
+        <div class="form__submitButton">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
   </section>
   
   <script src="src/components/navbar.js"></script>

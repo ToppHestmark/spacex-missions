@@ -1,7 +1,6 @@
 /* ##########################################################
 --- <<<     Next launch     >>> ---
 ---########################################################## */
-
 const nextLaunchUrl = "https://api.spacexdata.com/v3/launches/next";
 const errorContainer = document.querySelector(".error-container");
 const nextLaunchContainer = document.querySelector(".index__nextLaunchContainer");
@@ -77,7 +76,6 @@ function nextLaunchHtml(nextLaunchResult) {
 /* ############################################################
 --- <<<     Upcoming launches     >>> ---
 ---############################################################ */
-
 const upcomingLaunchUrl = "https://api.spacexdata.com/v3/launches/upcoming";
 const upcomingLaunchTable = document.querySelector('.index__upcomingLaunchTable');
 
@@ -113,4 +111,41 @@ async function getUpcomingLaunches() {
 getUpcomingLaunches();
 
 
+/* ############################################################
+--- <<<     Form Section     >>> ---
+---############################################################ */
+const form = document.querySelector("#contactForm");
+const subject = document.querySelector("#subject");
+const subjectError = document.querySelector("#subjectError");
+const email = document.querySelector("#email");
+const emailError = document.querySelector("#emailError");
+const passedValidation = document.querySelector("#passedValidation");
+const formSubmit = document.getElementById("formSubmitButton");
 
+
+form.addEventListener("submit", contactForm)
+
+function contactForm(event) {
+  console.log(event);
+  event.preventDefault();
+
+  subject.value.trim().length >= 10
+  ? subjectError.style.display = "none" 
+  : subjectError.style.display = "block"
+
+  message.value.trim().length >= 25
+  ? messageError.style.display = "none"
+  : messageError.style.display = "block"
+
+  validateEmail(email.value)
+  ? emailError.style.display = "none"
+  : emailError.style.display = "block"
+
+  subject.value.trim().length >= 10 === true
+  && message.value.trim().length >= 25 === true
+  && validateEmail(email.value) === true
+  ? passedValidation.style.display = "block"
+  : passedValidation.style.display = "none"
+}
+
+const validateEmail = email =>  /\S+@\S+\.\S+/.test(email);

@@ -291,7 +291,77 @@ tr.tablerow__borderBottom td {
 .index__formSection {
   width: 100%;
   min-height: 100vh;
-  background-color: tomato;
+  background-color: #fff;
+}
+.form__container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-top: 15vh;
+}
+
+#contactForm {
+  padding: 1em;
+  background: #fff;
+  display: block;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  margin-top: 15px;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  outline-width: 0;
+  background-color: #F6F6F6;
+  letter-spacing: 1px;
+}
+
+#contactForm textarea {
+  resize: vertical; 
+}
+
+.form__submitButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#contactForm button {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  background: #fff;
+  color: #55595c;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid #55595c;
+  letter-spacing: 3px;
+  outline: 0;
+}
+
+#contactForm button:hover {
+  border: 2px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+#contactForm .form-error {
+  display: none;
+  color: #F53B3B;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.form__container .passed-validation {
+  display: none;
+  text-align: center;
+  /* color: #81b214; */
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 10px 0px 10px 0px;
 }
 
 @media screen and (max-width: 990px) {
