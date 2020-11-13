@@ -122,8 +122,11 @@
 }
 
 @media (min-width: 1281px) {
+  .pastLaunch__container {
+    width: 90vw;
+  }
   .pastLaunch__card {
-    width: 23vw;
+    width: 28vw;
   }
 
   .button__moreDetails a {
