@@ -12,10 +12,10 @@
 ---############################################ */
 
 .index__header {
-  background-image: url("/assets/spacex-launch-night-large.jpg");
-  /* Photo by SpaceX on Unsplash.com. URL "https://unsplash.com/photos/-p-KCm6xB9I" */
+  background-image: url("/assets/background/spacex-launch-night-star-large.jpg");
+  /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/46259778995/" */
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -101,13 +101,6 @@
   font-size: 3rem;
   font-weight: 400;
   color: #f6f6f6;
-}
-
-@media screen and (max-width: 990px)  {
-
-  .index__header {
-    background-position: center right;
-  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -286,9 +279,69 @@ tr.tablerow__borderBottom td {
 }
 
 /* ############################################
+--- <<<     Goal section     >>> ---
+---############################################ */
+.index__goalSection-1 {
+  background-image: url('/assets/background/spaceship-cruise-large.jpg');
+  /* Image by SpaceX on StockSnap.io. URL "https://stocksnap.io/photo/space-spaceship-SQBE2C5NWT" */
+}
+.index__goalSection-2 {
+  background: url('/assets/background/engine-landing-on-deck-large.jpg');
+  /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/50291306346/" */
+}
+.index__goalSection-1,
+.index__goalSection-2 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index__goalSection-1 h3,
+.index__goalSection-2 h3 {
+  padding: 0 15vw 0 15vw;
+  font-weight: 400;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #f6f6f6;
+  text-shadow: 0px 1px 8px rgba(108, 108, 108, 0.8);
+}
+
+.index__videoSection {
+  width: 100%;
+  height: 80vh;
+}
+
+@media (min-width: 1281px) {
+  .index__goalSection-1 h3,
+  .index__goalSection-2 h3 {
+    padding: 0 25vw 0 25vw;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .index__goalSection-1 h3,
+  .index__goalSection-2 h3 {
+    padding: 0 5vw 0 5vw;
+  }
+}
+
+/* ############################################
 --- <<<     Form section     >>> ---
 ---############################################ */
 .index__formSection {
+  background-image: url('/assets/background/space-background-large.jpg');
+  /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   min-height: 115vh;
   background-color: #000;

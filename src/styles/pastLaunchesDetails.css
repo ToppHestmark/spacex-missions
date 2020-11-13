@@ -2,7 +2,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background-image: url('/assets/space-background-large.jpg');
+  background-image: url('/assets/background/space-background-large.jpg');
   /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
   background-repeat: no-repeat;
   background-position: center center;
