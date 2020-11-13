@@ -279,7 +279,7 @@ tr.tablerow__borderBottom td {
 }
 
 /* ############################################
---- <<<     Goals section     >>> ---
+--- <<<     Goals and video links section     >>> ---
 ---############################################ */
 .index__goalSection-1 {
   background-image: url('/assets/background/spaceship-cruise-large.jpg');
@@ -314,11 +314,69 @@ tr.tablerow__borderBottom td {
   text-shadow: 0px 1px 8px rgba(108, 108, 108, 0.8);
 }
 
-.index__linksSection {
+.index__videoLinksSection {
   width: 100%;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
+.index__videoLinksSection,
+.index__videoLinksContainer {
+}
+
+.index__videoCardsRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.index__videoLinkCard {
+  width: 35vw;
+  margin: 1rem;
+  padding: 1.2rem;
+  color: #55595c;
+  border: 2px solid rgba(0,0,0,.05);
+  transition: transform 250ms ease-in;
+}
+.index__videoLinkCard:hover {
+  -webkit-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  -moz-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  transform: scale(1.02);
+}
+
+.index__videoLinkCard img {
+  width: 100%;
+  height: auto;
+}
+
+.index__videoLinkCard p {
+  padding: 10px 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.index__videoLinkButton {
+  display: flex;
+  justify-content: center;
+}
+.index__videoLinkButton a {
+  margin-top: 2rem;
+  padding: 1em 6vw;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #55595c;
+  border: 1px solid rgba(0,0,0,.5);
+  letter-spacing: 3px;
+}
+.index__videoLinkButton a:hover {
+  background-color: #000;
+  color: white;
+  border: none;
+  border: 2px solid #000;
+}
+.index__videoLinkButton a:active {
+  background-color: #393e46;
+}
 
 @media (min-width: 1281px) {
   .index__goalSection-1 h3,
