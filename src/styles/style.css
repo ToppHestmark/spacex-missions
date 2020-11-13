@@ -7,6 +7,19 @@
   font-family: 'Oswald', sans-serif;
 }
 
+.index__upcomingLaunchSection h2,
+.index__videoLinksContainer h2 {
+  margin-top: 6vh;
+  padding: 5vh 0 4vh 0;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #55595c;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
 /* ############################################
 --- <<<     Header & Countdown Timer     >>> ---
 ---############################################ */
@@ -140,16 +153,6 @@
   justify-content: center;
   align-items: center;
 }
-.index__upcomingLaunchSection h2 {
-  margin-top: 10vh;
-  padding: 5vh 0 4vh 0;
-  font-size: 2rem;
-  font-weight: 300;
-  letter-spacing: 2px;
-  color: #55595c;
-  text-transform: uppercase;
-  text-align: center;
-}
 
 .index__upcomingLaunchContainer {
   width: 80vw;
@@ -160,7 +163,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 150px;
+  margin-bottom: 10vh;
 }
 
 .index__upcomingLaunchImageContainer img {
@@ -291,12 +294,12 @@ tr.tablerow__borderBottom td {
 }
 .index__goalSection-1,
 .index__goalSection-2 {
+  width: 100%;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -316,11 +319,16 @@ tr.tablerow__borderBottom td {
 
 .index__videoLinksSection {
   width: 100%;
+  margin-bottom: 10vh;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.index__videoLinksSection,
 .index__videoLinksContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
 .index__videoCardsRow {
@@ -331,6 +339,7 @@ tr.tablerow__borderBottom td {
 
 .index__videoLinkCard {
   width: 35vw;
+  max-width: 600px;
   margin: 1rem;
   padding: 1.2rem;
   color: #55595c;
@@ -360,7 +369,7 @@ tr.tablerow__borderBottom td {
   justify-content: center;
 }
 .index__videoLinkButton a {
-  margin-top: 2rem;
+  margin-top: 3rem;
   padding: 1em 6vw;
   text-decoration: none;
   text-transform: uppercase;
@@ -383,6 +392,30 @@ tr.tablerow__borderBottom td {
   .index__goalSection-2 h3 {
     padding: 0 25vw 0 25vw;
   }
+  .index__videoLinkCard {
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .index__videoLinksContainer {
+    width: 90%;
+  }
+  .index__videoLinkCard {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .index__videoLinksContainer {
+    width: 100%;
+  }
+  .index__videoLinkCard {
+    width: 45vw;
+    padding: 0.8rem;
+    margin: 10px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -390,6 +423,23 @@ tr.tablerow__borderBottom td {
   .index__goalSection-2 h3 {
     padding: 0 5vw 0 5vw;
   }
+
+  .index__videoCardsRow {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+  }
+
+  .index__videoLinkCard {
+    width: 88vw;
+    padding: 1rem;
+    margin: 20px;
+  }
+
+  .index__videoLinkButton a {
+    padding: 1em 18vw;
+  }
+  
 }
 
 /* ############################################

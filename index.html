@@ -50,70 +50,73 @@
     <div id="countdown-container"></div>
   </header>
 
-  <!-- ------------ Upcoming Launch ----------- -->
-  <section class="index__upcomingLaunchSection">
-    <h2>Upcoming Launches</h2>
-    <div class="index__upcomingLaunchContainer">
-      <div class="index__upcomingLaunchImageContainer">
-        <img src="/assets/content/rocket-rack-large.jpg" alt="SpaceX pre-launch with sunset">
+  <main>
+    <!-- ------------ Upcoming Launch ----------- -->
+    <section class="index__upcomingLaunchSection">
+      <h2>Upcoming Launches</h2>
+      <div class="index__upcomingLaunchContainer">
+        <div class="index__upcomingLaunchImageContainer">
+          <img src="/assets/content/rocket-rack-large.jpg" alt="SpaceX pre-launch with sunset">
+        </div>
+          <table class="upcomingLaunch__table">
+           <th>
+             <td class="upcomingLaunch__flightNumber">Flight</td>
+             <td class="upcomingLaunch__mission">Mission</td>
+             <td class="upcomingLaunch__site">Launch site</td>
+             <td class="upcomingLaunch__date">Launch date</td>
+           </th>
+           <table class="index__upcomingLaunchTable">
+           </table>
+          </table>
+          <i class="index__ApiLinkText">API Data by <a target="_blank" href="https://docs.spacexdata.com/">SpaceX API Docs</a></i>
       </div>
-        <table class="upcomingLaunch__table">
-         <th>
-           <td class="upcomingLaunch__flightNumber">Flight</td>
-           <td class="upcomingLaunch__mission">Mission</td>
-           <td class="upcomingLaunch__site">Launch site</td>
-           <td class="upcomingLaunch__date">Launch date</td>
-         </th>
-         <table class="index__upcomingLaunchTable">
-         </table>
-        </table>
-        <i class="index__ApiLinkText">API Data by <a target="_blank" href="https://docs.spacexdata.com/">SpaceX API Docs</a></i>
-    </div>
-  </section>
-
-  <!-- ------------ Goals and links ----------- -->
-  <section class="index__goalSection-1">
-    <h3>SpaceX goal is to enable people to live on another planet. Most notably, Mars.</h3>
-  </section>
-  <section class="index__videoLinksSection">
-    <div class="index__videoLinksContainer">
-      <div class="index__videoCardsRow">
-        <div class="index__videoLinkCard">
-          <img src="/assets/content/falcon-heavy-test-flight-small.jpg" alt="Falcon Heavy test flight.">
-          <p>Falcon Heavy | Test fligh</p>
-          <div class="index__videoLinkButton">
-            <a href="#">Watch video</a>
+    </section>
+  
+    <!-- ------------ Goals and links ----------- -->
+    <section class="index__goalSection-1">
+      <h3>SpaceX goal is to enable people to live on another planet. Most notably, Mars.</h3>
+    </section>
+    <section class="index__videoLinksSection">
+      <div class="index__videoLinksContainer">
+        <h2>DEVELOPMENT</h2>
+        <div class="index__videoCardsRow">
+          <div class="index__videoLinkCard">
+            <img src="/assets/content/falcon-heavy-test-flight-small.jpg" alt="Falcon Heavy test flight.">
+            <p>Falcon Heavy | Test fligh</p>
+            <div class="index__videoLinkButton">
+              <a target="_blank" href="https://youtu.be/wbSwFU6tY1c">Watch video</a>
+            </div>
+          </div>
+          <div class="index__videoLinkCard">
+            <img src="/assets/content/spacex-on-mars-small.jpg" alt="SpaceX on Mars.">
+            <p>SpaceX on Mars</p>
+            <div class="index__videoLinkButton">
+              <a target="_blank" href="https://youtu.be/FYU-N2RWfso">Watch video</a>
+            </div>
           </div>
         </div>
-        <div class="index__videoLinkCard">
-          <img src="/assets/content/spacex-on-mars-small.jpg" alt="SpaceX on Mars.">
-          <p>SpaceX on Mars</p>
-          <div class="index__videoLinkButton">
-            <a href="#">Watch video</a>
+        <div class="index__videoCardsRow">
+          <div class="index__videoLinkCard">
+            <img src="/assets/content/starship-journey-to-mars-small.jpg" alt="Starship journey to Mars">
+            <p>Starship | journey to Mars</p>
+            <div class="index__videoLinkButton">
+              <a target="_blank" href="https://youtu.be/-kU6fMGh4l4">Watch video</a>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="index__videoCardsRow">
-        <div class="index__videoLinkCard">
-          <img src="/assets/content/starship-journey-to-mars-small.jpg" alt="Starship journey to Mars">
-          <p>Starship | journey to Mars</p>
-          <div class="index__videoLinkButton">
-            <a href="#">Watch video</a>
-          </div>
-        </div>
-        <div class="index__videoLinkCard">
-          <img src="/assets/content/starship-sn6-testflight-small.jpg" alt="Starship SN6 test flight.">
-          <p>Starship | SN6 | test flight</p>
-          <div class="index__videoLinkButton">
-            <a href="#">Watch video</a>
+          <div class="index__videoLinkCard">
+            <img src="/assets/content/starship-sn6-testflight-small.jpg" alt="Starship SN6 test flight.">
+            <p>Starship | SN6 | test flight</p>
+            <div class="index__videoLinkButton">
+              <a target="_blank" href="https://youtu.be/MdAKrzOLQTg">Watch video</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="index__goalSection-2">
-    <h3>The best way to accomplish that, is to re-use as much of the rocket as possible.</h3>
-  </section>
+    </section>
+    <section class="index__goalSection-2">
+      <h3>The best way to accomplish that, is to re-use as much of the rocket as possible.</h3>
+    </section>
+  </main>
 
   <!-- ------------ Form ----------- -->
   <section class="index__formSection">
@@ -155,6 +158,10 @@
   <!-- Upcoming launch Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/32774791628/" -->
   <!-- Spaceship background Image by SpaceX on StockSnap.io. URL "https://stocksnap.io/photo/space-spaceship-SQBE2C5NWT" -->
   <!-- Engine landing background Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/50291306346/" -->
+  <!-- Video link Falcon Heavy Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/40628438523/" -->
+  <!-- Video link Starship SN6 testflight Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/50192510328/" -->
+  <!-- Video link Spaceship journey Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/48953947006/" -->
+  <!-- Video link SpaceX on Mars Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/48954139137/" -->
   <!-- Form section background Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" -->
 </body>
 </html>
