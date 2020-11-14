@@ -33,13 +33,15 @@
 
 .history__main {
   width: 100%;
+  padding: 20vh 0 30vh 0;
   display: flex;
   justify-content: center;
+  background-color: black;
 }
 .history__container {
   width: 80%;
   min-height: 100vh;
-  background-color: lightskyblue;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
 }

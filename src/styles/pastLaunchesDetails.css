@@ -13,7 +13,7 @@ body {
 .pastLaunchesDetails__main {
   display: flex;
   justify-content: center;
-  margin: 25vh 0 35vh 0;
+  margin: 25vh 0 30vh 0;
 }
 
 .pastLaunchesDetails__container {
