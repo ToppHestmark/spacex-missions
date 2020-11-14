@@ -1,7 +1,3 @@
-/* ############################################
---- <<<     Header     >>> ---
----############################################ */
-
 .history__header {
   width: 100%;
   min-height: 100vh;
@@ -33,6 +29,19 @@
   font-weight: 300;
   font-size: 1.3rem;
   letter-spacing: 1px;
+}
+
+.history__main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.history__container {
+  width: 80%;
+  min-height: 100vh;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
