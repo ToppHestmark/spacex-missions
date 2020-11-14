@@ -38,8 +38,8 @@ function createPastLaunchesHtml(pastLaunchResults) {
     <div class="pastLaunch__card">
       <img class="pastLaunch__missionBadge" src=${missionBadge} alt=${missionName}>
       <h2 class="pastLaunch__missionName">${missionName}</h2>
+      <p class="pastLaunch__date">${americanDateFormat(launchDateUTC)}</p>
       <p><b>Flight Number:</b> ${flightNumber}</p>
-      <p><b>Launch Date:</b> ${americanDateFormat(launchDateUTC)}</p>
       <p><b>Launch Site:</b> ${launchSite}</p>
       <p><b>Rocket:</b> ${rocketName}</p>
       ${successMessage()}

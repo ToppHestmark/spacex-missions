@@ -36,34 +36,114 @@
   padding: 20vh 0 30vh 0;
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-image: url('/assets/background/space-background-large.jpg');
+  /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 .history__container {
   width: 80%;
   min-height: 100vh;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-}
-
-.history__card:nth-child(even) {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
+  -webkit-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
+  -moz-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
 }
 
 .history__card {
-  width: 100%;
+  width: 80%;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+  justify-content: center;
+  align-self: center;
+  transition: transform 250ms ease-in;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.history__card:hover {
+  -webkit-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  -moz-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  transform: scale(1.02);
 }
 
-.history__cardText {
-  width: 50%;
+.history__cardTextContainer {
+  width: 100%;
+  padding: 2vh 0vw 2vh 0vw;
+  margin-bottom: 10vh;
+  color: #55595c;
+  letter-spacing: 1.5px;
+}
+
+
+.history__cardTextContainer h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-style: normal;
+}
+.history__cardTextContainer .history__date {
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 60%;
+}
+.history__description {
+  font-weight: 200;
+  padding: 1rem 0 3rem 0;
+}
+.history__link {
+  width: 100%;
+}
+.history__link a {
+  padding: 1em 6vw;
+  color: #55595c;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid rgba(0,0,0,.5);
+  letter-spacing: 3px;
+}
+.history__link a:hover {
+  color: white;
+  background-color: #000;
+  border: 2px solid #000;
+}
+.history__link a:active {
+  background-color: #393e46;
+}
+
+.history__card:first-child {
+  margin-top: 10vh;
+}
+.history__card:last-child {
+  margin-bottom: 10vh;
+} 
+
+@media screen and (max-width: 1024px)  {
+  .history__main {
+    padding: 0vh 0 30vh 0;
+  }
+  .history__container {
+    width: 100%;
+  }
+  .history__link a {
+    padding: 1em 10vw;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
   .history__header {
    background-image: url('/assets/background/spacex-boarding-bridge-small.jpg');
     background-position: center top;
+  }
+  .history__card {
+    width: 90%;
+  }
+  .history__link a {
+    padding: 1em 13vw;
   }
 }
 
@@ -72,4 +152,11 @@
     background-image: url('/assets/background/spacex-boarding-bridge-small.jpg');
     background-position: center top;
    }
+   .history__card {
+    width: 90%;
+    padding: 1rem;
+   }
+   .history__link a {
+    padding: 1em 16vw;
+  }
 }

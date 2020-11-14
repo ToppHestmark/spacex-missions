@@ -17,7 +17,7 @@ body {
 }
 
 .pastLaunchesDetails__container {
-  width: 70%;
+  width: 80%;
 }
 .pastLaunchesDetails__results {
   color: #55595c;
@@ -48,15 +48,22 @@ body {
   margin: 0 15px 20px 30px;
   padding: 4vh 5vw 0 5vw;
   font-weight: 300;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .pastLaunchesDetails__imageText {
-  font-size: x-small;
+  font-size: small;
+  opacity: 50%;
   font-weight: 300;
   margin: -3px 0px 0px 20px;
 }
 
+.pastLaunchesDetails__date {
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 60%;
+  margin-bottom: 15px;
+}
 .pastLaunchesDetails__TextContentContainer b {
   letter-spacing: 0.5px;
 }
@@ -64,8 +71,9 @@ body {
   margin-right: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-  font-weight: 400;
+  font-weight: 300;
 }
+
 
 .pastLaunchesDetails__successMessage, 
 .pastLaunchesDetails__failedMessage {
@@ -85,7 +93,7 @@ body {
   font-weight: 400;
   font-size: 2rem;
   text-align: center;
-  border-bottom: 1px solid #393e46;
+  border-bottom: 1px solid rgba(0,0,0,.05);
   letter-spacing: 3px;
 }
 

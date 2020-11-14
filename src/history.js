@@ -32,13 +32,13 @@ function createHistoryHtml(historyResults) {
 
     historyContainer.innerHTML += `
     <div class="history__card">
-      <div class="history__cardText">
+      <div class="history__cardTextContainer">
+      <p class="history__date">${americanDateFormat(eventDate)}</p>
         <h2>${title}</h2>
-        <p><b>Flight #:</b> ${flight()}</p>
-        <p>Date: ${americanDateFormat(eventDate)}</p>
-        <p>${details}</p>
+        <p><b>Flight Number:</b> ${flight()}</p>
+        <p class="history__description">${details}</p>
         <div class="history__link">
-          <a target="_blank" href="${articleLink}">Read article</a>
+          <a target="_blank" href="${articleLink}">Article</a>
         </div>
       </div>
     </div>`;

@@ -62,10 +62,10 @@ function createDetailsHtml(flightDetails) {
         <img src="${detailsImage}" alt="${missionName}">
         <p class="pastLaunchesDetails__imageText">Photo: SpaceX</p>
         <div class="pastLaunchesDetails__TextContentContainer">
+          <p class="pastLaunchesDetails__date"> ${americanDateFormat(launchDateUTC)}</p>
           <p class="pastLaunchesDetails__detailsDescription">${detailsDescription()}</p>
           <p><b>Mission:</b> ${successFactor()}</p>
           <p><b>Flight Number:</b> ${flightNumber}</p>
-          <p><b>Date Launched:</b> ${americanDateFormat(launchDateUTC)}</p>
           <p><b>Launch Site:</b> ${launchSite}</p>
           <p><b>Rocket:</b> ${rocketName}</p>
           <h3>Payloads</h3>

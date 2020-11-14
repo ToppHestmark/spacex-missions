@@ -39,7 +39,7 @@
 --- <<<     Past launch cards     >>> ---
 ---############################################ */
 
-.pastLaunch__mainSection {
+.pastLaunch__main {
   width: 100%;
   padding: 20vh 0 30vh 0;
   background-image: url('/assets/background/space-background-large.jpg');
@@ -68,7 +68,8 @@
 
 .pastLaunch__container {
   width: 80%;
-  padding-top: 6vh;
+  min-height: 100vh;
+  padding: 6vh 0 20vh 0;
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
@@ -109,6 +110,12 @@
   font-weight: 700;
   font-style: normal;
   letter-spacing: 1px;
+}
+.pastLaunch__card .pastLaunch__date {
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 60%;
+  margin-bottom: 5px;
 }
 .pastLaunch__card p {
   letter-spacing: 0.5px;
@@ -152,7 +159,6 @@
 }
 
 @media (min-width: 1281px) {
-
   .pastLaunch__card {
     width: 23vw;
   }
@@ -163,6 +169,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .pastLaunch__main {
+    padding: 0vh 0 30vh 0;
+  }
+
   .pastLaunch__container {
     width: 100%;
   }

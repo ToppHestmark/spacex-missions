@@ -221,6 +221,7 @@ tr.tablerow__borderBottom td {
   margin: 30px 10px 30px 10px;
   font-size: 12px;
   font-weight: 300;
+  opacity: 60%;
   color: #55595c;
   letter-spacing: 2px;
   text-transform: initial;
