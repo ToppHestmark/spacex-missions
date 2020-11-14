@@ -18,14 +18,16 @@
   text-align: center;
 }
 .pastLaunches__header h1 {
-  margin-top: 120px;
+  margin-top: 20vh;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 4rem;
   letter-spacing: 3px;
 }
 .pastLaunches__header p {
   margin-top: 2vh;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 1.3rem;
   letter-spacing: 1px;
 }
 
