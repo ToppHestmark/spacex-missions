@@ -1,0 +1,33 @@
+/* ############################################
+--- <<<     Header     >>> ---
+---############################################ */
+
+.history__header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/assets/background/spacex-boarding-bridge-large.jpg");
+  /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/39684491043/" */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 1px 8px rgba(108, 108, 108, 0.8);
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .history__header {
+   background-image: url('/assets/background/spacex-boarding-bridge-small.jpg');
+    background-position: center top;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .history__header {
+    background-image: url('/assets/background/spacex-boarding-bridge-small.jpg');
+    background-position: center top;
+   }
+}
