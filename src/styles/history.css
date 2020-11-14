@@ -42,12 +42,8 @@
 .history__container {
   width: 80%;
   min-height: 100vh;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
-  box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
-  -webkit-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
-  -moz-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
 }
 
 .history__card {

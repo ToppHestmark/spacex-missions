@@ -42,7 +42,6 @@
 .pastLaunch__main {
   width: 100%;
   padding-bottom: 30vh;
-  background-color: #eee;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -79,9 +78,6 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: #fff;
-  box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
-  -webkit-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
-  -moz-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
 }
 
 .pastLaunch__card {
