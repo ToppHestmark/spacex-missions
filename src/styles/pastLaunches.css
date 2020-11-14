@@ -41,13 +41,8 @@
 
 .pastLaunch__main {
   width: 100%;
-  padding: 20vh 0 30vh 0;
-  background-image: url('/assets/background/space-background-large.jpg');
-    /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
+  padding-bottom: 30vh;
+  background-color: #eee;
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -33,15 +33,10 @@
 
 .history__main {
   width: 100%;
-  padding: 20vh 0 30vh 0;
+  padding-bottom: 30vh;
+  background-color: #eee;
   display: flex;
   justify-content: center;
-  background-image: url('/assets/background/space-background-large.jpg');
-  /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .history__container {
@@ -121,6 +116,13 @@
 .history__card:last-child {
   margin-bottom: 10vh;
 } 
+
+@media (min-width: 1281px) {
+  .history__card {
+    width: 70%;
+    max-width: 900px;
+  }
+}
 
 @media screen and (max-width: 1024px)  {
   .history__main {
