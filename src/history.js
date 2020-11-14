@@ -22,16 +22,25 @@ function createHistoryHtml(historyResults) {
     const eventDate = history.event_date_utc;
     const details = history.details;
     const articleLink = history.links.article;
-    const wikipediaLinks = history.links.wikipedia;
     const flightNumber = history.flight_number;
 
     const flight = () => {
-      return flightNumber === null ? 'Not specified' : flightNumber;
-    };
-    const wikipedia = () => {
-      return wikipediaLinks === null ? '' : wikipediaLinks;
+      return flightNumber === null ? 'N/A' : flightNumber;
     };
 
-    console.log(wikipedia());
-  })
-}
+    console.log();
+
+    historyContainer.innerHTML += `
+    <div class="history__card">
+      <div class="history__cardText">
+        <h2>${title}</h2>
+        <p><b>Flight #:</b> ${flight()}</p>
+        <p>Date: ${americanDateFormat(eventDate)}</p>
+        <p>${details}</p>
+        <div class="history__link">
+          <a target="_blank" href="${articleLink}">Read article</a>
+        </div>
+      </div>
+    </div>`;
+  });
+};

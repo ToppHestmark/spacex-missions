@@ -39,9 +39,23 @@
 .history__container {
   width: 80%;
   min-height: 100vh;
-  background-color: aqua;
+  background-color: lightskyblue;
   display: flex;
   flex-direction: column;
+}
+
+.history__card:nth-child(even) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.history__card {
+  width: 100%;
+}
+
+.history__cardText {
+  width: 50%;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
