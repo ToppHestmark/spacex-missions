@@ -25,7 +25,7 @@
 ---############################################ */
 
 .index__header {
-  background-image: url("./../../assets/background/spacex-launch-night-star-large.jpg");
+  background-image: url("../../assets/background/spacex-launch-night-star-large.jpg");
   /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/46259778995/" */
   background-repeat: no-repeat;
   background-position: center;
@@ -287,11 +287,11 @@ tr.tablerow__borderBottom td {
 --- <<<     Goals and video links section     >>> ---
 ---############################################ */
 .index__goalSection-1 {
-  background-image: url('./../../assets/background/spaceship-cruise-large.jpg');
+  background-image: url('../../assets/background/spaceship-cruise-large.jpg');
   /* Image by SpaceX on StockSnap.io. URL "https://stocksnap.io/photo/space-spaceship-SQBE2C5NWT" */
 }
 .index__goalSection-2 {
-  background: url('./../../assets/background/engine-landing-on-deck-large.jpg');
+  background: url('../../assets/background/engine-landing-on-deck-large.jpg');
   /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/50291306346/" */
 }
 .index__goalSection-1,
@@ -448,15 +448,14 @@ tr.tablerow__borderBottom td {
 --- <<<     Form section     >>> ---
 ---############################################ */
 .index__formSection {
-  background-image: url('./../../assets/background/space-background-large.jpg');
+  background-image: url('../../assets/background/space-background-large.jpg');
   /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  min-height: 115vh;
-  background-color: #000;
+  min-height: 120vh;
 }
 .form__container {
   width: 50vw;
@@ -487,7 +486,6 @@ tr.tablerow__borderBottom td {
 #contactForm {
   padding: 0 0.8rem 1rem 0.8rem;
   background-color: #fff;
-  display: block;
 }
 
 #contactForm input,
