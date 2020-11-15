@@ -193,10 +193,15 @@
 tr.tablerow__borderBottom td {
   border-bottom: 1px solid rgba(0,0,0,.05);
 }
-.upcomingLaunch__dataResults:hover {
-  background-color: #f0f0f0;
+.upcomingLaunch__dataResults {
+  transition: transform 400ms ease-in;
 }
-
+.upcomingLaunch__dataResults:hover {
+  -webkit-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  -moz-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
+  transform: scaleX(1.02);
+}
 .upcomingLaunch__dataTable {
   width: 100vw;
   padding: 40px 0 40px 10px;
@@ -346,7 +351,7 @@ tr.tablerow__borderBottom td {
   padding: 1.2rem;
   color: #55595c;
   border: 2px solid rgba(0,0,0,.05);
-  transition: transform 250ms ease-in;
+  transition: transform 400ms ease-in;
 }
 .index__videoLinkCard:hover {
   -webkit-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
