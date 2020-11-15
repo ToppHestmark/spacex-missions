@@ -68,14 +68,13 @@
   padding: 2vh 0vw 2vh 0vw;
   margin-bottom: 10vh;
   color: #55595c;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
 }
 
 
 .history__cardTextContainer h2 {
   font-size: 1.7rem;
   font-weight: 700;
-  font-style: normal;
 }
 .history__cardTextContainer .history__date {
   font-size: 12px;
@@ -83,7 +82,7 @@
   opacity: 60%;
 }
 .history__description {
-  font-weight: 200;
+  font-weight: 300;
   padding: 1rem 0 3rem 0;
 }
 .history__link {

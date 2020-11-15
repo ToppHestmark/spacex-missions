@@ -119,6 +119,7 @@
 }
 .pastLaunch__card p {
   letter-spacing: 0.5px;
+  font-weight: 300;
 }
 
 .pastLaunch__failedMessage,
