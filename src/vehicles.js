@@ -50,15 +50,12 @@ const createVehiclesHtml = (rocketResults) => {
 
     rocketsContainer.innerHTML += `<div class="vehicle__card">
     <h2>${vehicleName}</h2>
-    <div class="vehicle__cardLeft">
       <div class="vehicles__imageContainer">
         <img src=${vehicleImage} alt="${vehicleName}">
       </div>
       <div class="vehicles__description">
         <p>${vehicleDescription}</p>
       </div>
-    </div>
-    <div class="vehicle__cardRight">
       <div class="vehicle__facts">
         <b>Status:</b> <p>${duty()}</p>
       </div>
@@ -86,8 +83,6 @@ const createVehiclesHtml = (rocketResults) => {
       <div class="vehicle__facts">
         <b>Reusable:</b> <p>${reusable()} </p>
       </div>
-
-    </div>
     </div>`;
   });
 };

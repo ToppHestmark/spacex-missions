@@ -36,6 +36,10 @@
   letter-spacing: 1px;
 }
 
+
+/* ############################################
+--- <<<     Vehicles     >>> ---
+---############################################ */
 .vehicles__main {
   width: 100%;
   display: flex;
@@ -52,20 +56,20 @@
 .vehicles__imageContainer img {
   width: 100%;
   height: auto;
-}
-.vehicle__cardLeft,
-.vehicle__cardRight {
-  width: 50%;
+  filter: brightness(0.8);
 }
 
-.vehicle__cardRight {
+.vehicle__facts {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* ############################################
---- <<<     Vehicles     >>> ---
----############################################ */
+
+@media (min-width: 1281px) {
+  .vehicles__rocketsContainer {
+    width: 60%;
+  }
+}
 
 @media screen and (max-width: 1024px) {
 

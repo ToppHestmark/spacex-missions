@@ -171,6 +171,7 @@
   width: 100%;
   height: auto;
   padding-bottom: 3vh;
+  filter: brightness(0.9);
 }
 
 .upcomingLaunch__table {
@@ -363,6 +364,7 @@ tr.tablerow__borderBottom td {
 .index__videoLinkCard img {
   width: 100%;
   height: auto;
+  filter: brightness(0.9);
 }
 
 .index__videoLinkCard p {
