@@ -5,7 +5,7 @@ const nextLaunchUrl = "https://api.spacexdata.com/v3/launches/next";
 const errorContainer = document.querySelector(".error-container");
 const nextLaunchContainer = document.querySelector(".index__nextLaunchContainer");
 
-async function getNextLaunch() {
+const getNextLaunch = async () => {
   try {
     const response = await fetch(nextLaunchUrl);
     const nextLaunchResult = await response.json();
@@ -19,7 +19,7 @@ async function getNextLaunch() {
 getNextLaunch()
 
 
-function nextLaunchHtml(nextLaunchResult) {
+const nextLaunchHtml = (nextLaunchResult) => {
   const missionName = nextLaunchResult.mission_name;
   const flightNumber = nextLaunchResult.flight_number;
   const launchSite = nextLaunchResult.launch_site.site_name_long;
@@ -79,13 +79,12 @@ function nextLaunchHtml(nextLaunchResult) {
 const upcomingLaunchUrl = "https://api.spacexdata.com/v3/launches/upcoming";
 const upcomingLaunchTable = document.querySelector('.index__upcomingLaunchTable');
 
-async function getUpcomingLaunches() {
+const getUpcomingLaunches = async () => {
   try {
     const response = await fetch(upcomingLaunchUrl);
     const upcomingLaunchResults = await response.json();
 
     upcomingLaunchResults.map((upcomingLaunch) => {
-
       const launchDateUTC = upcomingLaunch.launch_date_utc;
       const flightNumber = upcomingLaunch.flight_number;
       const missionName = upcomingLaunch.mission_name;

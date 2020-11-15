@@ -37,7 +37,7 @@ const createVehiclesHtml = (rocketResults) => {
     const rocketDescription = vehicle.description;
 
     rocketImages.map(image => {
-      console.log(image);
+
     })
     
     // console.log(rocketImages);

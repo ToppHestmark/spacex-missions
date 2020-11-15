@@ -1,7 +1,7 @@
 const historyUrl = "https://api.spacexdata.com/v3/history";
 const historyContainer = document.querySelector(".history__container");
 
-async function getHistory() {
+const getHistory = async () => {
   try {
     const response = await fetch(historyUrl);
     const historyResults = await response.json();
@@ -14,7 +14,8 @@ async function getHistory() {
 }
 getHistory()
 
-function createHistoryHtml(historyResults) {
+
+const createHistoryHtml = (historyResults) => {
 
   historyResults.map(history => {
 

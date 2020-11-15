@@ -1,7 +1,7 @@
 const pastLaunchUrl = "https://api.spacexdata.com/v3/launches/past";
 const pastLaunchContainer = document.querySelector(".pastLaunch__container");
 
-async function getPastLaunchProp() {
+const getPastLaunchProp = async () => {
 
   try {
     const response = await fetch(pastLaunchUrl);
@@ -17,7 +17,7 @@ async function getPastLaunchProp() {
 getPastLaunchProp();
 
 
-function createPastLaunchesHtml(pastLaunchResults) {
+const createPastLaunchesHtml = (pastLaunchResults) => {
 
   pastLaunchResults.map(pastLaunchProp => {
       

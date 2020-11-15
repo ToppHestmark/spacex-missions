@@ -5,7 +5,7 @@ const params = new URLSearchParams(queryString);
 const flight_number = params.get("flight_number");
 const singleFlightURL = "https://api.spacexdata.com/v3/launches/" + flight_number;
 
-async function getDetails() {
+const getDetails = async () => {
   try {
     const response = await fetch(singleFlightURL);
     const flightDetails = await response.json();
@@ -19,7 +19,7 @@ async function getDetails() {
 getDetails()
 
 
-function createDetailsHtml(flightDetails) {
+const createDetailsHtml = (flightDetails) => {
     const launchDateUTC = new Date(flightDetails.launch_date_utc);
     const missionName = flightDetails.mission_name;
     const detailsImage = flightDetails.links.flickr_images;
