@@ -36,6 +36,33 @@
   letter-spacing: 1px;
 }
 
+.vehicles__main {
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+
+.vehicles__rocketsContainer {
+  width: 80%;
+}
+
+.vehicles__imageContainer {
+  width: 100%;
+}
+.vehicles__imageContainer img {
+  width: 100%;
+  height: auto;
+}
+.vehicle__cardLeft,
+.vehicle__cardRight {
+  width: 50%;
+}
+
+.vehicle__cardRight {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ############################################
 --- <<<     Vehicles     >>> ---
 ---############################################ */

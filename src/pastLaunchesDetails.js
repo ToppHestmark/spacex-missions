@@ -40,7 +40,10 @@ const createDetailsHtml = (flightDetails) => {
       const nationality = `<li><b>Nationality:</b> ${payload.nationality}</li>`;
       const payloadMass = `<li><b>Mass (kg):</b> ${payload.payload_mass_kg}</li>`;
 
-      return `${payloadId} ${payloadType} ${customer} ${manufacturer} ${nationality} ${payloadMass}`;
+      let payloads = "";
+      payloads += `${payloadId} ${payloadType} ${customer} ${manufacturer} ${nationality} ${payloadMass}`;
+
+      return  payloads;
     });
       
     function successFactor() {
