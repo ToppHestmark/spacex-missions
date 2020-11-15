@@ -60,16 +60,16 @@ const createVehiclesHtml = (rocketResults) => {
         <b>Status:</b> <p>${duty()}</p>
       </div>
       <div class="vehicle__facts">
-        <b>First flight:</b> <p>${firstFlightDate}</p>
+        <b>First Flight:</b> <p>${firstFlightDate}</p>
       </div>
       <div class="vehicle__facts">
-        <b>Success rate:</b> <p>${vehicleSuccessRate} %</p>
+        <b>Success Rate:</b> <p>${vehicleSuccessRate} %</p>
       </div>
       <div class="vehicle__facts">
         <b>Engine Type:</b> <p>${vehicleEngineType.toUpperCase()}</p>
       </div>
       <div class="vehicle__facts">
-        <b>Cost per launch:</b> <p>$ ${costPerLaunch}</p>
+        <b>Cost per Launch:</b> <p>$ ${costPerLaunch}</p>
       </div>
       <div class="vehicle__facts">
         <b>Height:</b> ${height}
@@ -81,7 +81,7 @@ const createVehiclesHtml = (rocketResults) => {
         <b>Diameter:</b> ${diameter}
       </div>
       <div class="vehicle__facts">
-        <b>Reusable:</b> <p>${reusable()} </p>
+        <b>Reusable Engine:</b> <p>${reusable()} </p>
       </div>
     </div>`;
   });
