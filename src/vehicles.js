@@ -1,7 +1,10 @@
-const vehiclesContainer = document.querySelector('.vehicles__container');
-const roadsterContainer = document.querySelector('.roadster__container');
+const rocketsImgContainer = document.querySelector('.vehicles__rocketsImgContainer');
+const rocketsInfoContainer = document.querySelector('.vehicles__rocketsInfoContainer');
+const roadsterContainer = document.querySelector('.vehicles__roadsterContainer');
 const rocketsURL = "https://api.spacexdata.com/v3/rockets";
 const roadsterURL = "https://api.spacexdata.com/v3/roadster";
+
+console.log(rocketsInfoContainer);
 
 const getRockets = async () => {
   try {

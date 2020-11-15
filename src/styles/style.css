@@ -535,6 +535,9 @@ tr.tablerow__borderBottom td {
   background: #000;
   color: #fff;
 }
+#contactForm button:active {
+  background-color: #393e46;
+}
 
 #contactForm .form-error {
   display: none;

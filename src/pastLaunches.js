@@ -1,7 +1,7 @@
 const pastLaunchUrl = "https://api.spacexdata.com/v3/launches/past";
 const pastLaunchContainer = document.querySelector(".pastLaunch__container");
 
-const getPastLaunchProp = async () => {
+const getPastLaunches = async () => {
 
   try {
     const response = await fetch(pastLaunchUrl);
@@ -14,20 +14,20 @@ const getPastLaunchProp = async () => {
     pastLaunchContainer.innerHTML = displayError("An error occured when calling API")
   }
 }
-getPastLaunchProp();
+getPastLaunches();
 
 
 const createPastLaunchesHtml = (pastLaunchResults) => {
 
-  pastLaunchResults.map(pastLaunchProp => {
+  pastLaunchResults.map(pastLaunch => {
       
-    const launchDateUTC = pastLaunchProp.launch_date_utc;
-    const missionBadge = pastLaunchProp.links.mission_patch_small;
-    const missionName = pastLaunchProp.mission_name
-    const flightNumber = pastLaunchProp.flight_number;
-    const launchSite = pastLaunchProp.launch_site.site_name_long;
-    const rocketName = pastLaunchProp.rocket.rocket_name;
-    const launchSuccess = pastLaunchProp.launch_success;
+    const launchDateUTC = pastLaunch.launch_date_utc;
+    const missionBadge = pastLaunch.links.mission_patch_small;
+    const missionName = pastLaunch.mission_name
+    const flightNumber = pastLaunch.flight_number;
+    const launchSite = pastLaunch.launch_site.site_name_long;
+    const rocketName = pastLaunch.rocket.rocket_name;
+    const launchSuccess = pastLaunch.launch_success;
         
     
     function successMessage() {
@@ -39,8 +39,8 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
       <img class="pastLaunch__missionBadge" src=${missionBadge} alt=${missionName}>
       <p class="pastLaunch__date">${americanDateFormat(launchDateUTC)}</p>
       <h2 class="pastLaunch__missionName">${missionName}</h2>
-      <p><b>Flight Number:</b> ${flightNumber}</p>
-      <p><b>Launch Site:</b> ${launchSite}</p>
+      <p><b>Flight:</b> ${flightNumber}</p>
+      <p><b>Site:</b> ${launchSite}</p>
       <p><b>Rocket:</b> ${rocketName}</p>
       ${successMessage()}
       <div class="button__moreDetails">
