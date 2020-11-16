@@ -28,10 +28,10 @@ const nextLaunchHtml = (nextLaunchResult) => {
 
   nextLaunchContainer.innerHTML = `<div class="index__nextLaunchResults">
   <h2>${missionName}</h2>
-  <p><b>Flight Number:</b> ${flightNumber}</p>
-  <p><b>Launch Date:</b> ${americanDateFormat(launchDateUTC)}</p>
-  <p><b>Launch Site:</b> ${launchSite}</p>
-  <p><b>Rocket Name:</b> ${rocketName}</p>
+  <p><b>Flight:</b> ${flightNumber}</p>
+  <p><b>Date:</b> ${americanDateFormat(launchDateUTC)}</p>
+  <p><b>Site:</b> ${launchSite}</p>
+  <p><b>Rocket:</b> ${rocketName}</p>
   </div>`;
 
   // Countdown timer
@@ -67,7 +67,7 @@ const nextLaunchHtml = (nextLaunchResult) => {
 
     if (totalTimeRemaining < 0) {
       clearInterval(countdownInterval);
-      countdownContainer.innerHTML = `<h2>Launched</h2>`;
+      countdownContainer.innerHTML = `<h2 class="countdown__LaunchedMessage">Launched</h2>`;
     }
   }, 1000)
 } 

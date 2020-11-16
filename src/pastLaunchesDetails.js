@@ -34,11 +34,17 @@ const createDetailsHtml = (flightDetails) => {
 
     const missionPayloads = payloads.map(payload => {
       const payloadId = `<h4>${payload.payload_id}</h4>`;
-      const payloadType = `<li><b>Payload Type:</b> ${payload.payload_type}</li>`;
-      const customer = `<li><b>Customer:</b> ${payload.customers}</li>`;
-      const manufacturer = `<li><b>Manufacturer:</b> ${payload.manufacturer}</li>`;
-      const nationality = `<li><b>Nationality:</b> ${payload.nationality}</li>`;
-      const payloadMass = `<li><b>Mass (kg):</b> ${payload.payload_mass_kg}</li>`;
+      const payloadType = `<div class="pastLaunchDetails__payload"><b>Payload Type:</b> <p>${payload.payload_type}</p></div>`;
+      const customer = `<div class="pastLaunchDetails__payload"><b>Customer:</b> <p>${payload.customers}</p></div>`;
+      const manufacturer = `<div class="pastLaunchDetails__payload"><b>Manufacturer:</b> <p>${payload.manufacturer}</p></div>`;
+      const nationality = `<div class="pastLaunchDetails__payload"><b>Nationality:</b> <p>${payload.nationality}</p></div>`;
+
+      const payloadMassKg = payload.payload_mass_kg;
+      const payloadMassLbs = payload.payload_mass_lbs;
+      const massKg = String(payloadMassKg).replace(/(.)(?=(\d{3})+$)/g,'$1.');
+      const payloadMass = `    <div class="pastLaunchDetails__payload"><b>Mass:</b> <p> ${massKg} kg / ${payloadMassLbs} lbs </p> </div>`
+
+      console.log();
 
       let payloads = "";
       payloads += `${payloadId} ${payloadType} ${customer} ${manufacturer} ${nationality} ${payloadMass}`;
@@ -48,10 +54,6 @@ const createDetailsHtml = (flightDetails) => {
       
     function successFactor() {
       return launchSuccess ? `<span class="pastLaunchesDetails__successMessage">SUCCESSFUL</span>` : `<span class="pastLaunchesDetails__failedMessage">FAILED</span>`;
-    }
-
-    if (!detailsImage) {
-      return `<p>No image</p>`
     }
 
     function detailsDescription() {
@@ -71,7 +73,7 @@ const createDetailsHtml = (flightDetails) => {
           <p><b>Rocket:</b> ${rocketName}</p>
           <p><b>Site:</b> ${launchSite}</p>
           <p><b>Critical Success Factor:</b> ${successFactor()}</p>
-          <h3>Payloads</h3>
+          <h3>PAYLOADS</h3>
           <div class="pastLauchesDetails__payloads">${missionPayloads}</div>
           <div class="pastLaunchesDetails__links">
           <a target="_blank" href="${videoLink}">Watch video</a>

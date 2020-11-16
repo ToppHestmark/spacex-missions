@@ -119,6 +119,11 @@
   font-weight: 400;
   color: #f6f6f6;
 }
+.countdown__LaunchedMessage {
+  padding-top: 15px;
+  text-transform: uppercase;
+  color: #3BF56F !important;
+}
 
 @media (min-width: 481px) and (max-width: 767px) {
   .countdown__results {
