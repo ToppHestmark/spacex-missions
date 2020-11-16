@@ -7,6 +7,12 @@
   font-family: 'Oswald', sans-serif;
 }
 
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .index__upcomingLaunchSection h2,
 .index__videoLinksContainer h2 {
   margin-top: 6vh;
@@ -27,10 +33,7 @@
 .index__header {
   background-image: url("../../assets/background/spacex-launch-night-star-large.jpg");
   /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/46259778995/" */
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -304,10 +307,7 @@ tr.tablerow__borderBottom td {
 .index__goalSection-2 {
   width: 100%;
   min-height: 100vh;
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -457,10 +457,7 @@ tr.tablerow__borderBottom td {
 .index__formSection {
   background-image: url('../../assets/background/space-background-large.jpg');
   /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   width: 100%;
   min-height: 120vh;
 }

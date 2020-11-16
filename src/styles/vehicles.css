@@ -88,16 +88,40 @@
   transform: scaleX(1.02);
 }
 
+.vehicles__videoContainer {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.vehicles__videoContainer iframe {
+  position: absolute;
+  width: 65%;
+  height: 80%;
+}
+
 
 @media (min-width: 1281px) {
   .vehicles__rocketsContainer {
     width: 55%;
+  }
+  .vehicles__videoContainer iframe {
+    width: 60%;
+    max-width: 978px;
+    height: 86%;
+    max-height: 768px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .vehicle__card {
     padding: 40px 25px 40px 25px;
+  }
+  .vehicles__videoContainer iframe {
+    width: 75%;
+    height: 80%;
   }
 }
 
@@ -107,6 +131,10 @@
   }
   .vehicles__description {
     margin: 1.3rem 0 2.4rem 0;
+  }
+  .vehicles__videoContainer iframe {
+    width: 85%;
+    height: 60%;
   }
 }
 
@@ -119,5 +147,9 @@
   }
   .vehicles__description {
     margin: 2rem 5px 3rem 5px;
+  }
+  .vehicles__videoContainer iframe {
+    width: 96%;
+    height: 45%;
   }
 }
