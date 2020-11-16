@@ -81,7 +81,7 @@ const createDetailsHtml = (flightDetails) => {
             <a target="_blank" href="${videoLink}">Watch video</a>
             <a target="_blank" href="${articleLink}">Read article</a>
           </div>
-          <a href="#">Back</a>
+          <a class="pastLaunchesDetails__back" href="./../pages/past-launches.html">Back to past launches</a>
         </div>
       </div>
     </div>`;

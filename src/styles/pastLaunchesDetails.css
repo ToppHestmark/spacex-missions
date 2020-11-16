@@ -121,7 +121,7 @@ body {
 
 /* ----- Links ---- */
 .pastLaunchesDetails__links {
-  margin: 5rem 0 1rem 0;
+  margin: 5rem 0 5rem 0;
   display: flex;
   justify-content: center;
 }
@@ -142,6 +142,14 @@ body {
 }
 .pastLaunchesDetails__links a:active {
   background-color: #393e46;
+}
+
+.pastLaunchesDetails__back {
+  color: #55595c;
+  letter-spacing: 2px;
+}
+.pastLaunchesDetails__back:hover {
+  font-weight: 500;
 }
 
 @media (min-width: 1281px) {
