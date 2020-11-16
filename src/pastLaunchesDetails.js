@@ -64,22 +64,25 @@ const createDetailsHtml = (flightDetails) => {
     <div class="pastLaunchesDetails__results">
       <h1>${missionName}</h1>
       <div class="pastLaunchesDetails__contentContainer">
-        <img src="${detailsImage}" alt="${missionName}">
-        <p class="pastLaunchesDetails__imageText">Photo: SpaceX</p>
-        <div class="pastLaunchesDetails__TextContentContainer">
-          <p class="pastLaunchesDetails__date"> ${americanDateFormat(launchDateUTC)}</p>
-          <p class="pastLaunchesDetails__detailsDescription">${detailsDescription()}</p>
-          <p><b>Flight:</b> ${flightNumber}</p>
-          <p><b>Rocket:</b> ${rocketName}</p>
-          <p><b>Site:</b> ${launchSite}</p>
-          <p><b>Critical Success Factor:</b> ${successFactor()}</p>
-          <h3>PAYLOADS</h3>
+          <div class="pastLaunchesDetails__imageContainer">
+            <img src="${detailsImage}" alt="${missionName}">
+          </div>
+          <p class="pastLaunchesDetails__imageText">Photo: SpaceX</p>
+          <div class="pastLaunchesDetails__TextContentContainer">
+            <p class="pastLaunchesDetails__date"> ${americanDateFormat(launchDateUTC)}</p>
+            <p class="pastLaunchesDetails__detailsDescription">${detailsDescription()}</p>
+            <p><b>Flight:</b> ${flightNumber}</p>
+            <p><b>Rocket:</b> ${rocketName}</p>
+            <p><b>Site:</b> ${launchSite}</p>
+            <p><b>Critical Success Factor:</b> ${successFactor()}</p>
+            <h3>PAYLOADS</h3>
           <div class="pastLauchesDetails__payloads">${missionPayloads}</div>
           <div class="pastLaunchesDetails__links">
-          <a target="_blank" href="${videoLink}">Watch video</a>
-          <a target="_blank" href="${articleLink}">Read article</a>
+            <a target="_blank" href="${videoLink}">Watch video</a>
+            <a target="_blank" href="${articleLink}">Read article</a>
+          </div>
+          <a href="#">Back</a>
         </div>
-      </div>
       </div>
     </div>`;
 }

@@ -39,7 +39,7 @@ body {
   letter-spacing: 3px;
 }
 
-.pastLaunchesDetails__results img {
+.pastLaunchesDetails__imageContainer img {
   width: 100%;
   height: auto;
 }
@@ -88,7 +88,7 @@ body {
 }
 
 .pastLaunchesDetails__TextContentContainer h3 {
-  margin: 6rem 0 3rem 0;
+  margin: 6rem 0 1rem 0;
   padding-bottom: 1rem;
   font-weight: 400;
   font-size: 2rem;
