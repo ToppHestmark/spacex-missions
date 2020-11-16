@@ -6,7 +6,7 @@ const getPastLaunches = async () => {
   try {
     const response = await fetch(pastLaunchUrl);
     const pastLaunchResults = await response.json();
-    pastLaunchResults.sort((a, b) => b.flight_number - a.flight_number)
+    pastLaunchResults.sort((a, b) => b.flight_number - a.flight_number);
 
     createPastLaunchesHtml(pastLaunchResults)
   }
@@ -28,7 +28,6 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
     const launchSite = pastLaunch.launch_site.site_name_long;
     const rocketName = pastLaunch.rocket.rocket_name;
     const launchSuccess = pastLaunch.launch_success;
-        
     
     function successMessage() {
       return launchSuccess ? `<p class="pastLaunch__successMessage"><SUCCESSFUL>SUCCESSFUL</p>` : `<p class="pastLaunch__failedMessage">FAILED</p>`;
@@ -48,4 +47,11 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
       </div>
     </div>`;
   });
+    
+  const launchYear2020 = pastLaunchResults.filter(year => {
+    const thisYear = "2020";
+
+    return year.launch_year === thisYear;
+  })
+  console.log(launchYear2020);
 };
