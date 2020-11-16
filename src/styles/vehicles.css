@@ -139,6 +139,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .vehicles__header h1 {
+    font-size: 3rem;
+  }
   .vehicles__rocketsContainer {
     width: 100%;
   }

@@ -150,6 +150,12 @@
     background-image: url('../../assets/background/spacex-boarding-bridge-small.jpg');
     background-position: center top;
    }
+   .history__header h1 {
+    font-size: 3rem;
+  }
+  .history__header p {
+    padding: 0 7px 0 7px;
+  }
    .history__card {
     width: 90%;
     padding: 1rem;

@@ -201,6 +201,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .pastLaunches__header h1 {
+    font-size: 3rem;
+  }
   .pastLaunch__card {
     width: 88vw;
     margin: 1rem 5px 1rem 5px;
