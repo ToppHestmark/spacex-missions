@@ -61,6 +61,7 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
       </div>`;
     return cardsHtml;
   }
+  
 
   const year2020 = pastLaunchResults.filter(year => year.launch_year === '2020')
   year2020.map(pastLaunch => {

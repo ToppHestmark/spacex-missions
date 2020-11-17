@@ -44,7 +44,7 @@
 }
 
 .index__nextLaunchBorder {
-  border: 2px solid #f6f6f6;
+  border: 2px solid #fdfdfd;
   padding: 6vh 12vw;
 }
 
@@ -488,7 +488,7 @@ tr.tablerow__borderBottom td {
   /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
   background-position: center;
   width: 100%;
-  min-height: 120vh;
+  min-height: 105vh;
 }
 .form__container {
   width: 50vw;

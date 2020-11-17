@@ -35,7 +35,6 @@
 
 .history__main {
   width: 100%;
-  padding-bottom: 30vh;
   background-color: #eee;
   display: flex;
   justify-content: center;
@@ -121,9 +120,6 @@
 }
 
 @media screen and (max-width: 1024px)  {
-  .history__main {
-    padding: 0vh 0 30vh 0;
-  }
   .history__container {
     width: 100%;
   }

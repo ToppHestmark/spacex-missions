@@ -13,7 +13,7 @@ body {
 .pastLaunchesDetails__main {
   display: flex;
   justify-content: center;
-  margin: 25vh 0 30vh 0;
+  margin-top: 25vh;
 }
 
 .pastLaunchesDetails__container {
@@ -24,7 +24,7 @@ body {
 }
 
 .pastLaunchesDetails__contentContainer {
-  padding-bottom: 15vh;
+  padding-bottom: 10vh;
   background-color: #fff;
   box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
   -webkit-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
@@ -180,7 +180,7 @@ body {
     font-size: 24px;
 }
   .pastLaunchesDetails__main {
-    margin: 15vh 0 30vh 0;
+    margin-top: 15vh;
   }
   .pastLaunchesDetails__TextContentContainer {
     margin: 30px 15px 20px 25px;
@@ -197,7 +197,7 @@ body {
     font-size: 24px;
 }
   .pastLaunchesDetails__main {
-    margin: 15vh 0 30vh 0;
+    margin-top: 15vh;
   }
   .pastLaunchesDetails__TextContentContainer {
     margin: 30px 5px 20px 15px;
