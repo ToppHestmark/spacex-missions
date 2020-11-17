@@ -71,7 +71,7 @@ const createDetailsHtml = (flightDetails) => {
           <div class="pastLaunchesDetails__TextContentContainer">
             <p class="pastLaunchesDetails__date"> ${americanDateFormat(launchDateUTC)}</p>
             <p class="pastLaunchesDetails__detailsDescription">${detailsDescription()}</p>
-            <p><b>Flight:</b> ${flightNumber}</p>
+            <p><b>Flight#:</b> ${flightNumber}</p>
             <p><b>Rocket:</b> ${rocketName}</p>
             <p><b>Site:</b> ${launchSite}</p>
             <p><b>Critical Success Factor:</b> ${successFactor()}</p>

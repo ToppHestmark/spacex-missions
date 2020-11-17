@@ -36,7 +36,7 @@ const createHistoryHtml = (historyResults) => {
       <div class="history__cardTextContainer">
       <p class="history__date">${americanDateFormat(eventDate)}</p>
         <h2>${title}</h2>
-        <p><b>Flight:</b> ${flight()}</p>
+        <p><b>Flight#:</b> ${flight()}</p>
         <p class="history__description">${details}</p>
         <div class="history__link">
           <a target="_blank" href="${articleLink}">Article</a>

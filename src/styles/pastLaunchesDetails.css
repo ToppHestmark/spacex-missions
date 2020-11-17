@@ -148,9 +148,6 @@ body {
   color: #55595c;
   letter-spacing: 2px;
 }
-.pastLaunchesDetails__back:hover {
-  font-weight: 500;
-}
 
 @media (min-width: 1281px) {
   .pastLaunchesDetails__container {

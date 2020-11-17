@@ -28,7 +28,7 @@ const nextLaunchHtml = (nextLaunchResult) => {
 
   nextLaunchContainer.innerHTML = `<div class="index__nextLaunchResults">
   <h2>${missionName}</h2>
-  <p><b>Flight:</b> ${flightNumber}</p>
+  <p><b>Flight#:</b> ${flightNumber}</p>
   <p><b>Date:</b> ${americanDateFormat(launchDateUTC)}</p>
   <p><b>Site:</b> ${launchSite}</p>
   <p><b>Rocket:</b> ${rocketName}</p>

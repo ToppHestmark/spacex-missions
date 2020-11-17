@@ -51,7 +51,7 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
         <img class="pastLaunch__missionBadge" src=${missionBadge} alt=${missionName}>
         <p class="pastLaunch__date">${americanDateFormat(launchDateUTC)}</p>
         <h3 class="pastLaunch__missionName">${missionName}</h3>
-        <p><b>Flight:</b> ${flightNumber}</p>
+        <p><b>Flight#:</b> ${flightNumber}</p>
         <p><b>Site:</b> ${launchSite}</p>
         <p><b>Rocket:</b> ${rocketName}</p>
         ${successMessage()}
