@@ -36,19 +36,24 @@ const createDetailsHtml = (flightDetails) => {
       const payloadId = `<h4>${payload.payload_id}</h4>`;
       const payloadType = `<div class="pastLaunchDetails__payload"><b>Payload Type:</b> <p>${payload.payload_type}</p></div>`;
       const customer = `<div class="pastLaunchDetails__payload"><b>Customer:</b> <p>${payload.customers}</p></div>`;
-      const manufacturer = `<div class="pastLaunchDetails__payload"><b>Manufacturer:</b> <p>${payload.manufacturer}</p></div>`;
       const nationality = `<div class="pastLaunchDetails__payload"><b>Nationality:</b> <p>${payload.nationality}</p></div>`;
 
-      const payloadMassKg = payload.payload_mass_kg;
-      const payloadMassLbs = payload.payload_mass_lbs;
-      const massKg = String(payloadMassKg).replace(/(.)(?=(\d{3})+$)/g,'$1.');
-      const payloadMass = `    <div class="pastLaunchDetails__payload"><b>Mass:</b> <p> ${massKg} kg / ${payloadMassLbs} lbs </p> </div>`
+      const manufacturer = payload.manufacturer;
+      const ManufacturerHandler = () => {
+        return manufacturer === null 
+        ? `<div class="pastLaunchDetails__payload"><b>Manufacturer:</b> <p>Not specified</p></div>`
+        : `<div class="pastLaunchDetails__payload"><b>Manufacturer:</b> <p>${manufacturer}</p></div>`;
+      };
 
-      console.log();
+      const payloadMassKg = payload.payload_mass_kg;
+      const massKg = String(payloadMassKg).replace(/(.)(?=(\d{3})+$)/g,'$1.');
+      const payloadMassLbs = payload.payload_mass_lbs;
+      const removeLbsDecimal = Math.floor(payloadMassLbs)
+      const massLbs = String(removeLbsDecimal).replace(/(.)(?=(\d{3})+$)/g,'$1.');
+      const payloadMass = `    <div class="pastLaunchDetails__payload"><b>Mass:</b> <p> ${massKg} kg / ${massLbs} lbs </p> </div>`
 
       let payloads = "";
-      payloads += `${payloadId} ${payloadType} ${customer} ${manufacturer} ${nationality} ${payloadMass}`;
-
+      payloads += `${payloadId} ${payloadType} ${customer} ${ManufacturerHandler()} ${nationality} ${payloadMass}`;
       return  payloads;
     });
       

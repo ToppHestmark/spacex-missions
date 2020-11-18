@@ -65,7 +65,10 @@ body {
   margin-bottom: 15px;
 }
 .pastLaunchesDetails__TextContentContainer b {
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  opacity: 0.9;
+
 }
 .pastLaunchesDetails__detailsDescription {
   margin-right: 20px;

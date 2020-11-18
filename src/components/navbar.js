@@ -12,10 +12,12 @@ const navbarSlideFromTheSide = () => {
     navLinksList.classList.toggle('nav--active');
 
     navLinks.forEach((link, index) => {
+      const easeSpeed = (index / 7 + 0.2);
+
       if (link.style.animation) {
         link.style.animation = "";
       } else {
-      link.style.animation = `nav--linksFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+      link.style.animation = `nav--linksFade 0.5s ease forwards ${easeSpeed}s`;
       }
     });
 
@@ -24,12 +26,28 @@ const navbarSlideFromTheSide = () => {
 }
 navbarSlideFromTheSide()
 
-window.onscroll = () => { 
-  const verticalScroll = window.scrollY;
 
-  if (verticalScroll > 100) {
+window.onscroll = () => { 
+  const scrollDown = Math.ceil(window.scrollY);
+
+  if (scrollDown > 100) {
     nav.classList.add("nav--hide")
   } else {
     nav.classList.remove('nav--hide')
   }
+
+  if (scrollDown > 300) {
+    scrollToTopButton.style.display = "block";
+  } else {
+    scrollToTopButton.style.display = "none";
+  }
+ }
+
+ const scrollToTopButton = document.querySelector('.nav__scrollToTopButton');
+ function scrollToTop() {
+   window.scroll({
+     top: 0, 
+     left: 0, 
+     behavior: 'smooth'
+   });
  }

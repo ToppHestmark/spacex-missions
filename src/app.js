@@ -120,16 +120,16 @@ goalsAndLinks.innerHTML = indexGoalsLinks;
 /* ############################################################
 --- <<<     Form Section     >>> ---
 ---############################################################ */
-const form = document.querySelector("#contactForm");
+const contactForm = document.querySelector("#contactForm");
 const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
 const passedValidation = document.querySelector("#passedValidation");
 
-form.addEventListener("submit", contactForm)
+contactForm.addEventListener("submit", contactFormHandler)
 
-function contactForm(event) {
+function contactFormHandler(event) {
   event.preventDefault();
 
   subject.value.trim().length >= 10
@@ -148,7 +148,7 @@ function contactForm(event) {
   && message.value.trim().length >= 25 === true
   && validateEmail(email.value) === true
   ? passedValidation.style.display = "block"
-  : passedValidation.style.display = "none"
+  : passedValidation.style.display = "none";
 }
 
 const validateEmail = email =>  /\S+@\S+\.\S+/.test(email);

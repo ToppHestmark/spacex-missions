@@ -73,6 +73,30 @@ nav {
   display: none;
 }
 
+/* ---- Scroll up button --- */
+.nav__scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 8vh;
+  right: 3vw;
+  z-index: 99;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background-color: #393e46;
+  color: #f6f6f6;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 2px;
+  opacity: 0.6;
+  transition: transform 100ms ease-in;
+}
+
+.nav__scrollToTopButton:active {
+  background-color: #555;
+  transform: scale(1.02);
+}
+
 @media screen and (max-width: 990px) {
   body {
     overflow-x: hidden;
@@ -163,4 +187,5 @@ nav {
   .nav__links {
     width: 60%;  
   }
+
 }
