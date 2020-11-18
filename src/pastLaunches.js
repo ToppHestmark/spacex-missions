@@ -18,6 +18,7 @@ getPastLaunches();
 
 const createPastLaunchesHtml = (pastLaunchResults) => {
 
+
   const pastLaunchContainer2020 = document.querySelector(".pastLaunch__2020");
   const pastLaunchContainer2019 = document.querySelector(".pastLaunch__2019");
   const pastLaunchContainer2018 = document.querySelector(".pastLaunch__2018");
@@ -60,76 +61,75 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
         </div>
       </div>`;
     return cardsHtml;
-  }
+  };
   
-
+  // ----- Filtered by years -----
   const year2020 = pastLaunchResults.filter(year => year.launch_year === '2020')
-  year2020.map(pastLaunch => {
+    year2020.map(pastLaunch => {
     pastLaunchContainer2020.innerHTML += createCardsHtml(pastLaunch);
   });
-
+  
   const year2019 = pastLaunchResults.filter(year => year.launch_year === '2019')
-  year2019.map(pastLaunch => {
-    pastLaunchContainer2019.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2018 = pastLaunchResults.filter(year => year.launch_year === '2018')
-  year2018.map(pastLaunch => {
-    pastLaunchContainer2018.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2017 = pastLaunchResults.filter(year => year.launch_year === '2017')
-  year2017.map(pastLaunch => {
-    pastLaunchContainer2017.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2016 = pastLaunchResults.filter(year => year.launch_year === '2016')
-  year2016.map(pastLaunch => {
-    pastLaunchContainer2016.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2015 = pastLaunchResults.filter(year => year.launch_year === '2015')
-  year2015.map(pastLaunch => {
-    pastLaunchContainer2015.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2014 = pastLaunchResults.filter(year => year.launch_year === '2014')
-  year2014.map(pastLaunch => {
-    pastLaunchContainer2014.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2013 = pastLaunchResults.filter(year => year.launch_year === '2013')
-  year2013.map(pastLaunch => {
-    pastLaunchContainer2013.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2012 = pastLaunchResults.filter(year => year.launch_year === '2012')
-  year2012.map(pastLaunch => {
-    pastLaunchContainer2012.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2010 = pastLaunchResults.filter(year => year.launch_year === '2010')
-  year2010.map(pastLaunch => {
-    pastLaunchContainer2010.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2009 = pastLaunchResults.filter(year => year.launch_year === '2009')
-  year2009.map(pastLaunch => {
-    pastLaunchContainer2009.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2008 = pastLaunchResults.filter(year => year.launch_year === '2008')
-  year2008.map(pastLaunch => {
-    pastLaunchContainer2008.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2007 = pastLaunchResults.filter(year => year.launch_year === '2007')
-  year2007.map(pastLaunch => {
-    pastLaunchContainer2007.innerHTML += createCardsHtml(pastLaunch);
-  });
-
-  const year2006 = pastLaunchResults.filter(year => year.launch_year === '2006')
-  year2006.map(pastLaunch => {
-    pastLaunchContainer2006.innerHTML += createCardsHtml(pastLaunch);
-  });
+    year2019.map(pastLaunch => {
+      pastLaunchContainer2019.innerHTML += createCardsHtml(pastLaunch);});
+  
+    const year2018 = pastLaunchResults.filter(year => year.launch_year === '2018')
+    year2018.map(pastLaunch => {
+      pastLaunchContainer2018.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2017 = pastLaunchResults.filter(year => year.launch_year === '2017')
+    year2017.map(pastLaunch => {
+      pastLaunchContainer2017.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2016 = pastLaunchResults.filter(year => year.launch_year === '2016')
+    year2016.map(pastLaunch => {
+      pastLaunchContainer2016.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2015 = pastLaunchResults.filter(year => year.launch_year === '2015')
+    year2015.map(pastLaunch => {
+      pastLaunchContainer2015.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2014 = pastLaunchResults.filter(year => year.launch_year === '2014')
+    year2014.map(pastLaunch => {
+      pastLaunchContainer2014.innerHTML += createCardsHtml(pastLaunch);
+   });
+  
+    const year2013 = pastLaunchResults.filter(year => year.launch_year === '2013')
+    year2013.map(pastLaunch => {
+      pastLaunchContainer2013.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2012 = pastLaunchResults.filter(year => year.launch_year === '2012')
+    year2012.map(pastLaunch => {
+      pastLaunchContainer2012.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2010 = pastLaunchResults.filter(year => year.launch_year === '2010')
+    year2010.map(pastLaunch => {
+      pastLaunchContainer2010.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2009 = pastLaunchResults.filter(year => year.launch_year === '2009')
+    year2009.map(pastLaunch => {
+      pastLaunchContainer2009.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2008 = pastLaunchResults.filter(year => year.launch_year === '2008')
+    year2008.map(pastLaunch => {
+      pastLaunchContainer2008.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2007 = pastLaunchResults.filter(year => year.launch_year === '2007')
+    year2007.map(pastLaunch => {
+      pastLaunchContainer2007.innerHTML += createCardsHtml(pastLaunch);
+    });
+  
+    const year2006 = pastLaunchResults.filter(year => year.launch_year === '2006')
+    year2006.map(pastLaunch => {
+      pastLaunchContainer2006.innerHTML += createCardsHtml(pastLaunch);
+    });
 };

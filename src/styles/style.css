@@ -434,6 +434,16 @@ tr.tablerow__borderBottom td {
   background-color: #393e46;
 }
 
+.index__formVector {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.index__formVector img {
+  width: 200px;
+}
+
 @media (min-width: 1281px) {
   .index__goalSection-1 h3,
   .index__goalSection-2 h3 {

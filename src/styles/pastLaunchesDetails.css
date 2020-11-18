@@ -149,6 +149,16 @@ body {
   letter-spacing: 2px;
 }
 
+.pastLaunchesDetails__vector {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pastLaunchesDetails__vector img {
+  width: 200px;
+}
+
 @media (min-width: 1281px) {
   .pastLaunchesDetails__container {
     width: 65%;
