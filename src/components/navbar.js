@@ -26,28 +26,28 @@ const navbarSlideFromTheSide = () => {
 }
 navbarSlideFromTheSide()
 
-
 window.onscroll = () => { 
-  const scrollDown = Math.ceil(window.scrollY);
 
-  if (scrollDown > 100) {
+  const scrollingPosition = Math.ceil(window.scrollY);
+
+  if (scrollingPosition > 100) {
     nav.classList.add("nav--hide")
   } else {
     nav.classList.remove('nav--hide')
   }
 
-  if (scrollDown > 300) {
+  if (scrollingPosition > 300) {
     scrollToTopButton.style.display = "block";
   } else {
     scrollToTopButton.style.display = "none";
   }
- }
+}
 
- const scrollToTopButton = document.querySelector('.nav__scrollToTopButton');
- function scrollToTop() {
-   window.scroll({
-     top: 0, 
-     left: 0, 
-     behavior: 'smooth'
-   });
- }
+const scrollToTopButton = document.querySelector('.nav__scrollToTopButton');
+function scrollToTop() {
+  window.scroll({
+    top: 0, 
+    left: 0, 
+    behavior: 'smooth'
+  });
+}

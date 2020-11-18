@@ -388,6 +388,7 @@ tr.tablerow__borderBottom td {
   max-width: 600px;
   margin: 1rem;
   padding: 1.2rem;
+  border-radius: 3px;
   color: #55595c;
   border: 2px solid rgba(0,0,0,.05);
   transition: transform 400ms ease-in;
@@ -402,6 +403,7 @@ tr.tablerow__borderBottom td {
 .index__videoLinkCard img {
   width: 100%;
   height: auto;
+  border-radius: 3px;
   filter: brightness(0.9);
 }
 
@@ -538,6 +540,7 @@ tr.tablerow__borderBottom td {
 #contactForm {
   padding: 0.5rem 1.2rem 1rem 1.2rem;  
   background-color: #fff;
+  border-radius: 5px;
   box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
   -webkit-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
   -moz-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);

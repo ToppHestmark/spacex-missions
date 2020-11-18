@@ -18,7 +18,6 @@ getPastLaunches();
 
 const createPastLaunchesHtml = (pastLaunchResults) => {
 
-
   const pastLaunchContainer2020 = document.querySelector(".pastLaunch__2020");
   const pastLaunchContainer2019 = document.querySelector(".pastLaunch__2019");
   const pastLaunchContainer2018 = document.querySelector(".pastLaunch__2018");
@@ -62,6 +61,14 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
       </div>`;
     return cardsHtml;
   };
+  
+  
+  // window.addEventListener('scroll', function(e) {
+  //   let scrollingPosition = 0;
+  //   scrollingPosition = window.scrollY;
+    
+  //   console.log(scrollingPosition);
+  // });
   
   // ----- Filtered by years -----
   const year2020 = pastLaunchResults.filter(year => year.launch_year === '2020')
