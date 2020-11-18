@@ -519,6 +519,9 @@ tr.tablerow__borderBottom td {
 #contactForm {
   padding: 0 0.8rem 1rem 0.8rem;
   background-color: #fff;
+  box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
+  -webkit-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
+  -moz-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
 }
 
 #contactForm input,
