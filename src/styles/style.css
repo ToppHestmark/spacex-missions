@@ -103,6 +103,15 @@
   justify-content: space-evenly;
   color: #f6f6f6;
 }
+.index__icon {
+  display: inline;
+}
+.index__icon img {
+  width: 14px;
+}
+.index__icon.pin-icon img {
+  width: 12px;
+}
 .countdown__window {
   display: flex;
   flex-direction: column;

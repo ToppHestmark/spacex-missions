@@ -29,9 +29,9 @@ const nextLaunchHtml = (nextLaunchResult) => {
   nextLaunchContainer.innerHTML = `<div class="index__nextLaunchResults">
   <h2>${missionName}</h2>
   <p><b>Flight#:</b> ${flightNumber}</p>
-  <p><b>Date:</b> ${americanDateFormat(launchDateUTC)}</p>
-  <p><b>Site:</b> ${launchSite}</p>
-  <p><b>Rocket:</b> ${rocketName}</p>
+  <p><div class="index__icon"><img src="./../assets/icons/calendar-light-icon.png" alt="Calendar icon"></div> ${americanDateFormat(launchDateUTC)}</p>
+  <p><div class="index__icon pin-icon"><img src="./../assets/icons/pin-light-icon.png" alt="Pin icon"></div> ${launchSite}</p>
+  <p><div class="index__icon"><img src="./../assets/icons/rocket-light-icon.png" alt="Rocket icon"></div> ${rocketName}</p>
   </div>`;
 
   // Countdown timer
