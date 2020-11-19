@@ -63,6 +63,7 @@
   font-weight: 400;
   font-size: 2.5rem;
   letter-spacing: 3px;
+  margin-top: 5rem;
 }
 .index__headerTextContainer p {
   margin-top: 2vh;
@@ -83,14 +84,12 @@
 .index__nextLaunchResults  h2 {
   font-size: 4em;
   font-weight: 400;
-  padding: 10px;
   letter-spacing: 3px;
-  text-align: center;
 }
 .index__nextLaunchResults a {
   background-color: rgba(0,0,0, 1);
   color: #f6f6f6;
-  padding: 1.3em 5vw;
+  padding: 1.3em 7vw;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -156,15 +155,29 @@
   color: #F53B3B !important;
 }
 
+@media screen and (max-width: 1024px) {
+  .index__nextLaunchResults a {
+    padding: 1.3em 13vw;
+    text-align: center;
+  }
+}
+
 @media (min-width: 481px) and (max-width: 767px) {
+  .index__nextLaunchResults a {
+    padding: 1.3em 18vw;
+  }
   .countdown__results {
     min-width: 500px;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .index__headerTextContainer {
+    height: 15vh;
+  }
  
   .index__headerTextContainer h1 {
+    margin-top: 0;
     font-size: 2rem;
   }
   .index__headerTextContainer p {
@@ -184,6 +197,9 @@
   }
   .index__nextLaunchResults {
     font-size: small;
+  }
+  .index__nextLaunchResults a {
+    padding: 1.8em 20vw;
   }
  
   .countdown__results {
@@ -525,7 +541,6 @@ tr.tablerow__borderBottom td {
   /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
   background-position: center;
   width: 100%;
-  min-height: 105vh;
 }
 .form__container {
   width: 50vw;
