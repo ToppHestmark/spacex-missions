@@ -45,6 +45,7 @@
 
 .index__nextLaunchBorder {
   border: 2px solid #fdfdfd;
+  border-radius: 5px;
   padding: 6vh 12vw;
 }
 
@@ -86,6 +87,14 @@
   font-weight: 400;
   padding: 10px;
   letter-spacing: 3px;
+}
+.index__nextLaunchResults a {
+  color: #f6f6f6;
+  font-size: large;
+}
+.index__nextLaunchResults a:hover,
+.index__nextLaunchResults a:active {
+  color: #3BF56F;
 }
 
 /* --- Countdown Container --- */

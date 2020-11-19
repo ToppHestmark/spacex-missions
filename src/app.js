@@ -25,13 +25,36 @@ const nextLaunchHtml = (nextLaunchResult) => {
   const launchSite = nextLaunchResult.launch_site.site_name_long;
   const rocketName = nextLaunchResult.rocket.rocket_name;
   const launchDateUTC = nextLaunchResult.launch_date_utc;
+  const redditLink = nextLaunchResult.links.reddit_campaign;
 
   nextLaunchContainer.innerHTML = `<div class="index__nextLaunchResults">
-  <h2>${missionName}</h2>
-  <p><b>Flight#:</b> ${flightNumber}</p>
-  <p><div class="index__icon"><img src="./../assets/icons/calendar-light-icon.png" alt="Calendar icon"></div> ${americanDateFormat(launchDateUTC)}</p>
-  <p><div class="index__icon pin-icon"><img src="./../assets/icons/pin-light-icon.png" alt="Pin icon"></div> ${launchSite}</p>
-  <p><div class="index__icon"><img src="./../assets/icons/rocket-light-icon.png" alt="Rocket icon"></div> ${rocketName}</p>
+    <h2>${missionName}</h2>
+    <p>
+      <b>Flight# -</b> 
+      ${flightNumber}
+    </p>
+    <p>
+      <div class="index__icon">
+        <img src="./../assets/icons/rocket-light-icon.png" alt="Rocket icon">
+      </div> 
+      - ${rocketName}
+    </p>
+    <p>
+      <div class="index__icon">
+        <img src="./../assets/icons/calendar-light-icon.png" alt="Calendar icon">
+      </div> 
+      - ${americanDateFormat(launchDateUTC)}
+    </p>
+    <p>
+      <div class="index__icon pin-icon">
+        <img src="./../assets/icons/pin-light-icon.png" alt="Pin icon">
+      </div> 
+      - ${launchSite}
+    </p>
+    <div class="index__icon">
+        <img src="./../assets/icons/external-link-light.png" alt="External link icon">
+      </div> 
+    - <a target="_blank" href=${redditLink}>Reddit campaign</a>
   </div>`;
 
   // Countdown timer
@@ -39,7 +62,7 @@ const nextLaunchHtml = (nextLaunchResult) => {
     const launchTime = Date.parse(launchDateUTC);
     const now = Date.parse(new Date());
     const totalTimeRemaining = launchTime - now;
-    const countdownContainer = document.getElementById('countdown-container');
+    const countdownContainer = document.querySelector('#countdown-container');
     
     const seconds = Math.floor((totalTimeRemaining/1000) % 60);
     const minutes = Math.floor((totalTimeRemaining/1000/60) % 60);
