@@ -51,10 +51,11 @@ const nextLaunchHtml = (nextLaunchResult) => {
       </div> 
       - ${launchSite}
     </p>
-    <div class="index__icon">
-        <img src="./../assets/icons/external-link-light.png" alt="External link icon">
-      </div> 
-    - <a target="_blank" href=${redditLink}>Reddit campaign</a>
+    <div class="reddit-link">
+      <a target="_blank" href=${redditLink}><div class="index__icon">
+      <img src="./../assets/icons/external-link-light.png" alt="External link icon">
+    </div>Campaign threads</a>
+    </div>
   </div>`;
 
   // Countdown timer
