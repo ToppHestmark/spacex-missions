@@ -35,25 +35,25 @@ const nextLaunchHtml = (nextLaunchResult) => {
     </p>
     <p>
       <div class="index__icon">
-        <img src="./assets/icons/rocket-light-icon.png" alt="Rocket icon">
+        <img src="assets/icons/rocket-light-icon.png" alt="Rocket icon">
       </div>
       - ${rocketName}
     </p>
     <p>
       <div class="index__icon">
-        <img src="./assets/icons/calendar-light-icon.png" alt="Calendar icon">
+        <img src="assets/icons/calendar-light-icon.png" alt="Calendar icon">
       </div> 
       - ${americanDateFormat(launchDateUTC)}
     </p>
     <p>
       <div class="index__icon pin-icon">
-        <img src="./assets/icons/pin-light-icon.png" alt="Pin icon">
+        <img src="assets/icons/pin-light-icon.png" alt="Pin icon">
       </div> 
       - ${launchSite}
     </p>
     <div class="reddit-link">
       <a target="_blank" href=${redditLink}><div class="index__icon">
-      <img src="./assets/icons/external-link-light.png" alt="External link icon">
+      <img src="assets/icons/external-link-light.png" alt="External link icon">
     </div>Campaign threads</a>
     </div>
   </div>`;
