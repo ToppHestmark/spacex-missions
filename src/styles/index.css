@@ -87,7 +87,7 @@
   letter-spacing: 3px;
 }
 .index__nextLaunchResults a {
-  background-color: rgba(0,0,0, 0.75);
+  background-color: rgba(0,0,0, 1);
   color: #f6f6f6;
   padding: 1.3em 7vw;
   text-decoration: none;
@@ -96,7 +96,7 @@
 }
 .index__nextLaunchResults a:hover,
 .index__nextLaunchResults a:active {
-  background-color: rgba(0,0,0, 1);
+  background-color: rgba(0,0,0, 0.75);
 }
 
 .index__nextLaunchResults .reddit-link {
