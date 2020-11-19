@@ -30,26 +30,26 @@ const nextLaunchHtml = (nextLaunchResult) => {
   nextLaunchContainer.innerHTML = `<div class="index__nextLaunchResults">
     <h2>${missionName}</h2>
     <p>
-      <b>Flight# -</b> 
+      <b>Flight#</b> 
       ${flightNumber}
     </p>
     <p>
       <div class="index__icon">
         <img src="assets/icons/rocket-light-icon.png" alt="Rocket icon">
       </div>
-      - ${rocketName}
+      ${rocketName}
     </p>
     <p>
       <div class="index__icon">
         <img src="assets/icons/calendar-light-icon.png" alt="Calendar icon">
       </div> 
-      - ${americanDateFormat(launchDateUTC)}
+      ${americanDateFormat(launchDateUTC)}
     </p>
     <p>
       <div class="index__icon pin-icon">
         <img src="assets/icons/pin-light-icon.png" alt="Pin icon">
       </div> 
-      - ${launchSite}
+      ${launchSite}
     </p>
     <div class="reddit-link">
       <a target="_blank" href=${redditLink}><div class="index__icon">

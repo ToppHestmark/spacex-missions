@@ -87,7 +87,7 @@
   letter-spacing: 3px;
 }
 .index__nextLaunchResults a {
-  background-color: rgba(0,0,0, 1);
+  background-color: rgba(0,0,0, 0.75);
   color: #f6f6f6;
   padding: 1.3em 7vw;
   text-decoration: none;
@@ -96,7 +96,7 @@
 }
 .index__nextLaunchResults a:hover,
 .index__nextLaunchResults a:active {
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0, 1);
 }
 
 .index__nextLaunchResults .reddit-link {
@@ -120,14 +120,18 @@
   justify-content: space-evenly;
   color: #f6f6f6;
 }
+.index__nextLaunchResults p {
+  margin: 4px 0 4px 0;
+}
 .index__icon {
   display: inline;
 }
 .index__icon img {
-  width: 14px;
+  width: 12px;
+  margin-right: 8px;
 }
 .index__icon.pin-icon img {
-  width: 12px;
+  width: 10px;
 }
 .countdown__window {
   display: flex;
@@ -164,7 +168,7 @@
 
 @media (min-width: 481px) and (max-width: 767px) {
   .index__nextLaunchResults a {
-    padding: 1.3em 18vw;
+    padding: 1.3em 16vw;
   }
   .countdown__results {
     min-width: 500px;

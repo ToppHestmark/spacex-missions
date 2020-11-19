@@ -151,11 +151,6 @@
   background-color: #393e46;
 }
 
-.pastLaunch__yearSection.year2021--hide {
-  display: none;
-}
-
-
 @media (min-width: 1281px) {
   .pastLaunch__container {
     width: 80%;
