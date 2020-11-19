@@ -140,3 +140,9 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
       pastLaunchContainer2006.innerHTML += createCardsHtml(pastLaunch);
     });
 };
+
+/* ############################################################
+--- <<<     Footer     >>> ---
+---############################################################ */
+const pagesFooter = document.querySelector('.pages__footer');
+pagesFooter.innerHTML = pagesFooterHtml;

@@ -175,3 +175,10 @@ function contactFormHandler(event) {
 }
 
 const validateEmail = email =>  /\S+@\S+\.\S+/.test(email);
+
+
+/* ############################################################
+--- <<<     Footer     >>> ---
+---############################################################ */
+const indexFooter = document.querySelector('.index__footer');
+indexFooter.innerHTML = indexFooterHtml;

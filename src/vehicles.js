@@ -84,3 +84,9 @@ const createVehiclesHtml = (rocketResults) => {
     </div>`;
   });
 };
+
+/* ############################################################
+--- <<<     Footer     >>> ---
+---############################################################ */
+const pagesFooter = document.querySelector('.pages__footer');
+pagesFooter.innerHTML = pagesFooterHtml;

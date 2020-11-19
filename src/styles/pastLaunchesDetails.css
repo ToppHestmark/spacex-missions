@@ -141,7 +141,7 @@ body {
 .pastLaunchesDetails__links a:hover {
   color: white;
   background-color: #000;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 .pastLaunchesDetails__links a:active {
   background-color: #393e46;
