@@ -28,7 +28,9 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
     const launchSuccess = pastLaunch.launch_success;
 
     function successMessage() {
-      return launchSuccess ? `<p class="pastLaunch__successMessage"><SUCCESSFUL>SUCCESSFUL</p>` : `<p class="pastLaunch__failedMessage">FAILED</p>`;
+      return launchSuccess 
+      ? `<p class="pastLaunch__successMessage"><SUCCESSFUL>SUCCESSFUL</p>` 
+      : `<p class="pastLaunch__failedMessage">FAILED</p>`;
     }
     
     const cardsHtml = `
@@ -53,47 +55,41 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
   const container2017 = document.querySelector(".pastLaunch__2017");
   const container2016 = document.querySelector(".pastLaunch__2016");
   const container2015 = document.querySelector(".pastLaunch__2015");
-  const container2014 = document.querySelector(".pastLaunch__2014");
-  const containerBeyond2013 = document.querySelector(".pastLaunch__beyond2013");
+  const containerBeyond2014 = document.querySelector(".pastLaunch__beyond2013");
 
   // ----- Launches filtered by periods of time -----
-  const latestLaunches = pastLaunchResults.filter(year => year.launch_year >= '2020')
-    latestLaunches.map(pastLaunch => {
-    containerLatest.innerHTML += createCardsHtml(pastLaunch);
-  });
+    const latestLaunchesCards = pastLaunchResults.filter(year => year.launch_year >= '2020')
+      latestLaunchesCards.map(pastLaunch => {
+        containerLatest.innerHTML += createCardsHtml(pastLaunch);
+    });
   
-  const launches2019 = pastLaunchResults.filter(year => year.launch_year === '2019')
-    launches2019.map(pastLaunch => {
+  const launches2019Cards = pastLaunchResults.filter(year => year.launch_year === '2019')
+    launches2019Cards.map(pastLaunch => {
       container2019.innerHTML += createCardsHtml(pastLaunch);});
   
-    const launches2018 = pastLaunchResults.filter(year => year.launch_year === '2018')
-    launches2018.map(pastLaunch => {
+    const launches2018Cards = pastLaunchResults.filter(year => year.launch_year === '2018')
+    launches2018Cards.map(pastLaunch => {
       container2018.innerHTML += createCardsHtml(pastLaunch);
     });
   
-    const launches2017 = pastLaunchResults.filter(year => year.launch_year === '2017')
-    launches2017.map(pastLaunch => {
+    const launches2017Cards = pastLaunchResults.filter(year => year.launch_year === '2017')
+    launches2017Cards.map(pastLaunch => {
       container2017.innerHTML += createCardsHtml(pastLaunch);
     });
   
-    const launches2016 = pastLaunchResults.filter(year => year.launch_year === '2016')
-    launches2016.map(pastLaunch => {
+    const launches2016Cards = pastLaunchResults.filter(year => year.launch_year === '2016')
+    launches2016Cards.map(pastLaunch => {
       container2016.innerHTML += createCardsHtml(pastLaunch);
     });
   
-    const year2015 = pastLaunchResults.filter(year => year.launch_year === '2015')
-    year2015.map(pastLaunch => {
+    const launches2015Cards = pastLaunchResults.filter(year => year.launch_year === '2015')
+    launches2015Cards.map(pastLaunch => {
       container2015.innerHTML += createCardsHtml(pastLaunch);
     });
   
-    const launches2014 = pastLaunchResults.filter(year => year.launch_year === '2014')
-    launches2014.map(pastLaunch => {
-      container2014.innerHTML += createCardsHtml(pastLaunch);
-   });
-  
-    const beyond2013 = pastLaunchResults.filter(year => year.launch_year <= '2013')
-    beyond2013.map(pastLaunch => {
-      containerBeyond2013.innerHTML += createCardsHtml(pastLaunch);
+    const beyond2014 = pastLaunchResults.filter(year => year.launch_year <= '2014')
+    beyond2014.map(pastLaunch => {
+      containerBeyond2014.innerHTML += createCardsHtml(pastLaunch);
     });
 };
 

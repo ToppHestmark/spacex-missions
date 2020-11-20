@@ -60,13 +60,13 @@ const createDetailsHtml = (flightDetails) => {
       return payloads;
     });
       
-    function successFactor() {
+    const successFactor = () => {
       return launchSuccess 
       ? `<span class="pastLaunchesDetails__successMessage">SUCCESSFUL</span>` 
       : `<span class="pastLaunchesDetails__failedMessage">FAILED</span>`;
     };
 
-    function detailsDescription() {
+    const detailsDescription = () => {
       return detailsText ? detailsText : "No details available.";
     };
     
