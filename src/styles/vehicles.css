@@ -7,35 +7,11 @@
   min-height: 100vh;
   background-image: url("../../assets/background/engine-firing-off-2-large.jpg");
   /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/32040173928/" */
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   text-shadow: 0px 1px 8px rgba(108, 108, 108, 0.8);
 }
-
-.vehicles__header h1,
-.vehicles__header p {
-  color: #f6f6f6;
-  text-shadow: 0px 1px 8px rgba(108, 108, 108, 0.8);
-  text-align: center;
-}
-.vehicles__header h1 {
-  margin-top: 20vh;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 4rem;
-  letter-spacing: 3px;
-}
-.vehicles__header p {
-  margin-top: 2vh;
-  font-weight: 300;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-}
-
 
 /* ############################################
 --- <<<     Vehicles     >>> ---

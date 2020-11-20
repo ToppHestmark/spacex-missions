@@ -32,6 +32,7 @@ const createDetailsHtml = (flightDetails) => {
     const launchSuccess = flightDetails.launch_success;
     const payloads = flightDetails.rocket.second_stage.payloads;
 
+    // ----- Payloads-handler and helpers -----
     const missionPayloads = payloads.map(payload => {
       const payloadId = `<h4>${payload.payload_id}</h4>`;
       const payloadType = `<div class="pastLaunchDetails__payload"><b>Payload Type:</b> <p>${payload.payload_type}</p></div>`;

@@ -4,10 +4,7 @@ body {
   min-height: 100vh;
   background-image: url('../../assets/background/space-background-large.jpg');
   /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
-  background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .pastLaunchesDetails__main {

@@ -7,6 +7,43 @@
   font-family: 'Oswald', sans-serif;
 }
 
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed !important;
+}
+
+.history__header h1,
+.history__header p,
+.pastLaunches__header h1,
+.pastLaunches__header p,
+.vehicles__header h1,
+.vehicles__header p {
+  color: #f6f6f6;
+  text-shadow: 0px 1px 8px rgba(108, 108, 108, 0.8);
+  text-align: center;
+}
+
+.history__header h1,
+.pastLaunches__header h1,
+.vehicles__header h1 {
+  margin-top: 20vh;
+  padding: 0 10px 0 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 4rem;
+  letter-spacing: 3px;
+}
+
+.pastLaunches__header p,
+.history__header p,
+.vehicles__header p {
+  margin-top: 2vh;
+  font-weight: 300;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
 /* ############################################
 --- <<<     Navbar     >>> ---
 ---############################################ */
@@ -71,30 +108,6 @@ nav {
 
 .nav--hide {
   display: none;
-}
-
-/* ---- Scroll up button --- */
-.nav__scrollToTopButton {
-  display: none;
-  position: fixed;
-  bottom: 8vh;
-  right: 3vw;
-  z-index: 99;
-  font-size: 30px;
-  border: none;
-  outline: none;
-  background-color: #393e46;
-  color: #f6f6f6;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 2px;
-  opacity: 0.6;
-  transition: transform 100ms ease-in;
-}
-
-.nav__scrollToTopButton:active {
-  background-color: #555;
-  transform: scale(1.02);
 }
 
 @media screen and (max-width: 990px) {
@@ -188,4 +201,68 @@ nav {
     width: 60%;  
   }
 
+}
+
+/* ############################################
+--- <<<     Scroll to top button     >>> ---
+---############################################ */
+.nav__scrollToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 8vh;
+  right: 3vw;
+  z-index: 99;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background-color: #393e46;
+  color: #f6f6f6;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 2px;
+  opacity: 0.6;
+  transition: transform 100ms ease-in;
+}
+
+.nav__scrollToTopButton:active {
+  background-color: #555;
+  transform: scale(1.02);
+}
+
+/* ############################################
+--- <<<     Loading image     >>> ---
+---############################################ */
+.loading-bar { 
+  background-image: url('../../assets/icons/loading.png'); 
+  animation: loading-bar 0.8s steps(5) infinite; 
+  position: absolute;
+  display: block;
+  width: 28px; 
+  height: 4px; 
+}
+
+@keyframes loading-bar {
+  0% { 
+    background-position: 0px 0px; 
+  } 
+  50%, 100% { 
+    background-position: 0px -20px; 
+  } 
+}
+
+
+/* ############################################
+--- <<<     Errorhandler     >>> ---
+---############################################ */
+.error-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.errorMessageContainer {
+  padding: 3rem;
+  font-size: 22px;
+  color: #F53B3B;
+  background: #f6f6f6;
+  margin: 0 auto;
 }

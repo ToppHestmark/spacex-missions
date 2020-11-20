@@ -2,35 +2,10 @@
   width: 100%;
   min-height: 100vh;
   background-image: url("../../assets/background/spacex-boarding-bridge-large.jpg");
-
   /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/39684491043/" */
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
-}
-
-.history__header h1,
-.history__header p {
-  color: #f6f6f6;
-  text-shadow: 0px 1px 8px rgba(108, 108, 108, 0.8);
-  text-align: center;
-}
-.history__header h1 {
-  margin-top: 20vh;
-  padding: 0 10px 0 10px;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 4rem;
-  letter-spacing: 3px;
-}
-.history__header p {
-  margin-top: 2vh;
-  font-weight: 300;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
 }
 
 .history__main {
