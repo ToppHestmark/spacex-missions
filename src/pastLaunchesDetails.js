@@ -34,37 +34,41 @@ const createDetailsHtml = (flightDetails) => {
 
     // ----- Payloads-handler and helpers -----
     const missionPayloads = payloads.map(payload => {
-      const payloadId = `<h4>${payload.payload_id}</h4>`;
-      const payloadType = `<div class="pastLaunchDetails__payload"><b>Payload Type:</b> <p>${payload.payload_type}</p></div>`;
-      const customer = `<div class="pastLaunchDetails__payload"><b>Customer:</b> <p>${payload.customers}</p></div>`;
-      const nationality = `<div class="pastLaunchDetails__payload"><b>Nationality:</b> <p>${payload.nationality}</p></div>`;
-
+      const payloadId = payload.payload_id;
+      const payloadType = payload.payload_type;
+      const customer = payload.customers;
+      const nationality = payload.nationality;
       const manufacturer = payload.manufacturer;
-      const ManufacturerHandler = () => {
-        return manufacturer === null 
-        ? `<div class="pastLaunchDetails__payload"><b>Manufacturer:</b> <p>Not specified</p></div>`
-        : `<div class="pastLaunchDetails__payload"><b>Manufacturer:</b> <p>${manufacturer}</p></div>`;
+      const manufacturerHandler = () => {
+        return manufacturer === null ? 'Not specified' : manufacturer;
       };
 
       const payloadMassKg = payload.payload_mass_kg;
       const massKg = String(payloadMassKg).replace(/(.)(?=(\d{3})+$)/g,'$1.');
-      const payloadMassLbs = payload.payload_mass_lbs;
-      const removeLbsDecimal = Math.floor(payloadMassLbs)
-      const massLbs = String(removeLbsDecimal).replace(/(.)(?=(\d{3})+$)/g,'$1.');
-      const payloadMass = `    <div class="pastLaunchDetails__payload"><b>Mass:</b> <p> ${massKg} kg / ${massLbs} lbs </p> </div>`
+      const payloadMassLbs = Math.floor(payload.payload_mass_lbs);
+      const massLbs = String(payloadMassLbs).replace(/(.)(?=(\d{3})+$)/g,'$1.');
 
       let payloads = "";
-      payloads += `${payloadId} ${payloadType} ${customer} ${ManufacturerHandler()} ${nationality} ${payloadMass}`;
-      return  payloads;
+      payloads += `
+      <h4>${payloadId}</h4>
+      <div class="pastLaunchDetails__payload"><b>Payload Type:</b> <p>${payloadType}</p></div>
+      <div class="pastLaunchDetails__payload"><b>Customer:</b> <p>${customer}</p></div>
+      <div class="pastLaunchDetails__payload"><b>Manufacturer:</b> <p>${manufacturerHandler()}</p></div>
+      <div class="pastLaunchDetails__payload"><b>Nationality:</b> <p>${nationality}</p></div>
+      <div class="pastLaunchDetails__payload"><b>Mass:</b> <p> ${massKg} kg / ${massLbs} lbs </p> </div>
+      `;
+      return payloads;
     });
       
     function successFactor() {
-      return launchSuccess ? `<span class="pastLaunchesDetails__successMessage">SUCCESSFUL</span>` : `<span class="pastLaunchesDetails__failedMessage">FAILED</span>`;
-    }
+      return launchSuccess 
+      ? `<span class="pastLaunchesDetails__successMessage">SUCCESSFUL</span>` 
+      : `<span class="pastLaunchesDetails__failedMessage">FAILED</span>`;
+    };
 
     function detailsDescription() {
       return detailsText ? detailsText : "No details available.";
-    }
+    };
     
     pastLaunchesDetailsContainer.innerHTML = `
     <div class="pastLaunchesDetails__results">
