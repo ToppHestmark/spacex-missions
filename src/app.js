@@ -2,18 +2,16 @@
 --- <<<     Next launch     >>> ---
 ---########################################################## */
 const nextLaunchUrl = "https://api.spacexdata.com/v3/launches/next";
-const errorContainer = document.querySelector(".error-container");
 const nextLaunchContainer = document.querySelector(".index__nextLaunchContainer");
 
 const getNextLaunch = async () => {
   try {
     const response = await fetch(nextLaunchUrl);
     const nextLaunchResult = await response.json();
-
     nextLaunchHtml(nextLaunchResult)
   }
   catch(error) {
-    errorContainer.innerHTML = displayError("Ooops, An error occured when calling API.")
+    nextLaunchContainer.innerHTML = displayError("Ooops, an error occured when calling API.")
   }
 }
 getNextLaunch()
@@ -128,7 +126,7 @@ const getUpcomingLaunches = async () => {
     });
   }
   catch(error) {
-    upcomingLaunchContainer.innerHTML = displayError("Ooops, an error occured when calling API")
+    upcomingLaunchTable.innerHTML = displayError("Ooops, an error occured when calling API")
   }
 }
 getUpcomingLaunches();

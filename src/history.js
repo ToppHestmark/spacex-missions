@@ -5,7 +5,6 @@ const getHistory = async () => {
   try {
     const response = await fetch(historyUrl);
     const historyResults = await response.json();
-
     createHistoryHtml(historyResults)
   }
   catch(error) {
@@ -28,8 +27,6 @@ const createHistoryHtml = (historyResults) => {
     const flight = () => {
       return flightNumber === null ? 'N/A' : flightNumber;
     };
-
-    console.log();
 
     historyContainer.innerHTML += `
     <div class="history__card">

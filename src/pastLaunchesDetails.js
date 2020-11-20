@@ -9,11 +9,10 @@ const getDetails = async () => {
   try {
     const response = await fetch(singleFlightURL);
     const flightDetails = await response.json();
-    
     createDetailsHtml(flightDetails);
   }
   catch(error) {
-    pastLaunchesDetailsContainer.innerHTML = displayError("An error occured when calling API");
+    pastLaunchesDetailsContainer.innerHTML = displayError("OOps, an error occured when calling API");
   }
 }
 getDetails()

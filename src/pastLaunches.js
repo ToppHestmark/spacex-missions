@@ -1,16 +1,15 @@
 const pastLaunchUrl = "https://api.spacexdata.com/v3/launches/past";
-const container2020 = document.querySelector(".pastLaunch__2020");
+const containerLatest = document.querySelector(".pastLaunch__latest");
 
 const getPastLaunches = async () => {
   try {
     const response = await fetch(pastLaunchUrl);
     const pastLaunchResults = await response.json();
     pastLaunchResults.sort((a, b) => b.flight_number - a.flight_number);
-
     createPastLaunchesHtml(pastLaunchResults);
   }
   catch(error) {
-    container2020.innerHTML = displayError("An error occured when calling API")
+    containerLatest.innerHTML = displayError("Ooops, an error occured when calling API")
   }
 }
 getPastLaunches();
@@ -18,39 +17,7 @@ getPastLaunches();
 
 const createPastLaunchesHtml = (pastLaunchResults) => {
   
-  const createCardsHtml = (pastLaunch) => {
-    const launchDateUTC = pastLaunch.launch_date_utc;
-    const missionBadge = pastLaunch.links.mission_patch_small;
-    const missionName = pastLaunch.mission_name
-    const flightNumber = pastLaunch.flight_number;
-    const launchSite = pastLaunch.launch_site.site_name_long;
-    const rocketName = pastLaunch.rocket.rocket_name;
-    const launchSuccess = pastLaunch.launch_success;
-
-    function successMessage() {
-      return launchSuccess 
-      ? `<p class="pastLaunch__successMessage"><SUCCESSFUL>SUCCESSFUL</p>` 
-      : `<p class="pastLaunch__failedMessage">FAILED</p>`;
-    };
-    
-    const cardsHtml = `
-    <div class="pastLaunch__card">
-    <img class="pastLaunch__missionBadge" src=${missionBadge} alt=${missionName}>
-    <p class="pastLaunch__date">${americanDateFormat(launchDateUTC)}</p>
-    <h3 class="pastLaunch__missionName">${missionName}</h3>
-    <p><b>Flight#:</b> ${flightNumber}</p>
-    <p><b>Site:</b> ${launchSite}</p>
-    <p><b>Rocket:</b> ${rocketName}</p>
-    ${successMessage()}
-    <div class="button__moreDetails">
-    <a href="past-launches-details.html?flight_number=${flightNumber}">Learn more</a>
-    </div>
-    </div>`;
-    return cardsHtml;
-  };
-
   // ----- Launches filtered by periods of time -----
-  const containerLatest = document.querySelector(".pastLaunch__latest");
   const latestLaunchesCards = pastLaunchResults.filter(year => year.launch_year >= '2020')
       latestLaunchesCards.map(pastLaunch => {
         containerLatest.innerHTML += createCardsHtml(pastLaunch);
@@ -90,6 +57,37 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
     beyond2014.map(pastLaunch => {
       containerBeyond2014.innerHTML += createCardsHtml(pastLaunch);
     });
+};
+
+const createCardsHtml = (pastLaunch) => {
+  const launchDateUTC = pastLaunch.launch_date_utc;
+  const missionBadge = pastLaunch.links.mission_patch_small;
+  const missionName = pastLaunch.mission_name
+  const flightNumber = pastLaunch.flight_number;
+  const launchSite = pastLaunch.launch_site.site_name_long;
+  const rocketName = pastLaunch.rocket.rocket_name;
+  const launchSuccess = pastLaunch.launch_success;
+
+  function successMessage() {
+    return launchSuccess 
+    ? `<p class="pastLaunch__successMessage"><SUCCESSFUL>SUCCESSFUL</p>` 
+    : `<p class="pastLaunch__failedMessage">FAILED</p>`;
+  };
+  
+  const cardsHtml = `
+  <div class="pastLaunch__card">
+  <img class="pastLaunch__missionBadge" src=${missionBadge} alt=${missionName}>
+  <p class="pastLaunch__date">${americanDateFormat(launchDateUTC)}</p>
+  <h3 class="pastLaunch__missionName">${missionName}</h3>
+  <p><b>Flight#:</b> ${flightNumber}</p>
+  <p><b>Site:</b> ${launchSite}</p>
+  <p><b>Rocket:</b> ${rocketName}</p>
+  ${successMessage()}
+  <div class="button__moreDetails">
+  <a href="past-launches-details.html?flight_number=${flightNumber}">Learn more</a>
+  </div>
+  </div>`;
+  return cardsHtml;
 };
 
 /* ############################################################

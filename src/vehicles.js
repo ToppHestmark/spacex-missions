@@ -1,11 +1,10 @@
-const rocketsContainer = document.querySelector('.vehicles__rocketsContainer');
+const vehiclesContainer = document.querySelector('.vehicles__rocketsContainer');
 const rocketsURL = "https://api.spacexdata.com/v3/rockets";
 
 const getRockets = async () => {
   try {
     const rocketResponse = await fetch(rocketsURL);
     const rocketResults = await rocketResponse.json();
-
     createVehiclesHtml(rocketResults)
   }
   catch(error) {
@@ -46,7 +45,7 @@ const createVehiclesHtml = (rocketResults) => {
     const height = `<p> ${vehicleHeightMeters} m / ${vehicleHeightFeet} ft</p>`;
     const diameter = `<p> ${vehicleDiameterMeters} m / ${vehicleDiameterFeet} ft</p>`;
 
-    rocketsContainer.innerHTML += `<div class="vehicle__card">
+    vehiclesContainer.innerHTML += `<div class="vehicle__card">
     <h2>${vehicleName}</h2>
       <div class="vehicles__imageContainer">
         <img src=${vehicleImage} alt="${vehicleName}">

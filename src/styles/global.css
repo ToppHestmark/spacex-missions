@@ -230,7 +230,7 @@ nav {
 }
 
 /* ############################################
---- <<<     Loading image     >>> ---
+--- <<<     Loading png     >>> ---
 ---############################################ */
 .loading-bar { 
   background-image: url('../../assets/icons/loading.png'); 
@@ -254,11 +254,7 @@ nav {
 /* ############################################
 --- <<<     Errorhandler     >>> ---
 ---############################################ */
-.error-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+
 .errorMessageContainer {
   padding: 3rem;
   font-size: 22px;
