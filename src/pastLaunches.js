@@ -90,6 +90,14 @@ const createCardsHtml = (pastLaunch) => {
   return cardsHtml;
 };
 
+
+const showHeader = setTimeout(() => {
+ const subHeaders = document.querySelectorAll('.subheader--hide');
+ subHeaders.forEach((sub) => {
+  sub.classList.remove('subheader--hide')
+ })
+}, 2000)
+
 /* ############################################################
 --- <<<     Footer     >>> ---
 ---############################################################ */
