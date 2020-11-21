@@ -1,5 +1,6 @@
 const body = document.querySelector('body');
 const nav = document.querySelector("nav");
+const arrowDown = document.querySelector('.arrow-down');
 
 const navbarSlideFromTheSide = () => {
   const burger = document.querySelector(".nav__burger");
@@ -32,8 +33,10 @@ window.onscroll = () => {
 
   if (scrollingPosition > 100) {
     nav.classList.add("nav--hide")
+    arrowDown.style.display = 'none';
   } else {
-    nav.classList.remove('nav--hide')
+    nav.classList.remove('nav--hide');
+    arrowDown.style.display = 'block';
   }
 
   if (scrollingPosition > 300) {

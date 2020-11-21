@@ -8,6 +8,7 @@ body {
 }
 
 .pastLaunchesDetails__main {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   margin-top: 15vh;

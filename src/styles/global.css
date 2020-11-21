@@ -230,6 +230,43 @@ nav {
 }
 
 /* ############################################
+--- <<<     Arrow down     >>> ---
+---############################################ */
+.arrow-down {
+  position: absolute;
+  bottom: 10vh;
+  right: 3vw;
+  animation: arrow-down 2s infinite 0s linear;
+}
+.arrow-down img {
+  width: 30px;
+}
+
+@keyframes arrow-down{
+0% {
+    transform: rotate(xx) scale(1.6);
+    transform-origin: 20% 20%;
+    height: 100px;
+  }
+50% {
+    transform: rotate(xx) scale(1.6);
+    transform-origin: 20% 20%;
+    height: 70px;
+  }
+100% {
+    transform: rotate(xx) scale(1.6);
+    transform-origin: 20% 20%;
+    height: 100px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .arrow-down {
+    display: none;
+  }
+}
+
+/* ############################################
 --- <<<     Loading png     >>> ---
 ---############################################ */
 .loading-bar { 
