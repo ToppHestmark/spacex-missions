@@ -27,15 +27,10 @@ const nextLaunchHtml = (nextLaunchResult) => {
 
   nextLaunchContainer.innerHTML = `<div class="index__nextLaunchResults">
     <h2>${missionName}</h2>
-    <p>
-      <b>Flight#</b> 
-      ${flightNumber}
-    </p>
-    <p>
-      <div class="index__icon">
-        <img src="assets/icons/rocket-light-icon.png" alt="Rocket icon">
-      </div>
-      ${rocketName}
+    <p> <b>Flight#</b> ${flightNumber} </p>
+    <p> <div class="index__icon">
+          <img src="assets/icons/rocket-light-icon.png" alt="Rocket icon">
+        </div> ${rocketName}
     </p>
     <p>
       <div class="index__icon">
@@ -58,10 +53,11 @@ const nextLaunchHtml = (nextLaunchResult) => {
 
   // Countdown timer
   const countdownInterval = setInterval(() => {
+    const countdownContainer = document.querySelector('#countdown-container');
+    
     const launchTime = Date.parse(launchDateUTC);
     const now = Date.parse(new Date());
     const totalTimeRemaining = launchTime - now;
-    const countdownContainer = document.querySelector('#countdown-container');
     
     const seconds = Math.floor((totalTimeRemaining/1000) % 60);
     const minutes = Math.floor((totalTimeRemaining/1000/60) % 60);
@@ -106,30 +102,34 @@ const getUpcomingLaunches = async () => {
     const response = await fetch(upcomingLaunchUrl);
     const upcomingLaunchResults = await response.json();
 
-    upcomingLaunchResults.map((upcomingLaunch) => {
-      const launchDateUTC = upcomingLaunch.launch_date_utc;
-      const flightNumber = upcomingLaunch.flight_number;
-      const missionName = upcomingLaunch.mission_name;
-      const launchSite = upcomingLaunch.launch_site.site_name_long;
-
-      const launchSiteLocation = () => {
-        return launchSite === null ? "Not specified" : launchSite;
-      };
-
-      upcomingLaunchTable.innerHTML +=  `
-      <tr class="upcomingLaunch__dataResults tablerow__borderBottom">
-        <td class="upcomingLaunch__flightNumber upcomingLaunch__dataTable">${flightNumber}</td>
-        <td class="upcomingLaunch__mission upcomingLaunch__dataTable">${missionName}</td>
-        <td class="upcomingLaunch__site upcomingLaunch__dataTable">${launchSiteLocation()}</td>
-        <td class="upcomingLaunch__date upcomingLaunch__dataTable">${americanDateFormat(launchDateUTC)}</td>
-      </tr>`;
-    });
+    createTableHtml(upcomingLaunchResults)
   }
   catch(error) {
     upcomingLaunchTable.innerHTML = displayError("Ooops, an error occured when calling API")
   }
 }
 getUpcomingLaunches();
+
+const createTableHtml = (upcomingLaunchResults) => {
+  upcomingLaunchResults.map((upcomingLaunch) => {
+    const launchDateUTC = upcomingLaunch.launch_date_utc;
+    const flightNumber = upcomingLaunch.flight_number;
+    const missionName = upcomingLaunch.mission_name;
+    const launchSite = upcomingLaunch.launch_site.site_name_long;
+
+    const launchSiteLocation = () => {
+      return launchSite === null ? "Not specified" : launchSite;
+    };
+
+    upcomingLaunchTable.innerHTML +=  `
+    <tr class="upcomingLaunch__dataResults tablerow__borderBottom">
+      <td class="upcomingLaunch__flightNumber upcomingLaunch__dataTable">${flightNumber}</td>
+      <td class="upcomingLaunch__mission upcomingLaunch__dataTable">${missionName}</td>
+      <td class="upcomingLaunch__site upcomingLaunch__dataTable">${launchSiteLocation()}</td>
+      <td class="upcomingLaunch__date upcomingLaunch__dataTable">${americanDateFormat(launchDateUTC)}</td>
+    </tr>`;
+  });
+}
 
 
 /* ############################################################

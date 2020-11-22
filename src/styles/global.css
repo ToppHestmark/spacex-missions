@@ -264,25 +264,41 @@ nav {
 /* ############################################
 --- <<<     Loading png     >>> ---
 ---############################################ */
-.loading-bar { 
-  background-image: url('../../assets/icons/loading.png'); 
-  animation: loading-bar 0.8s steps(5) infinite; 
-  position: absolute;
-  display: block;
-  width: 28px; 
-  height: 4px; 
+.loader {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100px;
+  height: 100px;
 }
 
-@keyframes loading-bar {
-  0% 
-  { 
-    background-position: 0px 0px; 
-  } 
-  50%, 100% { 
-    background-position: 0px -20px; 
-  } 
+.loader .square {
+  width: 20px;
+  height: 20px;
+  background-color: #f6f6f6;
+  animation: loader 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+}
+.loader .square:nth-child(2) {
+  animation-delay: 0.1s;
+  opacity: 0.8;
+}
+.loader .square:nth-child(3) {
+  animation-delay: 0.2s;
+  opacity: 0.6;
+}
+.loader .square:nth-child(4) {
+  animation-delay: 0.3s;
+  opacity: 0.4;
 }
 
+@keyframes loader {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
 
 /* ############################################
 --- <<<     Errorhandler     >>> ---
