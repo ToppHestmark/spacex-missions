@@ -239,7 +239,8 @@ nav {
   animation: arrow-down 2s infinite 0s linear;
 }
 .arrow-down img {
-  width: 30px;
+  width: 25px;
+  opacity: 0.9;
 }
 
 @keyframes arrow-down{
@@ -260,12 +261,6 @@ nav {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .arrow-down {
-    display: none;
-  }
-}
-
 /* ############################################
 --- <<<     Loading png     >>> ---
 ---############################################ */
@@ -279,7 +274,8 @@ nav {
 }
 
 @keyframes loading-bar {
-  0% { 
+  0% 
+  { 
     background-position: 0px 0px; 
   } 
   50%, 100% { 
