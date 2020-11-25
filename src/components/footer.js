@@ -50,7 +50,7 @@ const indexFooterHtml = `<div class="footer__socialMediaLinks">
 </div>
 </div>
 <div class="footer__creatorText">
-<p>Made with 🤍 and a bunch of ☕</p>
+<p>Made with 🤍 and ☕</p>
 </div>`;
 
 const pagesFooterHtml = ` <div class="footer__socialMediaLinks">
@@ -105,5 +105,5 @@ const pagesFooterHtml = ` <div class="footer__socialMediaLinks">
 </div>
 </div>
 <div class="footer__creatorText">
-<p>Made with 🤍 and a bunch of ☕</p>
+<p>Made with 🤍 and ☕</p>
 </div>`;
