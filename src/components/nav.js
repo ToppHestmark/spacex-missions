@@ -10,6 +10,7 @@ const navbarSlideFromTheSide = () => {
   burger.addEventListener('click', () => {
 
     body.classList.toggle('prevent--scrolling');
+    arrowDown.classList.toggle('arrow-hide')
     navLinksList.classList.toggle('nav--active');
 
     navLinks.forEach((link, index) => {

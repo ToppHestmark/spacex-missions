@@ -243,6 +243,10 @@ nav {
   opacity: 0.9;
 }
 
+.arrow-hide {
+ visibility: hidden;
+}
+
 @keyframes arrow-down{
 0% {
     transform: rotate(xx) scale(1.6);
@@ -258,6 +262,12 @@ nav {
     transform: rotate(xx) scale(1.6);
     transform-origin: 20% 20%;
     height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .arrow-down img {
+    display: none;
   }
 }
 

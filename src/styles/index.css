@@ -73,6 +73,7 @@
   justify-content: center;
   color: #f6f6f6;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .index__nextLaunchResults  h2 {
@@ -102,6 +103,7 @@
 /* --- Countdown Container --- */
 #countdown-container {
   width: 100%;
+  min-height: 20vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -172,6 +174,7 @@
 @media (min-width: 320px) and (max-width: 480px) {
   .index__headerTextContainer {
     height: 15vh;
+    margin-top: 2rem;
   }
  
   .index__headerTextContainer h1 {

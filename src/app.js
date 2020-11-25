@@ -25,7 +25,8 @@ const nextLaunchHtml = (nextLaunchResult) => {
   const launchDateUTC = nextLaunchResult.launch_date_utc;
   const redditLink = nextLaunchResult.links.reddit_campaign;
 
-  nextLaunchContainer.innerHTML = `<div class="index__nextLaunchResults">
+  nextLaunchContainer.innerHTML = `
+  <div class="index__nextLaunchResults">
     <h2>${missionName}</h2>
     <p> <b>Flight#</b> ${flightNumber} </p>
     <p> <div class="index__icon">
