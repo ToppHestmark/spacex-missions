@@ -272,14 +272,25 @@ nav {
 }
 
 /* ############################################
---- <<<     Loading png     >>> ---
+--- <<<     Loading indicator     >>> ---
 ---############################################ */
+.loader-container {
+  position: relative;
+  width: 100%;
+  height: 50vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .loader {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
   width: 100px;
   height: 100px;
+}
+.loader-container--hide {
+  display: none;
 }
 
 .loader .square {

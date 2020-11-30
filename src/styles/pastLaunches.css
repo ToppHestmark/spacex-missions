@@ -11,6 +11,10 @@
   justify-content: center;
 }
 
+/* ----- Loading indicator ----- */
+.loader .square {
+  background-color: #55595c;
+}
 /* ############################################
 --- <<<     Past launch cards     >>> ---
 ---############################################ */

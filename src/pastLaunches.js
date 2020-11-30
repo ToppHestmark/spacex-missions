@@ -6,6 +6,7 @@ const getPastLaunches = async () => {
     const response = await fetch(pastLaunchUrl);
     const pastLaunchResults = await response.json();
     pastLaunchResults.sort((a, b) => b.flight_number - a.flight_number);
+
     createPastLaunchesHtml(pastLaunchResults);
   }
   catch(error) {
@@ -16,6 +17,27 @@ getPastLaunches();
 
 
 const createPastLaunchesHtml = (pastLaunchResults) => {
+
+  const loadingHandler = () => {
+    const loadingIndicator = document.querySelector('.loader-container');
+
+    return pastLaunchResults 
+    ? loadingIndicator.classList.add('loader-container--hide') 
+    : loadingIndicator.classList.remove('loader-container--hide');
+  }
+  loadingHandler()
+
+  const subHeaders = document.querySelectorAll('.subheader--hide');
+  const showSubHeaders = () => {
+    return pastLaunchResults 
+    ? subHeaders.forEach((sub) => {
+      sub.classList.remove('subheader--hide')
+      })
+    : subHeaders.forEach((sub) => {
+      sub.classList.add('subheader--hide')
+      })
+  }
+  showSubHeaders()
   
   // ----- Launches filtered by periods of time -----
   const latestLaunchesCards = pastLaunchResults.filter(year => year.launch_year >= '2020')
@@ -90,13 +112,6 @@ const createCardsHtml = (pastLaunch) => {
   return cardsHtml;
 };
 
-
-const showHeader = setTimeout(() => {
- const subHeaders = document.querySelectorAll('.subheader--hide');
- subHeaders.forEach((sub) => {
-  sub.classList.remove('subheader--hide')
- })
-}, 2000)
 
 /* ############################################################
 --- <<<     Footer     >>> ---
