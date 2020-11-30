@@ -47,7 +47,7 @@ const nextLaunchHtml = (nextLaunchResult) => {
     </p>
     <div class="reddit-link">
       <a target="_blank" href=${redditLink}><div class="index__icon">
-      <img src="assets/icons/external-link-light.png" alt="External link icon">
+      <img src="assets/icons/external-link-red.png" alt="External link icon">
     </div>Campaign threads</a>
     </div>
   </div>`;

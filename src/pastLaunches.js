@@ -27,8 +27,9 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
   }
   loadingHandler()
 
-  const subHeaders = document.querySelectorAll('.subheader--hide');
   const showSubHeaders = () => {
+    const subHeaders = document.querySelectorAll('.subheader--hide');
+    
     return pastLaunchResults 
     ? subHeaders.forEach((sub) => {
       sub.classList.remove('subheader--hide')

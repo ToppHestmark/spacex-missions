@@ -218,8 +218,8 @@ nav {
   background-color: #393e46;
   color: #f6f6f6;
   cursor: pointer;
-  padding: 10px;
-  border-radius: 2px;
+  padding: 20px;
+  border-radius: 50%;
   opacity: 0.6;
   transition: transform 100ms ease-in;
 }
