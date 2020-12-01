@@ -18,27 +18,8 @@ getPastLaunches();
 
 const createPastLaunchesHtml = (pastLaunchResults) => {
 
-  const loadingHandler = () => {
-    const loadingIndicator = document.querySelector('.loader-container');
-
-    return pastLaunchResults 
-    ? loadingIndicator.classList.add('loader-container--hide') 
-    : loadingIndicator.classList.remove('loader-container--hide');
-  }
-  loadingHandler()
-
-  const showSubHeaders = () => {
-    const subHeaders = document.querySelectorAll('.subheader--hide');
-    
-    return pastLaunchResults 
-    ? subHeaders.forEach((sub) => {
-      sub.classList.remove('subheader--hide')
-      })
-    : subHeaders.forEach((sub) => {
-      sub.classList.add('subheader--hide')
-      })
-  }
-  showSubHeaders()
+  loadingHandler(pastLaunchResults)
+  showSubHeaders(pastLaunchResults)
   
   // ----- Launches filtered by periods of time -----
   const latestLaunchesCards = pastLaunchResults.filter(year => year.launch_year >= '2020')
@@ -113,6 +94,25 @@ const createCardsHtml = (pastLaunch) => {
   return cardsHtml;
 };
 
+const loadingHandler = (pastLaunchResults) => {
+  const loadingIndicator = document.querySelector('.loader-container');
+
+  return pastLaunchResults 
+  ? loadingIndicator.classList.add('loader-container--hide') 
+  : loadingIndicator.classList.remove('loader-container--hide');
+}
+
+const showSubHeaders = (pastLaunchResults) => {
+  const subHeaders = document.querySelectorAll('.subheader--hide');
+  
+  return pastLaunchResults 
+    ? subHeaders.forEach((sub) => {
+      sub.classList.remove('subheader--hide')
+      })
+    : subHeaders.forEach((sub) => {
+      sub.classList.add('subheader--hide')
+      })
+}
 
 /* ############################################################
 --- <<<     Footer     >>> ---
