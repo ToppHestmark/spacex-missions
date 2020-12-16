@@ -38,6 +38,10 @@
 
   <!-- ------------ Next Launch ----------- -->
   <header class="index__header background-image">
+    <video autoplay muted loop id="index__video">
+      <source src="./assets/videos/videos_planet.mp4" loop type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
     <div class="index__headerTextContainer">
       <h1>SpaceX Missions</h1>
       <p>See what's coming up next and keep on track of the SpaceX launches.</p>
@@ -75,7 +79,7 @@
            <table class="index__upcomingLaunchTable">
            </table>
           </table>
-          <i class="index__ApiLinkText">API Data by <a target="_blank" href="https://docs.spacexdata.com/">SpaceX API Docs</a></i>
+          <i class="index__ApiLinkText">API Data by <a target="_blank" href="https://github.com/r-spacex/SpaceX-API/tree/master/docs/v4">SpaceX API Docs v4</a></i>
       </div>
     </section>
   
@@ -119,7 +123,7 @@
         </div>
         <div>
           <label for="message">Message</label>
-            <textarea rows="4" id="message" name="message" form="contactForm" >
+            <textarea id="message" name="message" form="contactForm" >
             </textarea>
           <div class="form-error" id="messageError" >
             Your message must contain at least 25 characters

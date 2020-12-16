@@ -25,7 +25,7 @@
 ---############################################ */
 
 .index__header {
-  background-image: url("../../assets/background/spacex-launch-night-star-large.jpg");
+  /* background-image: url("../../assets/background/spacex-launch-night-star-large.jpg"); */
   /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/46259778995/" */
   background-position: center;
   width: 100%;
@@ -37,9 +37,35 @@
   text-shadow: 0px 1px 8px rgba(108, 108, 108, 0.8);
 }
 
+.index__header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+  z-index: 2;
+}
+
+#index__video {
+  position: absolute;
+  width: 100vw; 
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .index__nextLaunchSection {
   padding: 6vh 12vw;
   margin-top: 2rem;
+  z-index: 3;
 }
 
 .index__headerTextContainer {
@@ -50,6 +76,7 @@
   justify-content: center;
   align-items: center;
   color: #f6f6f6;
+  z-index: 3;
 }
 .index__headerTextContainer h1 {
   text-transform: uppercase;
@@ -82,7 +109,7 @@
   letter-spacing: 3px;
 }
 .index__nextLaunchResults a {
-  background-color: rgba(0,0,0, 1);
+  background-color: rgba(0,0,0, 0.6);
   color: #F53B3B;
   padding: 1.3em 7vw;
   text-decoration: none;
@@ -91,7 +118,7 @@
 }
 .index__nextLaunchResults a:hover,
 .index__nextLaunchResults a:active {
-  background-color: rgba(0,0,0, 0.75);
+  background-color: rgba(0,0,0, 0.9);
 }
 
 .index__nextLaunchResults .reddit-link {
@@ -601,7 +628,8 @@ tr.tablerow__borderBottom td {
 }
 
 #contactForm textarea {
-  resize: vertical; 
+  resize: vertical;
+  min-height: 120px;
 }
 
 .form__submitButton {
