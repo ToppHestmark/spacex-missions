@@ -25,22 +25,6 @@ const nextLaunchHtml = (nextLaunchResult) => {
   const launchDateUTC = nextLaunchResult.date_utc;
   const redditLink = nextLaunchResult.links.reddit.campaign;
 
-  const rocketNameId = nextLaunchResult.rocket;
-  let rocket;
-  switch (rocketNameId) {
-    case "5e9d0d96eda699382d09d1ee":
-      rocket = "Starship";
-      break;
-    case "5e9d0d95eda69974db09d1ed":
-      rocket = "Falcon Heavy";
-      break;
-    case "5e9d0d95eda69973a809d1ec":
-      rocket = "Falcon 9";
-      break;
-    default:
-      rocket = "N/A";
-  }
-
   nextLaunchContainer.innerHTML = `
   <div class="index__nextLaunchResults">
     <h2>${missionName}</h2>
@@ -48,7 +32,7 @@ const nextLaunchHtml = (nextLaunchResult) => {
     <p> 
       <div class="index__icon">
       <img src="assets/icons/rocket-light-icon.png" alt="Rocket icon">
-      </div> ${rocket}
+      </div> ${rocketName(nextLaunchResult.rocket)}
     </p> 
     <p>
       <div class="index__icon">
@@ -105,7 +89,7 @@ const nextLaunchHtml = (nextLaunchResult) => {
 /* ############################################################
 --- <<<     Upcoming launches     >>> ---
 ---############################################################ */
-const upcomingLaunchUrl = "https://api.spacexdata.com/v3/launches/upcoming";
+const upcomingLaunchUrl = "https://api.spacexdata.com/v4/launches/upcoming";
 const upcomingLaunchTable = document.querySelector(
   ".index__upcomingLaunchTable"
 );
@@ -126,20 +110,18 @@ getUpcomingLaunches();
 
 const createTableHtml = (upcomingLaunchResults) => {
   upcomingLaunchResults.map((upcomingLaunch) => {
-    const launchDateUTC = upcomingLaunch.launch_date_utc;
+    const launchDateUTC = upcomingLaunch.date_utc;
     const flightNumber = upcomingLaunch.flight_number;
-    const missionName = upcomingLaunch.mission_name;
-    const launchSite = upcomingLaunch.launch_site.site_name_long;
-
-    const launchSiteLocation = () => {
-      return launchSite === null ? "Not specified" : launchSite;
-    };
+    const missionName = upcomingLaunch.name;
+    const rocketNameId = upcomingLaunch.rocket;
 
     upcomingLaunchTable.innerHTML += `
     <tr class="upcomingLaunch__dataResults tablerow__borderBottom">
       <td class="upcomingLaunch__flightNumber upcomingLaunch__dataTable">${flightNumber}</td>
       <td class="upcomingLaunch__mission upcomingLaunch__dataTable">${missionName}</td>
-      <td class="upcomingLaunch__site upcomingLaunch__dataTable">${launchSiteLocation()}</td>
+      <td class="upcomingLaunch__site upcomingLaunch__dataTable">${rocketName(
+        rocketNameId
+      )}</td>
       <td class="upcomingLaunch__date upcomingLaunch__dataTable">${americanDateFormat(
         launchDateUTC
       )}</td>
