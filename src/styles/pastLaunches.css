@@ -26,13 +26,8 @@
   flex-direction: column;
   color: #55595c;
 }
-.pastLaunch__yearSection {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
 
-.pastLaunch__yearSection h2 {
+.pastLaunch__main h2 {
   font-weight: 300;
   position: absolute;
   margin-top: -4rem;
