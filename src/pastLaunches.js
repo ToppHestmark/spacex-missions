@@ -20,16 +20,6 @@ const createPastLaunchesHtml = (pastLaunchResults) => {
   loadingHandler(pastLaunchResults);
   showSubHeaders(pastLaunchResults);
 
-  // const launchYear = () => {
-  //   pastLaunchResults.map((hello) => {
-  //     const launchDateToYear = new Intl.DateTimeFormat("en", {
-  //       year: "numeric",
-  //     }).format(new Date(hello.date_utc));
-  //     return launchDateToYear;
-  //   });
-  // };
-  // launchYear();
-
   pastLaunchResults.map((pastLaunch) => {
     containerContainer.innerHTML += createCardsHtml(pastLaunch);
   });
