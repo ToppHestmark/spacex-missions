@@ -268,13 +268,6 @@
   margin-bottom: 10vh;
 }
 
-.index__upcomingLaunchImageContainer img {
-  width: 100%;
-  height: auto;
-  padding-bottom: 3vh;
-  filter: brightness(0.9);
-}
-
 .upcomingLaunch__table {
   width: 100%;
   padding: 40px 0 40px 10px;
