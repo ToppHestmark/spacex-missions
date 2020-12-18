@@ -23,7 +23,7 @@ const indexFooterHtml = `<div class="footer__socialMediaLinks">
   <p>Links:</p>
   <ul>
     <li><a target="_blank" href="https://www.spacex.com/">SpaceX</a></li>
-    <li><a target="_blank" href="https://docs.spacexdata.com/?version=latest">SpaceX API Docs</a></li>
+    <li><a target="_blank" href="https://github.com/r-spacex/SpaceX-API">SpaceX API Docs</a></li>
     <li><a target="_blank" href="https://github.com/ToppHestmark/spacex-missions" title="Github">Github repo</a></li>
   </ul>
 </div>
@@ -78,7 +78,7 @@ const pagesFooterHtml = ` <div class="footer__socialMediaLinks">
   <p>Links:</p>
   <ul>
     <li><a target="_blank" href="https://www.spacex.com/">SpaceX</a></li>
-    <li><a target="_blank" href="https://docs.spacexdata.com/?version=latest">SpaceX API Docs</a></li>
+    <li><a target="_blank" href="https://github.com/r-spacex/SpaceX-API">SpaceX API Docs</a></li>
     <li><a target="_blank" href="https://github.com/ToppHestmark/spacex-missions" title="Github">Github repo</a></li>
   </ul>
 </div>
