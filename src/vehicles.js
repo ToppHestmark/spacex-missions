@@ -1,23 +1,22 @@
-const vehiclesContainer = document.querySelector('.vehicles__rocketsContainer');
-const rocketsURL = "https://api.spacexdata.com/v3/rockets";
+const vehiclesContainer = document.querySelector(".vehicles__rocketsContainer");
+const rocketsURL = "https://api.spacexdata.com/v4/rockets";
 
 const getRockets = async () => {
   try {
     const rocketResponse = await fetch(rocketsURL);
     const rocketResults = await rocketResponse.json();
-    createVehiclesHtml(rocketResults)
+    createVehiclesHtml(rocketResults);
+  } catch (error) {
+    vehiclesContainer.innerHTML = displayError(
+      "Ooops, An error occured when calling API."
+    );
   }
-  catch(error) {
-    vehiclesContainer.innerHTML = displayError("Ooops, An error occured when calling API.")
-  }
-}
-getRockets()
+};
+getRockets();
 
 const createVehiclesHtml = (rocketResults) => {
-
-  rocketResults.map(vehicle => {
-
-    const vehicleName = vehicle.rocket_name;
+  rocketResults.map((vehicle) => {
+    const vehicleName = vehicle.name;
     const vehicleDuty = vehicle.active;
     const vehicleFirstFlight = vehicle.first_flight;
     const vehicleMassKG = vehicle.mass.kg;
@@ -27,19 +26,22 @@ const createVehiclesHtml = (rocketResults) => {
     const vehicleDiameterMeters = vehicle.diameter.meters;
     const vehicleDiameterFeet = vehicle.diameter.feet;
     const vehicleReusable = vehicle.first_stage.reusable;
-    const vehicleImage = vehicle.flickr_images[0];
+    const vehicleImage = vehicle.flickr_images[1];
     const vehicleSuccessRate = vehicle.success_rate_pct;
     const vehicleCostPerLaunch = vehicle.cost_per_launch;
     const vehicleEngineType = vehicle.engines.type;
     const vehicleDescription = vehicle.description;
 
     // Formatting
-    const massInLb = String(vehicleMassLB).replace(/(.)(?=(\d{3})+$)/g,'$1.');
-    const massInKg = String(vehicleMassKG).replace(/(.)(?=(\d{3})+$)/g,'$1.');
-    const costPerLaunch = String(vehicleCostPerLaunch).replace(/(.)(?=(\d{3})+$)/g,'$1.');
+    const massInLb = String(vehicleMassLB).replace(/(.)(?=(\d{3})+$)/g, "$1.");
+    const massInKg = String(vehicleMassKG).replace(/(.)(?=(\d{3})+$)/g, "$1.");
+    const costPerLaunch = String(vehicleCostPerLaunch).replace(
+      /(.)(?=(\d{3})+$)/g,
+      "$1."
+    );
     const firstFlightDate = americanDateFormat(vehicleFirstFlight);
-    const duty = () => vehicleDuty ? "Active" : "Inactive";
-    const reusable = () => vehicleReusable ? "Yes" : "No";
+    const duty = () => (vehicleDuty ? "Active" : "Inactive");
+    const reusable = () => (vehicleReusable ? "Yes" : "No");
 
     const mass = `<p> ${massInKg} kg / ${massInLb} lbs</p>`;
     const height = `<p> ${vehicleHeightMeters} m / ${vehicleHeightFeet} ft</p>`;
@@ -87,5 +89,5 @@ const createVehiclesHtml = (rocketResults) => {
 /* ############################################################
 --- <<<     Footer     >>> ---
 ---############################################################ */
-const pagesFooter = document.querySelector('.pages__footer');
+const pagesFooter = document.querySelector(".pages__footer");
 pagesFooter.innerHTML = pagesFooterHtml;
