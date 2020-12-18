@@ -112,7 +112,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
    .history__header h1 {
     font-size: 3rem;
   }
@@ -126,4 +126,30 @@
    .history__link a {
     padding: 1em 16vw;
   }
+}
+
+.history__LinkContainer {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  background-color: #eee;
+}
+
+.history__ApiLinkText {
+  margin: 30px 10px 30px 10px;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 60%;
+  color: #55595c;
+  letter-spacing: 2px;
+  text-transform: initial;
+  text-align: center;
+}
+.history__ApiLinkText a {
+  font-weight: 400;
+  text-decoration: none;
+  color: #55595c;
+}
+.history__ApiLinkText a:hover {
+  text-decoration: underline;
 }

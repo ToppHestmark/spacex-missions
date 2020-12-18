@@ -377,7 +377,7 @@ tr.tablerow__borderBottom td {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .index__upcomingLaunchContainer {
     width: 100%;
   }
@@ -534,7 +534,7 @@ tr.tablerow__borderBottom td {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .index__goalSection-1 h3,
   .index__goalSection-2 h3 {
     padding: 0 5vw 0 5vw;
@@ -686,7 +686,7 @@ tr.tablerow__borderBottom td {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .form__container {
     width: 90vw;
   }
