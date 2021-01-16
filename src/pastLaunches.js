@@ -33,6 +33,7 @@ const createCardsHtml = (pastLaunch) => {
   const flightNumber = pastLaunch.flight_number;
   const launchSuccess = pastLaunch.success;
   const rocketNameId = pastLaunch.rocket;
+  const videoYouTube = pastLaunch.links.webcast;
 
   function successMessage() {
     return launchSuccess
@@ -42,15 +43,15 @@ const createCardsHtml = (pastLaunch) => {
 
   const cardsHtml = `
   <div class="pastLaunch__card">
-  <img class="pastLaunch__missionBadge" src=${missionBadge} alt=${missionName}>
-  <p class="pastLaunch__date">${americanDateFormat(launchDateUTC)}</p>
-  <h3 class="pastLaunch__missionName">${missionName}</h3>
-  <p><b>Flight#:</b> ${flightNumber}</p>
-  <p><b>Rocket:</b> ${rocketName(rocketNameId)}</p>
-  ${successMessage()}
-  <div class="button__moreDetails">
-  <a href="past-launches-details.html?flight_number=${flightNumber}">Learn more</a>
-  </div>
+    <img class="pastLaunch__missionBadge" src=${missionBadge} alt=${missionName}>
+    <p class="pastLaunch__date">${americanDateFormat(launchDateUTC)}</p>
+    <h3 class="pastLaunch__missionName">${missionName}</h3>
+    <p><b>Flight#:</b> ${flightNumber}</p>
+    <p><b>Rocket:</b> ${rocketName(rocketNameId)}</p>
+    ${successMessage()}
+    <div class="button__moreDetails">
+    <a href="${videoYouTube}" target="_blank">Watch Video</a>
+    </div>
   </div>`;
   return cardsHtml;
 };

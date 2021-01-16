@@ -7,6 +7,16 @@
   font-family: 'Oswald', sans-serif;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+
 .index__upcomingLaunchSection h2,
 .index__videoLinksContainer h2 {
   margin-top: 6vh;
