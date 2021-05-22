@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -28,7 +28,6 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
-
 
 /* ############################################
 --- <<<     Header & Countdown Timer     >>> ---
@@ -64,8 +63,8 @@ body {
 }
 
 #index__video {
-  position: absolute;
-  width: 100vw; 
+  position: fixed;
+  width: 100vw;
   height: 100vh;
   -o-object-fit: cover;
   object-fit: cover;
@@ -78,31 +77,6 @@ body {
   z-index: 3;
 }
 
-.index__headerTextContainer {
-  width: 100%;
-  height: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #f6f6f6;
-  z-index: 3;
-}
-.index__headerTextContainer h1 {
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 400;
-  font-size: 2.5rem;
-  letter-spacing: 3px;
-  margin-top: 5rem;
-}
-.index__headerTextContainer p {
-  margin-top: 2vh;
-  padding: 0 10px 0 10px;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
 .index__nextLaunchContainer,
 .next_launch_container,
 .countdown__results {
@@ -113,14 +87,14 @@ body {
   text-align: center;
 }
 
-.index__nextLaunchResults  h2 {
-  font-size: 4em;
-  font-weight: 400;
+.index__nextLaunchResults h2 {
+  font-size: 4rem;
+  font-weight: 500;
   letter-spacing: 3px;
 }
 .index__nextLaunchResults a {
-  background-color: rgba(0,0,0, 0.6);
-  color: #F53B3B;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f53b3b;
   padding: 1.3em 7vw;
   text-decoration: none;
   text-transform: uppercase;
@@ -128,7 +102,7 @@ body {
 }
 .index__nextLaunchResults a:hover,
 .index__nextLaunchResults a:active {
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .index__nextLaunchResults .reddit-link {
@@ -189,7 +163,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: 800 !important;
-  color: #F53B3B !important;
+  color: #f53b3b !important;
 }
 
 @media screen and (max-width: 1024px) {
@@ -213,7 +187,7 @@ body {
     height: 15vh;
     margin-top: 2rem;
   }
- 
+
   .index__headerTextContainer h1 {
     margin-top: 0;
     font-size: 2rem;
@@ -239,7 +213,7 @@ body {
   .index__nextLaunchResults a {
     padding: 1.8em 20vw;
   }
- 
+
   .countdown__results {
     min-width: 400px;
     padding: 1rem 1rem;
@@ -296,7 +270,7 @@ body {
 }
 
 tr.tablerow__borderBottom td {
-  border-bottom: 1px solid rgba(0,0,0,.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .upcomingLaunch__dataResults {
   transition: transform 400ms ease-in;
@@ -352,8 +326,6 @@ tr.tablerow__borderBottom td {
   }
 }
 @media (min-width: 1281px) {
-
-  
   .upcomingLaunch__flightNumber {
     width: 5vw;
     padding-left: 4vw;
@@ -370,12 +342,10 @@ tr.tablerow__borderBottom td {
   .upcomingLaunch__date {
     width: 20vw;
     padding-left: 8vw;
-  } 
-  
+  }
 }
 
 @media screen and (max-width: 990px) {
-
   .index__upcomingLaunchContainer {
     width: 90%;
   }
@@ -397,11 +367,11 @@ tr.tablerow__borderBottom td {
 --- <<<     Goals and video links section     >>> ---
 ---############################################ */
 .index__goalSection-1 {
-  background-image: url('../../assets/background/spaceship-cruise-large.jpg');
+  background-image: url("../../assets/background/spaceship-cruise-large.jpg");
   /* Image by SpaceX on StockSnap.io. URL "https://stocksnap.io/photo/space-spaceship-SQBE2C5NWT" */
 }
 .index__goalSection-2 {
-  background: url('../../assets/background/engine-landing-on-deck-large.jpg');
+  background: url("../../assets/background/engine-landing-on-deck-large.jpg");
   /* Image by Official SpaceX Photos on Flickr.com - URL "https://www.flickr.com/photos/spacex/50291306346/" */
 }
 .index__goalSection-1,
@@ -428,11 +398,12 @@ tr.tablerow__borderBottom td {
 
 .index__videoLinksSection {
   width: 100%;
-  margin-bottom: 10vh;
+  padding-bottom: 3em;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: white;
 }
 .index__videoLinksContainer {
   width: 80%;
@@ -453,7 +424,7 @@ tr.tablerow__borderBottom td {
   padding: 1.2rem;
   border-radius: 3px;
   color: #55595c;
-  border: 2px solid rgba(0,0,0,.05);
+  border: 2px solid rgba(0, 0, 0, 0.05);
   transition: transform 400ms ease-in;
 }
 .index__videoLinkCard:hover {
@@ -486,7 +457,7 @@ tr.tablerow__borderBottom td {
   text-decoration: none;
   text-transform: uppercase;
   color: #55595c;
-  border: 1px solid rgba(0,0,0,.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   letter-spacing: 3px;
 }
 .index__videoLinkButton a:hover {
@@ -566,14 +537,13 @@ tr.tablerow__borderBottom td {
   .index__videoLinkButton a {
     padding: 1em 18vw;
   }
-  
 }
 
 /* ############################################
 --- <<<     Form section     >>> ---
 ---############################################ */
 .index__formSection {
-  background-image: url('../../assets/background/space-background-large.jpg');
+  background-image: url("../../assets/background/space-background-large.jpg");
   /* Image by Ashwini Chaudhary on Unsplash.com - URL "https://unsplash.com/photos/czPD6s3JQmk" */
   background-position: center;
   width: 100%;
@@ -605,12 +575,12 @@ tr.tablerow__borderBottom td {
 }
 
 #contactForm {
-  padding: 0.5rem 1.2rem 1rem 1.2rem;  
+  padding: 0.5rem 1.2rem 1rem 1.2rem;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
-  -webkit-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
-  -moz-box-shadow: 2px -1px 54px 7px rgba(235,226,226,0.37);
+  box-shadow: 2px -1px 54px 7px rgba(235, 226, 226, 0.37);
+  -webkit-box-shadow: 2px -1px 54px 7px rgba(235, 226, 226, 0.37);
+  -moz-box-shadow: 2px -1px 54px 7px rgba(235, 226, 226, 0.37);
 }
 #contactForm label {
   font-size: smaller;
@@ -651,7 +621,7 @@ tr.tablerow__borderBottom td {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 500;
-  border: 1px solid rgba(0,0,0,.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   letter-spacing: 3px;
   outline: 0;
 }
@@ -667,7 +637,7 @@ tr.tablerow__borderBottom td {
 
 #contactForm .form-error {
   display: none;
-  color: #F53B3B;
+  color: #f53b3b;
   font-size: 0.9rem;
   margin-top: 2px;
 }
