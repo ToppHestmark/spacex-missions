@@ -28,14 +28,14 @@
   display: block;
   justify-content: center;
   align-self: center;
-  transition: transform 400ms ease-in;
-  border-bottom: 1px solid rgba(0,0,0,.05);
+  transition: transform 250ms ease-in;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .history__card:hover {
   -webkit-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
   -moz-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
   box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
-  transform: scaleX(1.02);
+  transform: scaleX(1.005);
 }
 
 .history__cardTextContainer {
@@ -45,7 +45,6 @@
   color: #55595c;
   letter-spacing: 1.4px;
 }
-
 
 .history__cardTextContainer h2 {
   font-size: 1.7rem;
@@ -68,7 +67,7 @@
   color: #55595c;
   text-decoration: none;
   text-transform: uppercase;
-  border: 1px solid rgba(0,0,0,.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   letter-spacing: 3px;
 }
 .history__link a:hover {
@@ -85,7 +84,7 @@
 }
 .history__card:last-child {
   margin-bottom: 10vh;
-} 
+}
 
 @media (min-width: 1281px) {
   .history__card {
@@ -94,7 +93,7 @@
   }
 }
 
-@media screen and (max-width: 1024px)  {
+@media screen and (max-width: 1024px) {
   .history__container {
     width: 100%;
   }
@@ -113,17 +112,17 @@
 }
 
 @media screen and (max-width: 480px) {
-   .history__header h1 {
+  .history__header h1 {
     font-size: 3rem;
   }
   .history__header p {
     padding: 0 7px 0 7px;
   }
-   .history__card {
+  .history__card {
     width: 90%;
     padding: 1rem;
-   }
-   .history__link a {
+  }
+  .history__link a {
     padding: 1em 16vw;
   }
 }

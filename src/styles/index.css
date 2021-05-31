@@ -273,13 +273,13 @@ tr.tablerow__borderBottom td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .upcomingLaunch__dataResults {
-  transition: transform 400ms ease-in;
+  transition: transform 250ms ease-in;
 }
 .upcomingLaunch__dataResults:hover {
   -webkit-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
   -moz-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
   box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
-  transform: scaleX(1.02);
+  transform: scaleX(1.005);
 }
 .upcomingLaunch__dataTable {
   width: 100vw;
@@ -425,13 +425,13 @@ tr.tablerow__borderBottom td {
   border-radius: 3px;
   color: #55595c;
   border: 2px solid rgba(0, 0, 0, 0.05);
-  transition: transform 400ms ease-in;
+  transition: transform 250ms ease-in;
 }
 .index__videoLinkCard:hover {
   -webkit-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
   -moz-box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
   box-shadow: 0px 6px 23px 0px rgba(114, 114, 114, 0.75);
-  transform: scale(1.02);
+  transform: scale(1.005);
 }
 
 .index__videoLinkCard img {
